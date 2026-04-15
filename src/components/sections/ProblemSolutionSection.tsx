@@ -1,52 +1,249 @@
+/**
+ * ProblemSolutionSection - 传统呼叫中心的困境 vs AI解决方案
+ * 
+ * 特效升级：
+ * - 3D 翻转卡片（正面=问题，背面=方案）
+ * - GlowCard 鼠标跟随光效
+ * - ParticleBackground 粒子网络（红色=混乱 vs 绿色=秩序）
+ * - Grid 布局，3列展示
+ */
+
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { useState, useCallback, useRef } from 'react'
 import { 
-  Phone, 
-  Clock, 
-  Users, 
-  BarChart3, 
-  Globe,
-  Bot,
-  Zap,
-  Target,
-  Star
+  Phone, Clock, Users, BarChart3, Globe,
+  Bot, Zap, Target, Star,
+  type LucideIcon
 } from 'lucide-react'
 import { Container } from '@/components/common'
+import { ParticleBackground } from '@/components/effects/ParticleBackground'
 
-const problemIcons = {
-  phone: Phone,
-  clock: Clock,
-  users: Users,
-  chart: BarChart3,
-  globe: Globe,
+// ==================== 数据 ====================
+
+const items: Array<{
+  icon: LucideIcon
+  problemTitle: string
+  problemDesc: string
+  solutionIcon: LucideIcon
+  solutionTitle: string
+  solutionDesc: string
+}> = [
+  {
+    icon: Phone,
+    problemTitle: '高昂人力成本',
+    problemDesc: '每位客服年成本 $40,000+，人力成本居高不下',
+    solutionIcon: Bot,
+    solutionTitle: 'AI 智能体替代',
+    solutionDesc: '替代 80% 重复工作，成本降低 60% 以上',
+  },
+  {
+    icon: Clock,
+    problemTitle: '24/7 覆盖困难',
+    problemDesc: '无法处理夜间和节假日咨询，客户等待时间长',
+    solutionIcon: Zap,
+    solutionTitle: '全天候服务',
+    solutionDesc: '24/7 无间断响应，随时满足客户需求',
+  },
+  {
+    icon: Users,
+    problemTitle: '高员工流失率',
+    problemDesc: '平均任期仅 6-12 个月，培训成本高',
+    solutionIcon: Target,
+    solutionTitle: '零培训成本',
+    solutionDesc: '分钟级部署，即刻上岗，无需培训周期',
+  },
+  {
+    icon: BarChart3,
+    problemTitle: '服务质量不稳定',
+    problemDesc: '每次通话质量参差不齐，客户体验不一致',
+    solutionIcon: Star,
+    solutionTitle: '100% 一致性',
+    solutionDesc: '每一通电话都完美执行，服务品质稳定',
+  },
+  {
+    icon: Globe,
+    problemTitle: '多语言支持有限',
+    problemDesc: '难以服务国际化客户，语言壁垒明显',
+    solutionIcon: Globe,
+    solutionTitle: '50+ 语言支持',
+    solutionDesc: '触达全球客户无障碍，多语言无缝切换',
+  },
+  {
+    icon: Phone,
+    problemTitle: '数据收集困难',
+    problemDesc: '通话数据无法结构化，缺少实时分析能力',
+    solutionIcon: BarChart3,
+    solutionTitle: '实时数据洞察',
+    solutionDesc: '通话内容自动分析，业务洞察即时生成',
+  },
+]
+
+// ==================== FlipCard 子组件 ====================
+
+function ProblemSolutionCard({
+  icon: ProblemIcon,
+  problemTitle,
+  problemDesc,
+  solutionIcon: SolutionIcon,
+  solutionTitle,
+  solutionDesc,
+  delay = 0,
+}: {
+  icon: LucideIcon
+  problemTitle: string
+  problemDesc: string
+  solutionIcon: LucideIcon
+  solutionTitle: string
+  solutionDesc: string
+  delay?: number
+}) {
+  const [isFlipped, setIsFlipped] = useState(false)
+  const cardRef = useRef<HTMLDivElement>(null)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return
+    const rect = cardRef.current.getBoundingClientRect()
+    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }, [])
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div
+        className="relative h-64 cursor-pointer perspective-800"
+        style={{ perspective: '800px' }}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsFlipped(true)}
+        onMouseLeave={() => setIsFlipped(false)}
+      >
+        <motion.div
+          className="relative w-full h-full"
+          style={{ transformStyle: 'preserve-3d', transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
+        >
+          {/* ========== 正面：问题 ========== */}
+          <div
+            ref={cardRef}
+            className="absolute inset-0 rounded-2xl overflow-hidden"
+            style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          >
+            {/* 背景 */}
+            <div className="absolute inset-0 bg-background-card border border-red-500/20 rounded-2xl" />
+            
+            {/* 鼠标跟随光效 */}
+            <div
+              className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+              style={{
+                background: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(239,68,68,0.15), transparent 50%)`,
+                opacity: 1,
+              }}
+            />
+
+            {/* 内容 */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+              {/* 红色问题图标 */}
+              <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-4">
+                <ProblemIcon className="w-8 h-8 text-red-400" />
+              </div>
+
+              <h3 className="text-xl font-semibold text-foreground-primary mb-2">
+                {problemTitle}
+              </h3>
+              <p className="text-foreground-muted text-sm leading-relaxed mb-4">
+                {problemDesc}
+              </p>
+
+              {/* 翻转提示 */}
+              <span className="text-xs text-red-400/60 flex items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 1l4 4-4 4" />
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                  <path d="M7 23l-4-4 4-4" />
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                </svg>
+                Hover to see solution
+              </span>
+            </div>
+
+            {/* 红色光晕 */}
+            <div className="absolute -inset-1 bg-gradient-to-br from-red-500/5 via-transparent to-transparent rounded-2xl -z-10" />
+          </div>
+
+          {/* ========== 背面：方案 ========== */}
+          <div
+            className="absolute inset-0 rounded-2xl overflow-hidden"
+            style={{
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+              transform: 'rotateY(180deg)',
+            }}
+          >
+            {/* 背景 */}
+            <div className="absolute inset-0 bg-background-card border border-accent-lime/30 rounded-2xl" />
+
+            {/* 鼠标跟随光效 */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(212,255,0,0.12), transparent 50%)`,
+              }}
+            />
+
+            {/* 内容 */}
+            <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+              {/* 绿色方案图标 */}
+              <div className="w-16 h-16 rounded-2xl bg-accent-lime/10 border border-accent-lime/20 flex items-center justify-center mb-4">
+                <SolutionIcon className="w-8 h-8 text-accent-lime" />
+              </div>
+
+              <h3 className="text-xl font-semibold text-accent-lime mb-2">
+                {solutionTitle}
+              </h3>
+              <p className="text-foreground-secondary text-sm leading-relaxed">
+                {solutionDesc}
+              </p>
+
+              {/* 成功标记 */}
+              <div className="mt-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-lime/10 border border-accent-lime/20">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-accent-lime">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span className="text-xs text-accent-lime">Solved</span>
+              </div>
+            </div>
+
+            {/* 绿色光晕 */}
+            <div className="absolute -inset-1 bg-gradient-to-br from-accent-lime/5 via-transparent to-transparent rounded-2xl -z-10" />
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  )
 }
 
-const solutionIcons = {
-  robot: Bot,
-  zap: Zap,
-  target: Target,
-  star: Star,
-  globe: Globe,
-}
+// ==================== 主组件 ====================
 
 const ProblemSolutionSection = () => {
   const { t } = useTranslation('home')
 
-  const problems = t('problem.items', { returnObjects: true }) as Array<{
-    icon: keyof typeof problemIcons
-    title: string
-    description: string
-  }>
-
-  const solutions = t('solution.items', { returnObjects: true }) as Array<{
-    icon: keyof typeof solutionIcons
-    title: string
-    description: string
-  }>
-
   return (
-    <section className="py-16 md:py-24 bg-surface">
-      <Container>
+    <section className="relative py-20 md:py-24 bg-background-primary overflow-hidden">
+      {/* 粒子背景 */}
+      <ParticleBackground
+        particleCount={40}
+        particleColor="#EF4444"
+        connectionDistance={120}
+        speed={0.3}
+        className="absolute inset-0 opacity-20"
+      />
+
+      <Container className="relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,108 +251,57 @@ const ProblemSolutionSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-display font-bold text-text mb-4">
-            {t('problem.title')}
+          <h2 className="text-h2 md:text-h1 font-semibold text-foreground-primary mb-4">
+            {t('problem.title', '传统呼叫中心的困境')}
           </h2>
-          <p className="text-body-lg text-text-secondary">
-            {t('problem.subtitle')}
+          <p className="text-body-lg text-foreground-secondary max-w-2xl mx-auto">
+            {t('problem.subtitle', '您是否正面临这些挑战？')}
           </p>
+
+          {/* 分隔线 + VS */}
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <div className="w-24 h-px bg-gradient-to-r from-transparent to-red-500/50" />
+            <div className="px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium">
+              PROBLEM
+            </div>
+            <div className="text-foreground-muted text-sm">→</div>
+            <div className="px-4 py-1.5 rounded-full bg-accent-lime/10 border border-accent-lime/20 text-accent-lime text-sm font-medium">
+              SOLUTION
+            </div>
+            <div className="w-24 h-px bg-gradient-to-r from-accent-lime/50 to-transparent" />
+          </div>
         </motion.div>
 
-        {/* Comparison grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Problems */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-error/10 flex items-center justify-center">
-                <span className="text-error text-lg">✗</span>
-              </div>
-              <h3 className="text-subheading font-semibold text-text">
-                {t('problem.title')}
-              </h3>
-            </div>
-
-            <div className="space-y-4">
-              {problems.map((problem, index) => {
-                const IconComponent = problemIcons[problem.icon] || Phone
-                
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-error/5 border border-error/10"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-error/10 flex items-center justify-center flex-shrink-0">
-                      <IconComponent size={20} className="text-error" />
-                    </div>
-                    <div>
-                      <h4 className="text-body font-semibold text-text mb-1">
-                        {problem.title}
-                      </h4>
-                      <p className="text-body-sm text-text-secondary">
-                        {problem.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                )
-              })}
-            </div>
-          </motion.div>
-
-          {/* Solutions */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-success/10 flex items-center justify-center">
-                <span className="text-success text-lg">✓</span>
-              </div>
-              <h3 className="text-subheading font-semibold text-text">
-                {t('solution.title')}
-              </h3>
-            </div>
-
-            <div className="space-y-4">
-              {solutions.map((solution, index) => {
-                const IconComponent = solutionIcons[solution.icon] || Bot
-                
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-success/5 border border-success/10"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0">
-                      <IconComponent size={20} className="text-success" />
-                    </div>
-                    <div>
-                      <h4 className="text-body font-semibold text-text mb-1">
-                        {solution.title}
-                      </h4>
-                      <p className="text-body-sm text-text-secondary">
-                        {solution.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                )
-              })}
-            </div>
-          </motion.div>
+        {/* Grid: 3列 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {items.map((item, index) => (
+            <ProblemSolutionCard
+              key={index}
+              icon={item.icon}
+              problemTitle={item.problemTitle}
+              problemDesc={item.problemDesc}
+              solutionIcon={item.solutionIcon}
+              solutionTitle={item.solutionTitle}
+              solutionDesc={item.solutionDesc}
+              delay={index * 0.1}
+            />
+          ))}
         </div>
+
+        {/* 底部提示 */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="text-center mt-12"
+        >
+          <p className="text-caption text-foreground-muted flex items-center justify-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-red-500/50" />
+            Hover a card to reveal the AI solution
+            <span className="inline-block w-2 h-2 rounded-full bg-accent-lime/50" />
+          </p>
+        </motion.div>
       </Container>
     </section>
   )

@@ -21,7 +21,6 @@ import {
   CheckCircle,
   Lock,
   FileText,
-  Users,
   Server,
   Database,
   Cloud,
@@ -31,6 +30,7 @@ import {
 } from 'lucide-react'
 import { Container, Card, Badge, Button } from '@/components/common'
 import { getLocalizedPath } from '@/utils'
+import { integrationCategories, getIntegrationsByCategory, type IntegrationCategory } from '@/data/integrations'
 
 const Product = () => {
   const { t } = useTranslation('product')
@@ -487,73 +487,71 @@ const Product = () => {
                 </p>
               </motion.div>
 
-              {/* Integration Categories */}
+              {/* Integration horizontal scroll */}
               <div className="space-y-8">
-                {/* CRM */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-subheading font-semibold text-text mb-4 flex items-center gap-2">
-                    <Users className="w-5 h-5 text-accent" />
-                    CRM Platforms
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {['Salesforce', 'HubSpot', 'Zendesk', 'Freshdesk'].map((platform) => (
-                      <Card key={platform} variant="hover" padding="md" className="text-center">
-                        <div className="w-12 h-12 rounded-xl bg-background-secondary mx-auto mb-3 flex items-center justify-center">
-                          <span className="text-body font-semibold text-text-muted">{platform.charAt(0)}</span>
-                        </div>
-                        <p className="text-body-sm font-medium text-text">{platform}</p>
-                      </Card>
-                    ))}
-                  </div>
-                </motion.div>
+                {integrationCategories.map((category) => {
+                  const catIntegrations = getIntegrationsByCategory(category.id as IntegrationCategory)
+                  if (catIntegrations.length === 0) return null
 
-                {/* Communication */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-subheading font-semibold text-text mb-4 flex items-center gap-2">
-                    <Link2 className="w-5 h-5 text-primary-purple" />
-                    Communication & Telephony
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {['Twilio', 'Vonage', 'SIP Trunking', 'WebRTC'].map((platform) => (
-                      <Card key={platform} variant="hover" padding="md" className="text-center">
-                        <div className="w-12 h-12 rounded-xl bg-background-secondary mx-auto mb-3 flex items-center justify-center">
-                          <span className="text-body font-semibold text-text-muted">{platform.charAt(0)}</span>
-                        </div>
-                        <p className="text-body-sm font-medium text-text">{platform}</p>
-                      </Card>
-                    ))}
-                  </div>
-                </motion.div>
+                  return (
+                    <motion.div
+                      key={category.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                    >
+                      <h3 className="text-subheading font-semibold text-text mb-4 text-center">
+                        {category.label.en}
+                      </h3>
+                      <div className="relative overflow-hidden">
+                        {/* Fade edges */}
+                        <div className="absolute inset-y-0 left-0 w-16 z-10 pointer-events-none
+                          bg-gradient-to-r from-surface to-transparent" />
+                        <div className="absolute inset-y-0 right-0 w-16 z-10 pointer-events-none
+                          bg-gradient-to-l from-surface to-transparent" />
 
-                {/* Business Intelligence */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-subheading font-semibold text-text mb-4 flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-primary-cyan" />
-                    Analytics & BI
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {['Tableau', 'Power BI', 'Looker', 'Mixpanel'].map((platform) => (
-                      <Card key={platform} variant="hover" padding="md" className="text-center">
-                        <div className="w-12 h-12 rounded-xl bg-background-secondary mx-auto mb-3 flex items-center justify-center">
-                          <span className="text-body font-semibold text-text-muted">{platform.charAt(0)}</span>
-                        </div>
-                        <p className="text-body-sm font-medium text-text">{platform}</p>
-                      </Card>
-                    ))}
-                  </div>
-                </motion.div>
+                        <motion.div
+                          className="flex items-center gap-6 py-2"
+                          initial={{ x: 0 }}
+                          animate={{ x: '-50%' }}
+                          transition={{
+                            x: { repeat: Infinity, repeatType: 'loop', duration: 25, ease: 'linear' },
+                          }}
+                          style={{ width: 'max-content' }}
+                        >
+                          {[...catIntegrations, ...catIntegrations].map((item, idx) => (
+                            <a
+                              key={`${item.id}-${idx}`}
+                              href={item.websiteUrl || '#'}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group flex items-center gap-3 flex-shrink-0
+                                px-4 py-2 rounded-xl
+                                hover:bg-surface-secondary transition-all duration-200
+                                hover:shadow-md hover:-translate-y-0.5"
+                            >
+                              <div className="w-10 h-10 flex items-center justify-center
+                                bg-surface-secondary rounded-lg border border-border
+                                group-hover:border-accent/30 transition-colors">
+                                <img
+                                  src={item.logo}
+                                  alt={item.name}
+                                  className="max-w-[28px] max-h-[28px] object-contain
+                                    opacity-60 group-hover:opacity-100 transition-opacity"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <span className="text-body-sm text-text-secondary whitespace-nowrap
+                                group-hover:text-text transition-colors">
+                                {item.name}
+                              </span>
+                            </a>
+                          ))}
+                        </motion.div>
+                      </div>
+                    </motion.div>
+                  )
+                })}
               </div>
 
               {/* API Section */}

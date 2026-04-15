@@ -21,7 +21,6 @@ import { Container } from '@/components/common'
 import { GradientText } from '@/components/effects/GradientText'
 import Hyperspeed from '@/components/effects/Hyperspeed'
 import GlitchText from '@/components/effects/GlitchText'
-import { LogoCarousel } from '@/components/effects/InfiniteCarousel'
 import { StarBorder } from '@/components/effects'
 import { getLocalizedPath } from '@/utils'
 
@@ -29,16 +28,6 @@ import { getLocalizedPath } from '@/utils'
 const prefersReducedMotion = () => {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
-
-// 客户 Logo 数据
-const clientLogos = [
-  { id: 'logo1', name: 'E-Commerce Platform', logo: <img src="/logos/customer-1.png" alt="E-Commerce Platform" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-  { id: 'logo2', name: 'Financial Services', logo: <img src="/logos/customer-2.png" alt="Financial Services" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-  { id: 'logo3', name: 'Healthcare Tech', logo: <img src="/logos/customer-3.png" alt="Healthcare Tech" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-  { id: 'logo4', name: 'Education Platform', logo: <img src="/logos/customer-4.png" alt="Education Platform" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-  { id: 'logo5', name: 'Insurance Company', logo: <img src="/logos/customer-5.png" alt="Insurance Company" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-  { id: 'logo6', name: 'Logistics Platform', logo: <img src="/logos/customer-6.png" alt="Logistics Platform" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" /> },
-]
 
 // 信任指标
 const trustMetrics = [
@@ -362,20 +351,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* 底部 Logo 轮播 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 lg:mt-16"
-        >
-          <div className="text-center mb-4">
-            <p className="text-body-sm text-foreground-muted">
-              {t('hero.trustedBy', '被全球领先企业信赖')}
-            </p>
-          </div>
-          <LogoCarousel logos={clientLogos} className="opacity-80" />
-        </motion.div>
       </Container>
 
       {/* 向下滚动提示 */}

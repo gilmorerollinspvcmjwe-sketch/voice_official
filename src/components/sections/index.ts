@@ -1,5 +1,4 @@
 export { default as HeroSection } from './HeroSection'
-export { default as SocialProofSection } from './SocialProofSection'
 export { default as ProblemSolutionSection } from './ProblemSolutionSection'
 export { default as FeaturesSection } from './FeaturesSection'
 export { default as HowItWorksSection } from './HowItWorksSection'

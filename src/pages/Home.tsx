@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import {
   HeroSection,
-  SocialProofSection,
   ProblemSolutionSection,
   FeaturesSection,
   HowItWorksSection,
@@ -32,13 +31,10 @@ const Home = () => {
       </Helmet>
 
       <div className="bg-background-primary">
-        {/* Hero 区域 - 全新重设计 */}
+        {/* Hero 区域 */}
         <HeroSection />
 
-        {/* 社会证明 - 客户 Logo 墙 */}
-        <SocialProofSection />
-
-        {/* 数据指标 - 新增：6大核心能力卡片 */}
+        {/* 社会证明 + 数据指标（合并） */}
         <MetricsSection />
 
         {/* 问题解决方案 */}
