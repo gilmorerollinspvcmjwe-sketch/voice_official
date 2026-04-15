@@ -1,0 +1,127 @@
+{
+  "brand": {
+    "name": "VoiceAI",
+    "tagline": "企业级语音AI平台"
+  },
+  "nav": {
+    "product": "产品",
+    "productOverview": "产品概览",
+    "features": "功能特性",
+    "technology": "技术架构",
+    "security": "安全合规",
+    "integrations": "集成",
+    "solutions": "解决方案",
+    "customerService": "客服",
+    "sales": "销售",
+    "collections": "催收",
+    "survey": "调研反馈",
+    "pricing": "定价",
+    "demo": "演示",
+    "ttsDemo": "TTS 演示",
+    "voiceDemo": "语音演示",
+    "effects": "音效",
+    "docs": "文档",
+    "company": "公司",
+    "about": "关于我们",
+    "blog": "博客",
+    "careers": "加入我们",
+    "contact": "联系我们",
+    "customers": "客户案例",
+    "login": "登录",
+    "getStarted": "免费试用"
+  },
+  "footer": {
+    "product": {
+      "title": "产品",
+      "overview": "产品概览",
+      "features": "功能特性",
+      "technology": "技术架构",
+      "security": "安全合规"
+    },
+    "solutions": {
+      "title": "解决方案",
+      "customerService": "客服场景",
+      "sales": "销售场景",
+      "collections": "催收场景"
+    },
+    "resources": {
+      "title": "资源",
+      "docs": "文档中心",
+      "api": "API参考",
+      "blog": "博客"
+    },
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "careers": "加入我们",
+      "contact": "联系我们"
+    },
+    "legal": {
+      "title": "法律条款",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "gdpr": "GDPR合规"
+    },
+    "copyright": "保留所有权利",
+    "cta": "免费试用"
+  },
+  "auth": {
+    "login": {
+      "seoTitle": "登录 - VoiceAI",
+      "seoDescription": "登录您的 VoiceAI 账户，管理语音智能体、查看分析数据等。",
+      "title": "欢迎回来",
+      "subtitle": "登录以继续使用控制台",
+      "google": "使用 Google 登录",
+      "github": "使用 GitHub 登录",
+      "or": "或",
+      "email": "电子邮箱",
+      "emailPlaceholder": "you@company.com",
+      "password": "密码",
+      "passwordPlaceholder": "输入密码",
+      "forgot": "忘记密码？",
+      "remember": "30 天内记住我",
+      "loading": "正在登录...",
+      "submit": "登录",
+      "noAccount": "还没有账户？",
+      "signUp": "立即注册",
+      "termsAgree": "登录即表示您同意我们的",
+      "and": "和",
+      "terms": "服务条款",
+      "privacy": "隐私政策"
+    },
+    "signup": {
+      "seoTitle": "注册 - VoiceAI",
+      "seoDescription": "创建您的 VoiceAI 账户，立即开始构建 AI 语音智能体。可免费试用。",
+      "title": "创建您的账户",
+      "subtitle": "开始 14 天免费试用。无需信用卡。",
+      "google": "使用 Google 注册",
+      "github": "使用 GitHub 注册",
+      "or": "或",
+      "name": "姓名",
+      "namePlaceholder": "张三",
+      "email": "工作邮箱",
+      "emailPlaceholder": "you@company.com",
+      "company": "公司名称",
+      "companyPlaceholder": "您的公司",
+      "password": "密码",
+      "passwordPlaceholder": "创建强密码",
+      "reqLength": "至少 8 个字符",
+      "reqUpper": "一个大写字母",
+      "reqLower": "一个小写字母",
+      "reqNumber": "一个数字",
+      "termsAgree": "我同意",
+      "and": "和",
+      "terms": "服务条款",
+      "privacy": "隐私政策",
+      "termsRequired": "请同意服务条款",
+      "marketingAgree": "发送产品更新和技巧（可选）",
+      "loading": "正在创建账户...",
+      "submit": "创建账户",
+      "hasAccount": "已有账户？",
+      "login": "登录",
+      "trialNote": "14 天免费试用，包含所有 Pro 功能。无需信用卡。"
+    },
+    "terms": "服务条款",
+    "privacy": "隐私政策"
+  }
+}

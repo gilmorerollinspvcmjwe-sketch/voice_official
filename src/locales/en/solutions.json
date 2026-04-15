@@ -1,0 +1,230 @@
+{
+  "seo": {
+    "title": "Solutions - AI Voice Agent Use Cases",
+    "description": "Discover how AI voice agents can transform your customer service, sales, and operations across industries."
+  },
+  "hero": {
+    "badge": "Solutions",
+    "title": "AI Voice Agents for Every Use Case",
+    "subtitle": "From customer support to sales outreach, our voice AI handles it all with natural conversations."
+  },
+  "solutions": {
+    "customerService": {
+      "title": "Customer Service",
+      "description": "Handle high-volume customer inquiries 24/7 with AI agents that sound human.",
+      "feature1": "24/7 availability",
+      "feature2": "Multi-language support",
+      "feature3": "Instant resolution"
+    },
+    "sales": {
+      "title": "Sales Outreach",
+      "description": "Scale your sales team with AI agents that qualify leads and book appointments.",
+      "feature1": "Lead qualification",
+      "feature2": "Appointment setting",
+      "feature3": "CRM integration"
+    },
+    "collections": {
+      "title": "Collections & Reminders",
+      "description": "Automate payment reminders and collection calls with empathetic AI agents.",
+      "feature1": "Payment reminders",
+      "feature2": "Payment plan negotiation",
+      "feature3": "Compliance handling"
+    },
+    "appointment": {
+      "title": "Appointment Reminders",
+      "description": "Reduce no-shows with automated appointment reminders and confirmations.",
+      "feature1": "Automated reminders",
+      "feature2": "Rescheduling assistance",
+      "feature3": "Calendar integration"
+    },
+    "survey": {
+      "title": "Survey & Feedback",
+      "description": "Conduct surveys and collect feedback with natural voice conversations.",
+      "feature1": "NPS surveys",
+      "feature2": "Customer satisfaction",
+      "feature3": "Market research"
+    }
+  },
+  "common": {
+    "learnMore": "Learn more"
+  },
+  "cta": {
+    "title": "Find your solution",
+    "subtitle": "Talk to our team about your specific use case.",
+    "button": "Contact Sales"
+  },
+  "customerServicePage": {
+    "seo": {
+      "title": "AI Customer Service Solution - VoiceAI",
+      "description": "24/7 intelligent customer service with AI voice agents. Smart routing, knowledge base matching, emotion management, and automatic ticket generation."
+    },
+    "hero": {
+      "badge": "Customer Service",
+      "title": "Intelligent Customer Service That Never Sleeps",
+      "subtitle": "Deploy AI voice agents that handle customer inquiries 24/7 with human-like empathy, instant knowledge retrieval, and seamless escalation to live agents."
+    },
+    "capabilities": {
+      "title": "Core Capabilities",
+      "subtitle": "Everything your support team needs, automated",
+      "alwaysOn": {
+        "title": "24/7 Availability",
+        "description": "AI agents handle calls around the clock with consistent quality, eliminating wait times and after-hours gaps.",
+        "highlights": ["Zero wait time", "Consistent quality 24/7", "Holiday & weekend coverage", "Overflow handling"]
+      },
+      "smartRouting": {
+        "title": "Smart Routing & Triage",
+        "description": "Automatically classify and route inquiries by intent, urgency, and customer tier. Ensure the right issue reaches the right resolution path.",
+        "highlights": ["Intent-based classification", "Priority scoring", "VIP customer detection", "Skill-based routing"]
+      },
+      "knowledgeMatch": {
+        "title": "Knowledge Base Matching",
+        "description": "RAG-powered retrieval from your help center, FAQs, and internal docs. Agents always have the latest answers at their fingertips.",
+        "highlights": ["RAG-powered retrieval", "Auto-sync with help center", "Multi-source aggregation", "Confidence scoring"]
+      },
+      "emotionCare": {
+        "title": "Emotion-Aware Responses",
+        "description": "Real-time sentiment detection adjusts tone and approach. Frustrated callers receive empathetic handling and proactive escalation.",
+        "highlights": ["Real-time sentiment detection", "Adaptive tone adjustment", "Proactive de-escalation", "Empathy scripting"]
+      },
+      "ticketGen": {
+        "title": "Automatic Ticket Generation",
+        "description": "Unresolved issues are automatically converted to structured support tickets with full conversation context and suggested categories.",
+        "highlights": ["Auto ticket creation", "Conversation context attached", "Category suggestion", "SLA assignment"]
+      },
+      "liveHandoff": {
+        "title": "Seamless Live Agent Handoff",
+        "description": "When escalation is needed, AI transfers the call with full context summary so the live agent can pick up without asking the customer to repeat.",
+        "highlights": ["Context-rich transfer", "No repeat needed", "Warm handoff support", "Agent whisper mode"]
+      }
+    },
+    "metrics": {
+      "title": "Proven Results",
+      "subtitle": "Metrics from production customer service deployments",
+      "resolution": { "value": "85%", "label": "First-Call Resolution" },
+      "satisfaction": { "value": "4.7/5", "label": "Customer Satisfaction" },
+      "costReduction": { "value": "60%", "label": "Cost Reduction" },
+      "handleTime": { "value": "-45%", "label": "Avg Handle Time" }
+    },
+    "cta": {
+      "title": "Transform Your Customer Service",
+      "subtitle": "See how AI agents can handle your support volume with higher satisfaction scores.",
+      "button": "Book a Demo"
+    }
+  },
+  "salesPage": {
+    "seo": {
+      "title": "AI Sales Solution - VoiceAI",
+      "description": "Scale your sales with AI voice agents. Automated lead qualification, product recommendations, follow-up scheduling, and funnel analytics."
+    },
+    "hero": {
+      "badge": "Sales",
+      "title": "AI-Powered Sales That Scale Without Limits",
+      "subtitle": "Automate outbound calls, qualify leads in real-time, deliver personalized product recommendations, and never miss a follow-up opportunity."
+    },
+    "capabilities": {
+      "title": "Sales Capabilities",
+      "subtitle": "Your AI sales team, always on",
+      "leadQualification": {
+        "title": "Lead Qualification",
+        "description": "AI agents call, engage, and score leads using BANT or custom frameworks. Only qualified prospects reach your sales team.",
+        "highlights": ["BANT scoring", "Custom qualification criteria", "Real-time lead scoring", "CRM auto-update"]
+      },
+      "productRecommendation": {
+        "title": "Product Recommendations",
+        "description": "Context-aware product suggestions based on prospect needs, industry, and conversation signals. Increase conversion with personalized pitches.",
+        "highlights": ["Need-based matching", "Cross-sell detection", "Dynamic pitch scripts", "Competitive positioning"]
+      },
+      "autoFollowUp": {
+        "title": "Automated Follow-Up",
+        "description": "Schedule and execute follow-up calls automatically. AI remembers previous conversations and picks up where it left off.",
+        "highlights": ["Auto-scheduled callbacks", "Conversation continuity", "Multi-touch sequences", "Optimal timing detection"]
+      },
+      "funnelAnalytics": {
+        "title": "Sales Funnel Analytics",
+        "description": "Real-time visibility into your AI sales pipeline. Track conversion rates, call outcomes, and revenue attribution at every stage.",
+        "highlights": ["Pipeline visualization", "Conversion tracking", "Revenue attribution", "A/B test results"]
+      },
+      "appointmentBooking": {
+        "title": "Appointment Booking",
+        "description": "AI agents check calendar availability and book meetings in real-time. Sync with Google Calendar, Outlook, and Calendly.",
+        "highlights": ["Real-time availability", "Calendar sync", "Time zone handling", "Confirmation & reminders"]
+      },
+      "crmIntegration": {
+        "title": "CRM Integration",
+        "description": "Bi-directional sync with Salesforce, HubSpot, and Pipedrive. Every call is logged with notes, outcomes, and next steps.",
+        "highlights": ["Salesforce integration", "HubSpot sync", "Auto call logging", "Deal stage updates"]
+      }
+    },
+    "metrics": {
+      "title": "Sales Impact",
+      "subtitle": "Results from AI-powered sales deployments",
+      "qualified": { "value": "3x", "label": "More Qualified Leads" },
+      "conversion": { "value": "+40%", "label": "Conversion Rate" },
+      "coverage": { "value": "10x", "label": "Outreach Coverage" },
+      "cost": { "value": "-70%", "label": "Cost Per Lead" }
+    },
+    "cta": {
+      "title": "Supercharge Your Sales Pipeline",
+      "subtitle": "Let AI handle prospecting so your team can focus on closing deals.",
+      "button": "Start Free Trial"
+    }
+  },
+  "collectionsPage": {
+    "seo": {
+      "title": "AI Collections Solution - VoiceAI",
+      "description": "Compliant and empathetic AI-powered collections. Automated reminders, tiered escalation, voice outreach, and payment plan negotiation."
+    },
+    "hero": {
+      "badge": "Collections",
+      "title": "Compliant, Empathetic Collections at Scale",
+      "subtitle": "AI voice agents handle payment reminders and collections with regulatory compliance, empathetic communication, and flexible payment plan negotiation."
+    },
+    "capabilities": {
+      "title": "Collections Capabilities",
+      "subtitle": "Recover more while respecting your customers",
+      "complianceReminders": {
+        "title": "Compliance-First Reminders",
+        "description": "Every call follows FDCPA, TCPA, and local regulations. Built-in compliance guardrails ensure your collections stay on the right side of the law.",
+        "highlights": ["FDCPA compliant", "TCPA adherence", "Call time restrictions", "Consent management"]
+      },
+      "tieredEscalation": {
+        "title": "Tiered Escalation Strategy",
+        "description": "Intelligent escalation from gentle reminders to formal notices based on account age, amount, and payment history.",
+        "highlights": ["Risk-based tiering", "Progressive messaging", "Custom escalation rules", "Human handoff triggers"]
+      },
+      "voiceOutreach": {
+        "title": "Voice Outbound Campaigns",
+        "description": "High-volume automated outbound calls with natural-sounding AI agents. Reach thousands of accounts daily with personalized messages.",
+        "highlights": ["High-volume dialing", "Personalized messages", "Voicemail detection", "Callback scheduling"]
+      },
+      "paymentNegotiation": {
+        "title": "Payment Plan Negotiation",
+        "description": "AI agents negotiate flexible payment plans within pre-approved parameters. Offer installments, deferrals, or settlements automatically.",
+        "highlights": ["Flexible installments", "Pre-approved parameters", "Settlement offers", "Plan confirmation"]
+      },
+      "accountIntelligence": {
+        "title": "Account Intelligence",
+        "description": "Enrich outreach with account data: payment history, risk scores, and previous interaction outcomes for smarter conversations.",
+        "highlights": ["Payment history analysis", "Risk score integration", "Previous interaction context", "Propensity to pay scoring"]
+      },
+      "reporting": {
+        "title": "Collections Reporting",
+        "description": "Track recovery rates, promise-to-pay conversion, and agent performance with real-time dashboards and exportable reports.",
+        "highlights": ["Recovery rate tracking", "Promise-to-pay metrics", "Agent performance", "Compliance audit trail"]
+      }
+    },
+    "metrics": {
+      "title": "Collections Performance",
+      "subtitle": "Results from AI-powered collections deployments",
+      "recovery": { "value": "+35%", "label": "Recovery Rate" },
+      "cost": { "value": "-55%", "label": "Collection Cost" },
+      "compliance": { "value": "100%", "label": "Compliance Rate" },
+      "contact": { "value": "3x", "label": "Contact Rate" }
+    },
+    "cta": {
+      "title": "Modernize Your Collections Process",
+      "subtitle": "Recover more revenue with compliant, empathetic AI voice agents.",
+      "button": "Schedule a Demo"
+    }
+  }
+}

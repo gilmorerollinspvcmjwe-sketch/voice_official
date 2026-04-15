@@ -1,0 +1,43 @@
+{
+  "seo": {
+    "title": "Customer Stories - VoiceAI",
+    "description": "See how leading companies use VoiceAI to transform their customer communications."
+  },
+  "hero": {
+    "title": "Trusted by Industry Leaders",
+    "subtitle": "See how companies transform their customer communications with VoiceAI."
+  },
+  "cases": {
+    "badge": "Case Studies",
+    "title": "Success Stories",
+    "subtitle": "Real results from real customers.",
+    "readMore": "Read full story"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Customers Say",
+    "quote1": "VoiceAI transformed our customer service. We reduced wait times by 80% and our customers love the natural conversations.",
+    "author1": "Sarah Chen",
+    "role1": "VP of Customer Service, TechCorp",
+    "quote2": "The ROI was immediate. We saw a 60% reduction in support costs within the first month.",
+    "author2": "Michael Roberts",
+    "role2": "CTO, FinanceHub",
+    "quote3": "Implementation was incredibly fast. We had our first AI agent running in under an hour.",
+    "author3": "Emily Watson",
+    "role3": "Head of Operations, RetailMax"
+  },
+  "cta": {
+    "title": "Ready to join them?",
+    "subtitle": "Start your free trial and see results in days, not months.",
+    "button": "Start Free Trial"
+  },
+  "notFound": "Case Study Not Found",
+  "notFoundDesc": "The case study you're looking for doesn't exist.",
+  "backToList": "Back to Case Studies",
+  "challenge": "The Challenge",
+  "solution": "The Solution",
+  "keyResults": "Key Results",
+  "gallery": "Gallery",
+  "relatedCases": "Related Case Studies",
+  "readMore": "Read Case Study"
+}

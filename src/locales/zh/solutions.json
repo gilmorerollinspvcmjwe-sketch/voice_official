@@ -1,0 +1,230 @@
+{
+  "seo": {
+    "title": "解决方案 - AI语音智能体应用场景",
+    "description": "了解AI语音智能体如何改变各行各业的客服、销售和运营。"
+  },
+  "hero": {
+    "badge": "解决方案",
+    "title": "适用于各种场景的AI语音智能体",
+    "subtitle": "从客服支持到销售外呼，我们的语音AI以自然对话处理一切。"
+  },
+  "solutions": {
+    "customerService": {
+      "title": "客户服务",
+      "description": "AI智能体全天候处理大量客户咨询，听起来就像真人。",
+      "feature1": "7x24小时服务",
+      "feature2": "多语言支持",
+      "feature3": "即时解决"
+    },
+    "sales": {
+      "title": "销售外呼",
+      "description": "用AI智能体扩展您的销售团队，筛选线索、预约演示。",
+      "feature1": "线索筛选",
+      "feature2": "预约设置",
+      "feature3": "CRM集成"
+    },
+    "collections": {
+      "title": "催收回款",
+      "description": "自动化付款提醒和催收电话，AI智能体富有同理心。",
+      "feature1": "账单提醒",
+      "feature2": "还款计划协商",
+      "feature3": "合规处理"
+    },
+    "appointment": {
+      "title": "预约提醒",
+      "description": "自动化预约提醒和确认，减少爽约率。",
+      "feature1": "自动提醒",
+      "feature2": "改约协助",
+      "feature3": "日历集成"
+    },
+    "survey": {
+      "title": "调研反馈",
+      "description": "通过自然语音对话进行调研和收集反馈。",
+      "feature1": "NPS调研",
+      "feature2": "客户满意度",
+      "feature3": "市场研究"
+    }
+  },
+  "common": {
+    "learnMore": "了解更多"
+  },
+  "cta": {
+    "title": "找到您的解决方案",
+    "subtitle": "与我们的团队讨论您的具体使用场景。",
+    "button": "联系销售"
+  },
+  "customerServicePage": {
+    "seo": {
+      "title": "AI智能客服方案 - VoiceAI",
+      "description": "7x24全天候智能客服。智能分流、知识库匹配、情感安抚、自动工单生成。"
+    },
+    "hero": {
+      "badge": "智能客服",
+      "title": "永不休息的智能客户服务",
+      "subtitle": "部署AI语音智能体，全天候处理客户咨询，具备类人同理心、即时知识检索和无缝升级到人工坐席的能力。"
+    },
+    "capabilities": {
+      "title": "核心能力",
+      "subtitle": "客服团队所需的一切，全部自动化",
+      "alwaysOn": {
+        "title": "7x24全天候服务",
+        "description": "AI智能体全天候接听电话，质量始终如一，消除等待时间和非工作时间空白。",
+        "highlights": ["零等待时间", "全天候一致质量", "节假日与周末覆盖", "溢出处理"]
+      },
+      "smartRouting": {
+        "title": "智能分流与分级",
+        "description": "按意图、紧急程度和客户等级自动分类和路由咨询。确保正确的问题到达正确的解决路径。",
+        "highlights": ["基于意图分类", "优先级评分", "VIP客户识别", "技能路由"]
+      },
+      "knowledgeMatch": {
+        "title": "知识库匹配",
+        "description": "RAG驱动的检索，从帮助中心、FAQ和内部文档获取答案。智能体始终掌握最新信息。",
+        "highlights": ["RAG驱动检索", "帮助中心自动同步", "多源聚合", "置信度评分"]
+      },
+      "emotionCare": {
+        "title": "情感感知回应",
+        "description": "实时情感检测调整语气和策略。对情绪激动的来电者提供同理心处理和主动升级。",
+        "highlights": ["实时情感检测", "自适应语气调整", "主动安抚降级", "同理心话术"]
+      },
+      "ticketGen": {
+        "title": "自动工单生成",
+        "description": "未解决的问题自动转化为结构化工单，附带完整对话上下文和建议分类。",
+        "highlights": ["自动创建工单", "附带对话上下文", "分类建议", "SLA分配"]
+      },
+      "liveHandoff": {
+        "title": "无缝人工接管",
+        "description": "需要升级时，AI附带完整上下文摘要转接通话，人工坐席无需客户重复描述问题。",
+        "highlights": ["上下文丰富转接", "无需重复描述", "温暖交接支持", "坐席耳语模式"]
+      }
+    },
+    "metrics": {
+      "title": "实证效果",
+      "subtitle": "来自生产环境客服部署的指标",
+      "resolution": { "value": "85%", "label": "首次通话解决率" },
+      "satisfaction": { "value": "4.7/5", "label": "客户满意度" },
+      "costReduction": { "value": "60%", "label": "成本降低" },
+      "handleTime": { "value": "-45%", "label": "平均处理时长" }
+    },
+    "cta": {
+      "title": "升级您的客户服务",
+      "subtitle": "了解AI智能体如何以更高的满意度处理您的客服量。",
+      "button": "预约演示"
+    }
+  },
+  "salesPage": {
+    "seo": {
+      "title": "AI智能销售方案 - VoiceAI",
+      "description": "AI驱动的智能销售。自动线索筛选、产品推荐、跟进安排、销售漏斗分析。"
+    },
+    "hero": {
+      "badge": "智能销售",
+      "title": "AI驱动的销售，无限扩展",
+      "subtitle": "自动化外呼、实时线索筛选、个性化产品推荐，永不错过任何跟进机会。"
+    },
+    "capabilities": {
+      "title": "销售能力",
+      "subtitle": "您的AI销售团队，永不下线",
+      "leadQualification": {
+        "title": "线索筛选",
+        "description": "AI智能体拨打电话、互动交流，使用BANT或自定义框架评分。只有合格的潜在客户才会到达您的销售团队。",
+        "highlights": ["BANT评分", "自定义筛选标准", "实时线索评分", "CRM自动更新"]
+      },
+      "productRecommendation": {
+        "title": "产品推荐",
+        "description": "基于客户需求、行业和对话信号的上下文感知产品建议。通过个性化推介提高转化率。",
+        "highlights": ["需求匹配", "交叉销售检测", "动态话术脚本", "竞争定位"]
+      },
+      "autoFollowUp": {
+        "title": "自动跟进",
+        "description": "自动安排和执行跟进电话。AI记住之前的对话，从上次中断的地方继续。",
+        "highlights": ["自动安排回拨", "对话连续性", "多触点序列", "最佳时机检测"]
+      },
+      "funnelAnalytics": {
+        "title": "销售漏斗分析",
+        "description": "实时查看AI销售管线。在每个阶段追踪转化率、通话结果和收入归因。",
+        "highlights": ["管线可视化", "转化追踪", "收入归因", "A/B测试结果"]
+      },
+      "appointmentBooking": {
+        "title": "预约安排",
+        "description": "AI智能体实时检查日历可用性并预约会议。同步Google日历、Outlook和Calendly。",
+        "highlights": ["实时可用性", "日历同步", "时区处理", "确认与提醒"]
+      },
+      "crmIntegration": {
+        "title": "CRM集成",
+        "description": "与Salesforce、HubSpot和Pipedrive双向同步。每次通话都记录备注、结果和后续步骤。",
+        "highlights": ["Salesforce集成", "HubSpot同步", "自动通话记录", "交易阶段更新"]
+      }
+    },
+    "metrics": {
+      "title": "销售成效",
+      "subtitle": "AI驱动销售部署的实际结果",
+      "qualified": { "value": "3x", "label": "更多合格线索" },
+      "conversion": { "value": "+40%", "label": "转化率提升" },
+      "coverage": { "value": "10x", "label": "外呼覆盖量" },
+      "cost": { "value": "-70%", "label": "单线索成本" }
+    },
+    "cta": {
+      "title": "加速您的销售管线",
+      "subtitle": "让AI处理前期开发，您的团队专注于成交。",
+      "button": "免费试用"
+    }
+  },
+  "collectionsPage": {
+    "seo": {
+      "title": "AI智能催收方案 - VoiceAI",
+      "description": "合规、有温度的AI催收。自动提醒、分级催收、语音外呼、还款计划协商。"
+    },
+    "hero": {
+      "badge": "智能催收",
+      "title": "合规、有温度的规模化催收",
+      "subtitle": "AI语音智能体以合规方式处理付款提醒和催收，具备同理心沟通和灵活的还款计划协商能力。"
+    },
+    "capabilities": {
+      "title": "催收能力",
+      "subtitle": "在尊重客户的同时回收更多",
+      "complianceReminders": {
+        "title": "合规优先提醒",
+        "description": "每次通话遵循相关法规。内置合规护栏确保催收始终合法合规。",
+        "highlights": ["法规合规", "通话时间限制", "频次控制", "同意管理"]
+      },
+      "tieredEscalation": {
+        "title": "分级催收策略",
+        "description": "根据账龄、金额和还款历史，从温和提醒到正式通知的智能升级。",
+        "highlights": ["风险分级", "渐进式消息", "自定义升级规则", "人工转接触发"]
+      },
+      "voiceOutreach": {
+        "title": "语音外呼活动",
+        "description": "大批量自动外呼，AI智能体发音自然。每天触达数千个账户，个性化消息。",
+        "highlights": ["大批量拨号", "个性化消息", "语音信箱检测", "回拨安排"]
+      },
+      "paymentNegotiation": {
+        "title": "还款计划协商",
+        "description": "AI智能体在预批准参数内协商灵活的还款计划。自动提供分期、延期或和解方案。",
+        "highlights": ["灵活分期", "预批准参数", "和解方案", "计划确认"]
+      },
+      "accountIntelligence": {
+        "title": "账户智能",
+        "description": "用账户数据丰富外呼：还款历史、风险评分和历史交互结果，让对话更智能。",
+        "highlights": ["还款历史分析", "风险评分集成", "历史交互上下文", "还款意愿评分"]
+      },
+      "reporting": {
+        "title": "催收报告",
+        "description": "通过实时仪表板和可导出报表追踪回收率、承诺还款转化率和坐席表现。",
+        "highlights": ["回收率追踪", "承诺还款指标", "坐席表现", "合规审计追踪"]
+      }
+    },
+    "metrics": {
+      "title": "催收成效",
+      "subtitle": "AI驱动催收部署的实际结果",
+      "recovery": { "value": "+35%", "label": "回收率提升" },
+      "cost": { "value": "-55%", "label": "催收成本" },
+      "compliance": { "value": "100%", "label": "合规率" },
+      "contact": { "value": "3x", "label": "触达率" }
+    },
+    "cta": {
+      "title": "升级您的催收流程",
+      "subtitle": "用合规、有温度的AI语音智能体回收更多收入。",
+      "button": "预约演示"
+    }
+  }
+}

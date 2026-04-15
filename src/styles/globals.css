@@ -1,0 +1,483 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   AI Voice Agent - Global Styles
+   深色主题 + 紫蓝渐变 + 金色CTA + 荧光绿数据强调
+   ============================================ */
+
+@layer base {
+  /* CSS 变量定义 */
+  :root {
+    /* 背景系统 */
+    --bg-primary: #0A0A0F;
+    --bg-secondary: #12121A;
+    --bg-card: #1A1A24;
+    --bg-elevated: #22222E;
+    --bg-hover: #2A2A36;
+    
+    /* 文字颜色 */
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0B0;
+    --text-muted: #6A6A7A;
+    
+    /* 紫蓝渐变 - 主色调 */
+    --accent-purple: #8B5CF6;
+    --accent-blue: #3B82F6;
+    --accent-cyan: #06B6D4;
+    
+    /* 金色系统 - CTA */
+    --gold-primary: #D4A574;
+    --gold-light: #E8C9A0;
+    --gold-dark: #B8935F;
+    
+    /* 荧光绿 - 数据强调 */
+    --lime-primary: #D4FF00;
+    --lime-light: #E0FF33;
+    --lime-dark: #B8E600;
+    
+    /* 渐变 */
+    --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #06B6D4 100%);
+    --gradient-gold: linear-gradient(135deg, #D4A574 0%, #E8C9A0 50%, #D4A574 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    --gradient-glow: radial-gradient(circle, rgba(212, 255, 0, 0.15) 0%, transparent 70%);
+    
+    /* 间距 */
+    --section-padding-y: 8rem;
+    --section-gap: 6rem;
+  }
+
+  /* HTML 基础样式 */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Body 基础样式 */
+  body {
+    @apply bg-background-primary text-foreground-primary min-h-screen;
+    font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+
+  /* Typography 基础 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight text-foreground-primary;
+  }
+
+  h1 { @apply text-hero; }
+  h2 { @apply text-h2; }
+  h3 { @apply text-h3; }
+  h4 { @apply text-h4; }
+
+  /* Focus 样式 */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-purple ring-offset-2 ring-offset-background-primary;
+  }
+
+  /* Selection 样式 */
+  ::selection {
+    @apply bg-primary-purple/30 text-foreground-primary;
+  }
+
+  /* Link 样式 */
+  a {
+    @apply text-foreground-secondary hover:text-foreground-primary transition-colors duration-200;
+  }
+
+  /* Button 重置 */
+  button {
+    @apply cursor-pointer focus:outline-none;
+  }
+}
+
+@layer components {
+  /* 容器 */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section 间距 */
+  .section-padding {
+    @apply py-section-sm md:py-section lg:py-32;
+  }
+
+  .section-padding-lg {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Section 标题 */
+  .section-header {
+    @apply text-center mb-12 md:mb-16;
+  }
+
+  .section-title {
+    @apply text-h2 font-semibold text-foreground-primary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-body-lg text-foreground-secondary max-w-2xl mx-auto;
+  }
+
+  /* 渐变背景 */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-mesh {
+    background: linear-gradient(135deg, #0A0A0F 0%, #12121A 50%, #0A0A0F 100%);
+  }
+
+  /* 渐变文字 */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .text-gradient-lime {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #D4FF00 0%, #00FF88 50%, #D4FF00 100%);
+  }
+
+  /* Card 样式 */
+  .card {
+    @apply bg-background-card rounded-2xl border border-border p-6;
+    @apply transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:bg-background-elevated hover:border-border-light;
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .card-glow {
+    @apply hover:shadow-glow hover:border-primary-purple/30;
+  }
+
+  .card-gold {
+    @apply border-l-4 border-gold bg-background-card/80;
+    @apply backdrop-blur-sm;
+  }
+
+  /* CTA 按钮 */
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-gold text-background-primary font-semibold rounded-xl;
+    @apply hover:shadow-gold-lg hover:-translate-y-0.5;
+    @apply transition-all duration-300;
+    @apply flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border border-border text-foreground-primary font-semibold rounded-xl;
+    @apply hover:border-gold hover:text-gold;
+    @apply transition-all duration-300;
+    @apply flex items-center justify-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 text-foreground-secondary font-medium;
+    @apply hover:text-foreground-primary hover:bg-background-hover;
+    @apply transition-all duration-200 rounded-lg;
+  }
+
+  /* Badge 样式 */
+  .badge {
+    @apply inline-flex items-center px-3 py-1.5 rounded-lg text-caption font-medium;
+  }
+
+  .badge-gold {
+    @apply bg-gold/10 text-gold border border-gold/20;
+  }
+
+  .badge-lime {
+    @apply bg-accent-lime/10 text-accent-lime border border-accent-lime/20;
+  }
+
+  .badge-purple {
+    @apply bg-primary-purple/10 text-primary-purple border border-primary-purple/20;
+  }
+
+  /* 数据卡片 */
+  .metric-card {
+    @apply text-center p-6 rounded-2xl bg-background-card border border-border;
+    @apply hover:border-accent-lime/50 hover:shadow-lime;
+    @apply transition-all duration-300;
+  }
+
+  .metric-value {
+    @apply text-metric font-bold text-accent-lime mb-2;
+  }
+
+  .metric-label {
+    @apply text-body-sm text-foreground-secondary;
+  }
+
+  /* 客户案例卡片 */
+  .testimonial-card {
+    @apply relative p-8 bg-background-card/80 backdrop-blur-sm;
+    @apply border-l-4 border-gold rounded-r-2xl;
+  }
+
+  .testimonial-quote {
+    @apply font-serif text-6xl text-gold/30 absolute -top-2 left-4;
+  }
+
+  /* Logo 墙 */
+  .logo-item {
+    @apply flex items-center justify-center px-8 py-4;
+    @apply grayscale opacity-60;
+    @apply hover:grayscale-0 hover:opacity-100;
+    @apply transition-all duration-300;
+  }
+
+  /* 产品展示 - 3D 透视 */
+  .product-showcase {
+    @apply relative transform perspective-1000;
+    transform-style: preserve-3d;
+  }
+
+  .product-showcase-3d {
+    @apply transition-transform duration-500;
+    transform: rotateY(-5deg);
+  }
+
+  .product-showcase-3d:hover {
+    transform: rotateY(0deg);
+  }
+
+  /* 进度指示器 */
+  .progress-bar {
+    @apply w-48 h-1 bg-foreground-muted/10 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-accent-lime rounded-full transition-all duration-300;
+  }
+
+  /* 导航点 */
+  .nav-dot {
+    @apply w-2 h-2 rounded-full bg-foreground-muted/30;
+    @apply hover:bg-foreground-muted/50 transition-all duration-200;
+  }
+
+  .nav-dot-active {
+    @apply bg-accent-lime w-6;
+  }
+
+  /* 安全区域 */
+  .safe-area-inset {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@layer utilities {
+  /* 隐藏滚动条 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 文字阴影 */
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(212, 165, 116, 0.5);
+  }
+
+  /* 背景模糊 */
+  .backdrop-blur-strong {
+    backdrop-filter: blur(20px);
+  }
+
+  /* 响应式隐藏 */
+  .hide-mobile {
+    @apply hidden md:block;
+  }
+
+  .hide-desktop {
+    @apply md:hidden;
+  }
+
+  /* 延迟动画 */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  /* 透视效果 */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+
+  /* GPU 加速 */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* ============================================
+   响应式断点辅助
+   ============================================ */
+
+@media (max-width: 640px) {
+  .section-padding { padding-top: 3rem; padding-bottom: 3rem; }
+  .section-padding-lg { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid { grid-template-columns: 45% 55%; }
+}
+
+/* ============================================
+   减弱动画偏好（无障碍）
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-float,
+  .animate-glow,
+  .animate-gradient-flow,
+  .animate-shimmer {
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   打印样式
+   ============================================ */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: #FFFFFF;
+    color: #000000;
+  }
+  
+  .bg-background-primary,
+  .bg-background-secondary,
+  .bg-background-card {
+    background: #FFFFFF;
+  }
+}
+
+/* ============================================
+   特效组件样式
+   ============================================ */
+
+/* 金属流动文字动画 */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text-animated {
+  background-size: 200% auto;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Shimmer 效果 */
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    #FFFFFF 0%,
+    #FFFFFF 40%,
+    #D4FF00 50%,
+    #FFFFFF 60%,
+    #FFFFFF 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* 光晕脉冲 */
+.glow-pulse {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* 背景光斑缓动脉冲 - 替代 Tailwind animate-pulse */
+@keyframes slowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.15; }
+}
+.animate-slow-pulse {
+  animation: slowPulse 4s ease-in-out infinite;
+}
+
+/* 波形动画 */
+.wave-animation {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+/* 无限轮播 */
+.infinite-scroll {
+  animation: scroll var(--scroll-duration, 20s) linear infinite;
+}
+
+.infinite-scroll-reverse {
+  animation-direction: reverse;
+}
+
+.infinite-scroll-paused {
+  animation-play-state: paused;
+}
+
+/* 波形条动画 - 轻量 CSS 替代 framer-motion */
+@keyframes waveBar {
+  0%, 100% { height: 8px; }
+  25% { height: 24px; }
+  50% { height: 16px; }
+  75% { height: 32px; }
+}
+.wave-bar-animate {
+  animation: waveBar 0.8s ease-in-out infinite;
+}

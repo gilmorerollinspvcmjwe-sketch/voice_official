@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "title": "Demo - Experience AI Voice Agents",
+    "description": "Listen to real AI voice conversations and try our interactive demo. See how natural our voice agents sound."
+  },
+  "hero": {
+    "title": "Experience AI Voice in Action",
+    "subtitle": "Listen to real conversations and see how our voice agents handle complex scenarios.",
+    "cta": "Try Live Demo"
+  },
+  "audio": {
+    "badge": "Audio Demos",
+    "title": "Listen to Sample Conversations",
+    "subtitle": "Hear how natural our AI voice agents sound in real scenarios.",
+    "demo1": {
+      "title": "Customer Service Call",
+      "scenario": "Support"
+    },
+    "demo2": {
+      "title": "Sales Qualification",
+      "scenario": "Sales"
+    },
+    "demo3": {
+      "title": "Payment Reminder",
+      "scenario": "Collections"
+    }
+  },
+  "video": {
+    "badge": "Video Tutorials",
+    "title": "Learn How It Works",
+    "subtitle": "Watch tutorials on building and deploying AI voice agents.",
+    "tutorial1": "Getting Started with VoiceAI",
+    "tutorial2": "Building Your First Agent"
+  },
+  "cta": {
+    "title": "Ready to try it yourself?",
+    "subtitle": "Experience a live conversation with our AI voice agent.",
+    "button": "Try Live Demo"
+  }
+}

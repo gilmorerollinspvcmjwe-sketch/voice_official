@@ -1,0 +1,268 @@
+{
+  "seo": {
+    "title": "Product Features - AI Voice Agent Platform",
+    "description": "Explore our enterprise-grade voice AI features including natural synthesis, intelligent understanding, and real-time analytics."
+  },
+  "hero": {
+    "badge": "Product",
+    "title": "Enterprise-Grade Voice AI Platform",
+    "subtitle": "Build, deploy, and scale AI voice agents that sound human and deliver exceptional customer experiences.",
+    "cta": "Start Free Trial",
+    "ctaSecondary": "Watch Demo"
+  },
+  "sections": {
+    "features": "Features",
+    "technology": "Technology",
+    "security": "Security",
+    "integrations": "Integrations"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to build voice AI applications",
+    "voiceSynthesis": {
+      "title": "Natural Voice Synthesis",
+      "description": "Industry-leading TTS technology with 99.5% human-likeness for natural conversations."
+    },
+    "conversationAI": {
+      "title": "Intelligent Conversation AI",
+      "description": "LLM-powered understanding with context memory for complex multi-turn dialogues."
+    },
+    "lowLatency": {
+      "title": "Ultra-Low Latency",
+      "description": "Sub-500ms response times for natural, real-time conversations."
+    },
+    "multilingual": {
+      "title": "Multi-language Support",
+      "description": "Support for 50+ languages with native accent and dialect handling."
+    },
+    "analytics": {
+      "title": "Real-time Analytics",
+      "description": "Comprehensive dashboards and insights to optimize your voice operations."
+    },
+    "security": {
+      "title": "Enterprise Security",
+      "description": "SOC2, GDPR, HIPAA compliant with end-to-end encryption."
+    }
+  },
+  "technology": {
+    "title": "Our Technology Stack",
+    "subtitle": "Built on cutting-edge AI and cloud infrastructure",
+    "asr": "Automatic Speech Recognition with industry-leading accuracy",
+    "llm": "Large Language Models for natural conversation understanding",
+    "tts": "Neural Text-to-Speech with human-like voice synthesis"
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "subtitle": "Start building your voice AI application today.",
+    "button": "Start Free Trial"
+  },
+  "featuresPage": {
+    "seo": {
+      "title": "Platform Features - VoiceAI",
+      "description": "Explore VoiceAI's core capabilities: intelligent speech recognition, natural language understanding, emotion detection, multilingual support, real-time analytics, and knowledge base integration."
+    },
+    "hero": {
+      "badge": "Core Features",
+      "title": "Everything You Need to Build Intelligent Voice Agents",
+      "subtitle": "Our comprehensive platform delivers six core capabilities that power natural, efficient, and intelligent voice interactions at enterprise scale."
+    },
+    "capabilities": {
+      "title": "Core Capabilities",
+      "subtitle": "Six pillars of our voice AI platform",
+      "speechRecognition": {
+        "title": "Intelligent Speech Recognition",
+        "description": "State-of-the-art ASR engine with 99.5% accuracy across diverse accents, dialects, and noisy environments. Supports real-time streaming and batch processing.",
+        "highlights": ["99.5% recognition accuracy", "Noise-resistant processing", "Real-time streaming ASR", "Custom vocabulary support"]
+      },
+      "nlu": {
+        "title": "Natural Language Understanding",
+        "description": "Deep semantic parsing powered by fine-tuned LLMs. Understands intent, entities, context, and nuance across multi-turn conversations.",
+        "highlights": ["Intent classification", "Entity extraction", "Context-aware dialogue", "Multi-turn memory"]
+      },
+      "emotionDetection": {
+        "title": "Emotion Recognition",
+        "description": "Real-time sentiment and emotion analysis from vocal tone, speech patterns, and linguistic cues. Adapt responses dynamically based on caller mood.",
+        "highlights": ["Vocal tone analysis", "Sentiment scoring", "Dynamic response adaptation", "Escalation triggers"]
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Native support for 50+ languages and regional dialects. Automatic language detection and seamless mid-conversation language switching.",
+        "highlights": ["50+ languages", "Dialect handling", "Auto language detection", "Mid-call switching"]
+      },
+      "analytics": {
+        "title": "Real-Time Analytics",
+        "description": "Live dashboards tracking call metrics, resolution rates, sentiment trends, and agent performance. Export reports and set custom alerts.",
+        "highlights": ["Live call monitoring", "Resolution rate tracking", "Sentiment trend analysis", "Custom alert rules"]
+      },
+      "knowledgeBase": {
+        "title": "Knowledge Base Integration",
+        "description": "Connect your internal knowledge bases, FAQs, and documentation. RAG-powered retrieval ensures accurate, up-to-date responses every time.",
+        "highlights": ["RAG-powered retrieval", "Auto-sync with docs", "Contextual answer generation", "Version-controlled content"]
+      }
+    },
+    "workflow": {
+      "title": "How It Works",
+      "subtitle": "From voice input to intelligent response in milliseconds",
+      "step1": {
+        "title": "Voice Capture",
+        "description": "High-fidelity audio capture with noise cancellation and echo suppression."
+      },
+      "step2": {
+        "title": "Speech-to-Text",
+        "description": "Real-time ASR converts speech to text with punctuation and speaker diarization."
+      },
+      "step3": {
+        "title": "Intent & Entity Extraction",
+        "description": "NLU engine parses meaning, identifies intent, and extracts key entities."
+      },
+      "step4": {
+        "title": "Intelligent Response",
+        "description": "LLM generates contextual responses, retrieves knowledge, and triggers actions."
+      }
+    },
+    "cta": {
+      "title": "Experience Every Feature First-Hand",
+      "subtitle": "Start your free trial and explore the full platform with no limitations.",
+      "button": "Start Free Trial"
+    }
+  },
+  "technologyPage": {
+    "seo": {
+      "title": "Technology Architecture - VoiceAI",
+      "description": "Discover VoiceAI's technology stack: foundation LLMs, streaming pipeline, neural TTS engine, ultra-low-latency architecture, and distributed deployment."
+    },
+    "hero": {
+      "badge": "Technology",
+      "title": "Built for Performance, Designed for Scale",
+      "subtitle": "Our technology stack combines cutting-edge AI models with a high-performance infrastructure engineered for enterprise-grade reliability and speed."
+    },
+    "stack": {
+      "title": "Technology Stack",
+      "subtitle": "Five layers powering every conversation",
+      "foundationModel": {
+        "title": "Foundation LLM Engine",
+        "description": "Fine-tuned large language models optimized for voice conversations. Supports GPT-4o, Claude, and custom models with voice-specific instruction tuning.",
+        "specs": ["Voice-optimized fine-tuning", "128K context window", "Multi-model routing", "Custom model hosting"]
+      },
+      "streaming": {
+        "title": "Streaming Pipeline",
+        "description": "End-to-end streaming architecture processes audio in real-time. Chunked processing with overlap ensures zero-gap conversation flow.",
+        "specs": ["Chunked audio processing", "Zero-gap streaming", "Bi-directional WebSocket", "Adaptive bitrate"]
+      },
+      "ttsEngine": {
+        "title": "Neural TTS Engine",
+        "description": "Next-generation text-to-speech with 100+ voices, 12 emotion presets, and HD 48kHz output. Clone custom voices with just 30 seconds of audio.",
+        "specs": ["100+ neural voices", "12 emotion presets", "48kHz HD audio", "30-second voice cloning"]
+      },
+      "lowLatency": {
+        "title": "Ultra-Low-Latency Architecture",
+        "description": "Edge computing nodes worldwide ensure sub-200ms end-to-end latency. Intelligent request routing minimizes round-trip times.",
+        "specs": ["<200ms end-to-end", "Global edge nodes", "Smart request routing", "Connection pooling"]
+      },
+      "distributed": {
+        "title": "Distributed Deployment",
+        "description": "Kubernetes-native microservices with auto-scaling. Multi-cloud support across AWS, GCP, and Azure with 99.99% uptime SLA.",
+        "specs": ["Kubernetes-native", "Auto-scaling", "Multi-cloud support", "99.99% uptime SLA"]
+      }
+    },
+    "architecture": {
+      "title": "System Architecture",
+      "subtitle": "A high-level view of our distributed voice AI pipeline",
+      "layers": {
+        "ingress": "Ingress Layer — Load balancing, TLS termination, rate limiting",
+        "processing": "Processing Layer — ASR, NLU, LLM orchestration, TTS",
+        "data": "Data Layer — Vector store, conversation memory, analytics",
+        "infra": "Infrastructure — K8s, observability, CI/CD, secrets management"
+      }
+    },
+    "benchmarks": {
+      "title": "Performance Benchmarks",
+      "subtitle": "Verified metrics from production workloads",
+      "latency": { "value": "<200ms", "label": "End-to-End Latency" },
+      "accuracy": { "value": "99.5%", "label": "ASR Accuracy" },
+      "uptime": { "value": "99.99%", "label": "Platform Uptime" },
+      "concurrent": { "value": "100K+", "label": "Concurrent Calls" }
+    },
+    "cta": {
+      "title": "See the Technology in Action",
+      "subtitle": "Schedule a technical deep-dive with our engineering team.",
+      "button": "Book a Demo"
+    }
+  },
+  "securityPage": {
+    "seo": {
+      "title": "Security & Compliance - VoiceAI",
+      "description": "VoiceAI's enterprise security: SOC 2 Type II, HIPAA, GDPR compliant. TLS 1.3, AES-256 encryption, RBAC, audit logging, and more."
+    },
+    "hero": {
+      "badge": "Security & Compliance",
+      "title": "Enterprise-Grade Security You Can Trust",
+      "subtitle": "We protect your data with industry-leading security practices, comprehensive compliance certifications, and transparent audit processes."
+    },
+    "certifications": {
+      "title": "Compliance Certifications",
+      "subtitle": "Independently audited and certified",
+      "soc2": {
+        "name": "SOC 2 Type II",
+        "description": "Annual third-party audit covering security, availability, processing integrity, confidentiality, and privacy controls."
+      },
+      "hipaa": {
+        "name": "HIPAA",
+        "description": "Full HIPAA compliance for handling protected health information in healthcare voice AI deployments."
+      },
+      "gdpr": {
+        "name": "GDPR",
+        "description": "Complete GDPR compliance including data subject rights, consent management, and cross-border transfer safeguards."
+      },
+      "iso27001": {
+        "name": "ISO 27001",
+        "description": "Certified information security management system covering all aspects of our platform operations."
+      }
+    },
+    "encryption": {
+      "title": "Data Encryption",
+      "subtitle": "End-to-end protection at every layer",
+      "items": [
+        "TLS 1.3 for all data in transit",
+        "AES-256 encryption for data at rest",
+        "Hardware Security Modules (HSM) for key management",
+        "Automatic key rotation on 90-day cycles",
+        "Zero-knowledge architecture for voice recordings",
+        "Encrypted backups with geo-redundancy"
+      ]
+    },
+    "accessControl": {
+      "title": "Access Control",
+      "subtitle": "Granular permissions and identity management",
+      "items": [
+        "Multi-factor authentication (MFA) enforced",
+        "Role-based access control (RBAC) with custom roles",
+        "SSO integration via SAML 2.0 and OpenID Connect",
+        "IP allowlisting and geo-restriction",
+        "Session management with configurable timeouts",
+        "Privileged access management (PAM)"
+      ]
+    },
+    "auditLog": {
+      "title": "Audit & Monitoring",
+      "subtitle": "Complete visibility into every action",
+      "items": [
+        "Immutable audit logs for all platform actions",
+        "Real-time security event monitoring (SIEM integration)",
+        "Automated anomaly detection and alerting",
+        "Quarterly penetration testing by third parties",
+        "Vulnerability disclosure program",
+        "Incident response SLA: 15-minute acknowledgment"
+      ]
+    },
+    "documents": {
+      "title": "Compliance Documentation",
+      "items": ["Security Whitepaper", "Privacy Policy", "Data Processing Agreement", "Penetration Test Summary"]
+    },
+    "cta": {
+      "title": "Need a Security Review?",
+      "subtitle": "Our security team is ready to walk you through our practices and certifications.",
+      "button": "Contact Security Team"
+    }
+  }
+}

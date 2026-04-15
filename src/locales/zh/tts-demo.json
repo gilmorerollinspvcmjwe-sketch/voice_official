@@ -1,0 +1,206 @@
+{
+  "title": "50+ 超逼真 AI 音色试听",
+  "subtitle": "体验像真人一样的 AI 语音合成效果",
+  "hero": {
+    "badge": "业界领先 TTS 技术",
+    "title": "50+ 超逼真 AI 音色",
+    "titleHighlight": "像真人一样自然",
+    "description": "支持多语言、多情感、多风格，为客服/销售/播客/有声书等场景打造完美声音。",
+    "cta": {
+      "primary": "立即试听",
+      "secondary": "了解更多"
+    },
+    "stats": {
+      "voices": {
+        "value": "50+",
+        "label": "音色"
+      },
+      "languages": {
+        "value": "50+",
+        "label": "语言"
+      },
+      "mos": {
+        "value": "4.8",
+        "label": "MOS评分"
+      }
+    }
+  },
+  "gallery": {
+    "title": "AI 真人形象展示",
+    "subtitle": "点击头像试听对应音色，体验超逼真 AI 语音合成效果",
+    "popular": "热门"
+  },
+  "filter": {
+    "gender": {
+      "label": "性别",
+      "all": "全部",
+      "female": "女声",
+      "male": "男声"
+    },
+    "ageRange": {
+      "label": "年龄段",
+      "all": "全部年龄段"
+    },
+    "language": {
+      "label": "语言",
+      "all": "全部语言"
+    },
+    "style": {
+      "label": "风格",
+      "all": "全部风格"
+    },
+    "scenario": {
+      "label": "适用场景",
+      "all": "全部场景"
+    },
+    "reset": "重置筛选",
+    "results": "{{count}} 个音色符合条件"
+  },
+  "customDemo": {
+    "title": "自定义试听",
+    "subtitle": "输入您想听到的内容，选择喜欢的音色，即刻生成个性化语音试听",
+    "textInput": {
+      "label": "输入试听文案",
+      "placeholder": "请输入您想听到的内容...",
+      "charLimit": "{{count}} / {{max}} 字"
+    },
+    "voiceSelect": {
+      "label": "选择音色"
+    },
+    "params": {
+      "language": "语言",
+      "emotion": "情感",
+      "speed": "语速: {{value}}x",
+      "pitch": "音调: {{value}}x"
+    },
+    "generate": {
+      "button": "生成试听",
+      "loading": "正在生成...",
+      "success": "生成成功！",
+      "error": "生成失败，请稍后重试"
+    },
+    "player": {
+      "play": "播放",
+      "pause": "暂停",
+      "download": "下载"
+    },
+    "reset": "重置"
+  },
+  "specs": {
+    "title": "技术规格",
+    "subtitle": "业界领先的 TTS 技术参数，确保语音合成质量达到最高标准",
+    "items": {
+      "mos": {
+        "label": "自然度 (MOS)",
+        "value": "4.8/5.0",
+        "description": "接近真人水平，听不出是 AI"
+      },
+      "languages": {
+        "label": "支持语言",
+        "value": "50+",
+        "description": "中/英/日/韩/法/德等 50+ 语言"
+      },
+      "voices": {
+        "label": "音色数量",
+        "value": "100+",
+        "description": "男女/年龄段/风格全覆盖"
+      },
+      "emotion": {
+        "label": "情感支持",
+        "value": "8 种",
+        "description": "平静/开心/悲伤/愤怒/惊讶/害怕/厌恶/期待"
+      },
+      "latency": {
+        "label": "响应延迟",
+        "value": "<500ms",
+        "description": "实时生成，毫秒级响应"
+      },
+      "concurrent": {
+        "label": "并发支持",
+        "value": "1000+",
+        "description": "同时合成，无需排队"
+      }
+    },
+    "waveform": {
+      "title": "AI vs 真人波形对比",
+      "ai": "AI 语音合成",
+      "human": "真人录音",
+      "note": "AI 语音波形与真人高度相似，自然度 MOS 评分接近满分"
+    },
+    "emotionRadar": {
+      "title": "情感表达能力覆盖"
+    }
+  },
+  "scenarios": {
+    "title": "应用场景",
+    "subtitle": "覆盖客服、销售、播客、有声书、教育、游戏等多行业场景，为每个场景提供最佳音色推荐",
+    "viewDetails": "查看场景详情",
+    "recommended": "推荐音色",
+    "comparisonTitle": "各场景音色推荐对比",
+    "items": {
+      "customerService": {
+        "title": "客服咨询",
+        "description": "温柔亲切的声音，提升客户体验"
+      },
+      "sales": {
+        "title": "销售外呼",
+        "description": "专业自信的声音，增强信任感"
+      },
+      "podcast": {
+        "title": "播客播报",
+        "description": "知性优雅的声音，吸引听众"
+      },
+      "audiobook": {
+        "title": "有声书",
+        "description": "富有表现力的声音，情感丰富"
+      },
+      "education": {
+        "title": "教育课件",
+        "description": "清晰标准的声音，易于理解"
+      },
+      "gameNpc": {
+        "title": "游戏 NPC",
+        "description": "多样化声音，符合角色设定"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "客户案例",
+    "subtitle": "来自电商、金融、教育、游戏等行业的真实使用案例",
+    "industryDistribution": "行业客户分布",
+    "summary": {
+      "customers": {
+        "value": "500+",
+        "label": "企业客户"
+      },
+      "calls": {
+        "value": "1000万+",
+        "label": "月通话量"
+      },
+      "satisfaction": {
+        "value": "95%",
+        "label": "平均满意度"
+      },
+      "costReduction": {
+        "value": "60%",
+        "label": "成本降低"
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好为您的产品打造完美声音了吗？",
+    "subtitle": "免费试用，无需信用卡，5 分钟快速上手",
+    "primary": "免费试用",
+    "secondary": "联系销售"
+  },
+  "emotions": {
+    "calm": "平静",
+    "happy": "开心",
+    "sad": "悲伤",
+    "angry": "愤怒",
+    "surprised": "惊讶",
+    "afraid": "害怕",
+    "disgusted": "厌恶",
+    "expecting": "期待"
+  }
+}

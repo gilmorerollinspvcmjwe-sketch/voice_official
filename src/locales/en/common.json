@@ -1,0 +1,127 @@
+{
+  "brand": {
+    "name": "VoiceAI",
+    "tagline": "Enterprise Voice AI Platform"
+  },
+  "nav": {
+    "product": "Product",
+    "productOverview": "Overview",
+    "features": "Features",
+    "technology": "Technology",
+    "security": "Security",
+    "integrations": "Integrations",
+    "solutions": "Solutions",
+    "customerService": "Customer Service",
+    "sales": "Sales",
+    "collections": "Collections",
+    "survey": "Survey & Feedback",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "ttsDemo": "TTS Demo",
+    "voiceDemo": "Voice Demo",
+    "effects": "Effects",
+    "docs": "Docs",
+    "company": "Company",
+    "about": "About Us",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "customers": "Customers",
+    "login": "Log In",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "product": {
+      "title": "Product",
+      "overview": "Overview",
+      "features": "Features",
+      "technology": "Technology",
+      "security": "Security"
+    },
+    "solutions": {
+      "title": "Solutions",
+      "customerService": "Customer Service",
+      "sales": "Sales",
+      "collections": "Collections"
+    },
+    "resources": {
+      "title": "Resources",
+      "docs": "Documentation",
+      "api": "API Reference",
+      "blog": "Blog"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "gdpr": "GDPR Compliance"
+    },
+    "copyright": "All rights reserved.",
+    "cta": "Start Free Trial"
+  },
+  "auth": {
+    "login": {
+      "seoTitle": "Log In - VoiceAI",
+      "seoDescription": "Log in to your VoiceAI account to manage your voice agents, view analytics, and more.",
+      "title": "Welcome Back",
+      "subtitle": "Sign in to continue to your dashboard",
+      "google": "Continue with Google",
+      "github": "Continue with GitHub",
+      "or": "or",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgot": "Forgot password?",
+      "remember": "Remember me for 30 days",
+      "loading": "Signing in...",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "termsAgree": "By signing in, you agree to our",
+      "and": "and",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "signup": {
+      "seoTitle": "Sign Up - VoiceAI",
+      "seoDescription": "Create your VoiceAI account and start building AI voice agents today. Free trial available.",
+      "title": "Create Your Account",
+      "subtitle": "Start your 14-day free trial. No credit card required.",
+      "google": "Sign up with Google",
+      "github": "Sign up with GitHub",
+      "or": "or",
+      "name": "Full Name",
+      "namePlaceholder": "John Smith",
+      "email": "Work Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company Name",
+      "companyPlaceholder": "Your Company",
+      "password": "Password",
+      "passwordPlaceholder": "Create a strong password",
+      "reqLength": "At least 8 characters",
+      "reqUpper": "One uppercase letter",
+      "reqLower": "One lowercase letter",
+      "reqNumber": "One number",
+      "termsAgree": "I agree to the",
+      "and": "and",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "termsRequired": "Please accept the Terms of Service",
+      "marketingAgree": "Send me product updates and tips (optional)",
+      "loading": "Creating account...",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Log in",
+      "trialNote": "14-day free trial includes full access to all Pro features. No credit card required."
+    },
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "Company - About VoiceAI",
+    "description": "Learn about our mission to transform customer conversations with AI voice technology."
+  },
+  "hero": {
+    "title": "Transforming Customer Conversations",
+    "subtitle": "We're on a mission to make every customer interaction natural, efficient, and delightful."
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Our Story",
+    "description1": "Founded in 2024, VoiceAI is building the future of customer communication. We believe that every customer deserves a helpful, natural conversation - whether they're talking to a human or an AI.",
+    "description2": "Our team of AI researchers, engineers, and customer experience experts are passionate about creating technology that genuinely helps businesses and their customers.",
+    "stat1": "Enterprise Customers",
+    "stat2": "Monthly Calls",
+    "stat3": "Languages Supported",
+    "stat4": "Uptime SLA"
+  },
+  "team": {
+    "badge": "Team",
+    "title": "Meet Our Team",
+    "subtitle": "The people behind the technology.",
+    "ceo": "CEO & Co-founder",
+    "ceoBio": "Former VP at major tech company with 15+ years in AI.",
+    "cto": "CTO & Co-founder",
+    "ctoBio": "PhD in Machine Learning, ex-Google AI researcher.",
+    "coo": "COO",
+    "cooBio": "Operations leader with background in scaling startups.",
+    "vp": "VP of Product",
+    "vpBio": "Product veteran from leading SaaS companies."
+  },
+  "careers": {
+    "badge": "Careers",
+    "title": "Join Our Team",
+    "subtitle": "We're looking for talented people to help us build the future.",
+    "job1": {
+      "title": "Senior ML Engineer"
+    },
+    "job2": {
+      "title": "Full Stack Developer"
+    },
+    "job3": {
+      "title": "Product Manager"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact Us - VoiceAI",
+      "description": "Get in touch with VoiceAI. Contact our sales team, customer support, or visit our office."
+    },
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "cta": "Contact Us",
+    "form": {
+      "title": "Send us a message",
+      "name": "Your Name",
+      "namePlaceholder": "John Smith",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your Company Name",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message Sent!",
+      "successMessage": "We'll get back to you within 24 hours."
+    },
+    "info": {
+      "email": "Email",
+      "emailSupport": "Support: support@voiceai.com",
+      "phone": "Phone",
+      "phoneHours": "Mon-Fri, 9am-6pm PST",
+      "address": "Office",
+      "hours": "Business Hours",
+      "weekdays": "Monday - Friday",
+      "weekend": "Saturday - Sunday",
+      "closed": "Closed"
+    }
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog - VoiceAI",
+      "description": "Insights, tutorials, and best practices for AI voice agents in customer service and sales."
+    },
+    "badge": "Blog",
+    "title": "VoiceAI Insights",
+    "subtitle": "Expert insights, tutorials, and best practices for building effective AI voice agents.",
+    "featured": "Featured",
+    "allPosts": "All Articles",
+    "readMore": "Read Article",
+    "backToList": "Back to Blog",
+    "notFound": "Article Not Found",
+    "notFoundDesc": "The article you're looking for doesn't exist.",
+    "share": "Share:",
+    "related": "Related Articles",
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Get the latest insights and tutorials delivered to your inbox every week.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  }
+}

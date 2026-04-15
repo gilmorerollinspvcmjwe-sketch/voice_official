@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "Documentation - VoiceAI Developer Hub",
+    "description": "Get started with VoiceAI. Comprehensive documentation, API reference, SDKs, and tutorials."
+  },
+  "hero": {
+    "badge": "Documentation",
+    "title": "Developer Documentation",
+    "subtitle": "Everything you need to integrate AI voice into your applications.",
+    "cta": "Quick Start Guide"
+  },
+  "sections": {
+    "quickstart": {
+      "title": "Quick Start",
+      "description": "Get up and running in 5 minutes."
+    },
+    "api": {
+      "title": "API Reference",
+      "description": "Complete API documentation and examples."
+    },
+    "sdks": {
+      "title": "SDKs",
+      "description": "Official SDKs for popular languages."
+    },
+    "guides": {
+      "title": "Guides",
+      "description": "In-depth tutorials and best practices."
+    }
+  },
+  "quickstart": {
+    "title": "Quick Start Guide",
+    "step1": {
+      "title": "Create an Account",
+      "description": "Sign up for a free VoiceAI account and get your API key from the dashboard."
+    },
+    "step2": {
+      "title": "Install the SDK",
+      "description": "Install our SDK using npm, pip, or your preferred package manager."
+    },
+    "step3": {
+      "title": "Configure Your Agent",
+      "description": "Define your agent's personality, voice, and conversation flow."
+    },
+    "step4": {
+      "title": "Make Your First Call",
+      "description": "Start a test conversation and hear your AI agent in action."
+    }
+  }
+}

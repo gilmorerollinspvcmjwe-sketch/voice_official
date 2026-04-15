@@ -1,0 +1,206 @@
+{
+  "title": "50+ Hyper-Realistic AI Voices Demo",
+  "subtitle": "Experience AI voices indistinguishable from humans",
+  "hero": {
+    "badge": "Industry-leading TTS Technology",
+    "title": "50+ Hyper-Realistic AI Voices",
+    "titleHighlight": "Indistinguishable from Humans",
+    "description": "Multi-language, multi-emotion, multi-style voices for customer service, sales, podcasts, audiobooks, and more.",
+    "cta": {
+      "primary": "Try Now",
+      "secondary": "Learn More"
+    },
+    "stats": {
+      "voices": {
+        "value": "50+",
+        "label": "Voices"
+      },
+      "languages": {
+        "value": "50+",
+        "label": "Languages"
+      },
+      "mos": {
+        "value": "4.8",
+        "label": "MOS Score"
+      }
+    }
+  },
+  "gallery": {
+    "title": "AI Avatar Gallery",
+    "subtitle": "Click on an avatar to hear the corresponding voice and experience hyper-realistic AI speech synthesis",
+    "popular": "Popular"
+  },
+  "filter": {
+    "gender": {
+      "label": "Gender",
+      "all": "All",
+      "female": "Female",
+      "male": "Male"
+    },
+    "ageRange": {
+      "label": "Age Range",
+      "all": "All Ages"
+    },
+    "language": {
+      "label": "Language",
+      "all": "All Languages"
+    },
+    "style": {
+      "label": "Style",
+      "all": "All Styles"
+    },
+    "scenario": {
+      "label": "Scenario",
+      "all": "All Scenarios"
+    },
+    "reset": "Reset Filters",
+    "results": "{{count}} voices found"
+  },
+  "customDemo": {
+    "title": "Custom Demo",
+    "subtitle": "Enter your desired content, choose your favorite voice, and instantly generate a personalized audio demo",
+    "textInput": {
+      "label": "Enter Text",
+      "placeholder": "Enter the content you want to hear...",
+      "charLimit": "{{count}} / {{max}} characters"
+    },
+    "voiceSelect": {
+      "label": "Select Voice"
+    },
+    "params": {
+      "language": "Language",
+      "emotion": "Emotion",
+      "speed": "Speed: {{value}}x",
+      "pitch": "Pitch: {{value}}x"
+    },
+    "generate": {
+      "button": "Generate Demo",
+      "loading": "Generating...",
+      "success": "Generated Successfully!",
+      "error": "Generation failed, please try again"
+    },
+    "player": {
+      "play": "Play",
+      "pause": "Pause",
+      "download": "Download"
+    },
+    "reset": "Reset"
+  },
+  "specs": {
+    "title": "Technical Specifications",
+    "subtitle": "Industry-leading TTS parameters ensuring the highest quality speech synthesis",
+    "items": {
+      "mos": {
+        "label": "Naturalness (MOS)",
+        "value": "4.8/5.0",
+        "description": "Close to human level, indistinguishable from real voice"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "50+",
+        "description": "Chinese, English, Japanese, Korean, French, German, etc."
+      },
+      "voices": {
+        "label": "Voice Profiles",
+        "value": "100+",
+        "description": "Male/Female, various age ranges and styles"
+      },
+      "emotion": {
+        "label": "Emotion Support",
+        "value": "8 types",
+        "description": "Calm, Happy, Sad, Angry, Surprised, Afraid, Disgusted, Expecting"
+      },
+      "latency": {
+        "label": "Response Latency",
+        "value": "<500ms",
+        "description": "Real-time generation, instant response"
+      },
+      "concurrent": {
+        "label": "Concurrent Calls",
+        "value": "1000+",
+        "description": "Simultaneous synthesis without queueing"
+      }
+    },
+    "waveform": {
+      "title": "AI vs Human Waveform Comparison",
+      "ai": "AI Voice Synthesis",
+      "human": "Human Recording",
+      "note": "AI voice waveform highly similar to human, MOS score close to perfect"
+    },
+    "emotionRadar": {
+      "title": "Emotion Expression Coverage"
+    }
+  },
+  "scenarios": {
+    "title": "Application Scenarios",
+    "subtitle": "Covering customer service, sales, podcasts, audiobooks, education, gaming and more industries with best voice recommendations",
+    "viewDetails": "View Scenario Details",
+    "recommended": "Recommended Voices",
+    "comparisonTitle": "Scenario Voice Recommendation Comparison",
+    "items": {
+      "customerService": {
+        "title": "Customer Service",
+        "description": "Warm and friendly voice to enhance customer experience"
+      },
+      "sales": {
+        "title": "Sales Outbound",
+        "description": "Professional and confident voice to build trust"
+      },
+      "podcast": {
+        "title": "Podcast Broadcasting",
+        "description": "Intellectual and elegant voice to attract listeners"
+      },
+      "audiobook": {
+        "title": "Audiobook Narration",
+        "description": "Expressive and emotional voice for rich storytelling"
+      },
+      "education": {
+        "title": "Educational Content",
+        "description": "Clear and standard voice for easy understanding"
+      },
+      "gameNpc": {
+        "title": "Game NPCs",
+        "description": "Diverse voices matching character settings"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Customer Stories",
+    "subtitle": "Real use cases from e-commerce, finance, education, gaming and other industries",
+    "industryDistribution": "Industry Customer Distribution",
+    "summary": {
+      "customers": {
+        "value": "500+",
+        "label": "Enterprise Customers"
+      },
+      "calls": {
+        "value": "10M+",
+        "label": "Monthly Calls"
+      },
+      "satisfaction": {
+        "value": "95%",
+        "label": "Average Satisfaction"
+      },
+      "costReduction": {
+        "value": "60%",
+        "label": "Cost Reduction"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Create the Perfect Voice for Your Product?",
+    "subtitle": "Start free trial, no credit card required, setup in 5 minutes",
+    "primary": "Start Free Trial",
+    "secondary": "Contact Sales"
+  },
+  "emotions": {
+    "calm": "Calm",
+    "happy": "Happy",
+    "sad": "Sad",
+    "angry": "Angry",
+    "surprised": "Surprised",
+    "afraid": "Afraid",
+    "disgusted": "Disgusted",
+    "expecting": "Expecting"
+  }
+}

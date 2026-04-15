@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "公司 - 关于VoiceAI",
+    "description": "了解我们用AI语音技术变革客户对话的使命。"
+  },
+  "hero": {
+    "title": "变革客户对话体验",
+    "subtitle": "我们的使命是让每一次客户互动都自然、高效、愉悦。"
+  },
+  "about": {
+    "badge": "关于我们",
+    "title": "我们的故事",
+    "description1": "VoiceAI成立于2024年，正在构建客户沟通的未来。我们相信每一位客户都值得获得有帮助的、自然的对话体验——无论他们是在与人类还是AI对话。",
+    "description2": "我们的AI研究员、工程师和客户体验专家团队热衷于创造真正帮助企业和客户的技术。",
+    "stat1": "企业客户",
+    "stat2": "月通话量",
+    "stat3": "支持语言",
+    "stat4": "可用性SLA"
+  },
+  "team": {
+    "badge": "团队",
+    "title": "认识我们的团队",
+    "subtitle": "技术背后的人。",
+    "ceo": "CEO & 联合创始人",
+    "ceoBio": "前大型科技公司VP，15年AI经验",
+    "cto": "CTO & 联合创始人",
+    "ctoBio": "机器学习博士，前Google AI研究员",
+    "coo": "COO",
+    "cooBio": "运营领导者，初创公司扩展专家",
+    "vp": "产品副总裁",
+    "vpBio": "知名SaaS公司产品专家"
+  },
+  "careers": {
+    "badge": "招聘",
+    "title": "加入我们的团队",
+    "subtitle": "我们正在寻找有才华的人一起构建未来。",
+    "job1": {
+      "title": "高级ML工程师"
+    },
+    "job2": {
+      "title": "全栈开发工程师"
+    },
+    "job3": {
+      "title": "产品经理"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "联系我们 - VoiceAI",
+      "description": "联系VoiceAI。联系我们的销售团队、客户支持或访问我们的办公室。"
+    },
+    "title": "联系我们",
+    "subtitle": "有问题？我们很乐意听取您的意见。发送消息，我们会尽快回复。",
+    "cta": "联系我们",
+    "form": {
+      "title": "发送消息",
+      "name": "您的姓名",
+      "namePlaceholder": "张三",
+      "email": "电子邮箱",
+      "emailPlaceholder": "zhangsan@company.com",
+      "company": "公司名称",
+      "companyPlaceholder": "您的公司名称",
+      "message": "留言内容",
+      "messagePlaceholder": "我们能为您做什么？",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "success": "消息已发送！",
+      "successMessage": "我们将在24小时内回复您。"
+    },
+    "info": {
+      "email": "电子邮件",
+      "emailSupport": "技术支持：support@voiceai.com",
+      "phone": "电话",
+      "phoneHours": "周一至周五，9:00-18:00 PST",
+      "address": "办公室",
+      "hours": "营业时间",
+      "weekdays": "周一至周五",
+      "weekend": "周六至周日",
+      "closed": "休息"
+    }
+  },
+  "blog": {
+    "seo": {
+      "title": "博客 - VoiceAI",
+      "description": "AI语音智能体在客服和销售领域的洞察、教程和最佳实践。"
+    },
+    "badge": "博客",
+    "title": "VoiceAI 洞察",
+    "subtitle": "构建高效AI语音智能体的专家洞察、教程和最佳实践。",
+    "featured": "精选",
+    "allPosts": "全部文章",
+    "readMore": "阅读全文",
+    "backToList": "返回列表",
+    "notFound": "文章未找到",
+    "notFoundDesc": "您查找的文章不存在。",
+    "share": "分享：",
+    "related": "相关文章",
+    "newsletter": {
+      "title": "订阅我们的通讯",
+      "subtitle": "每周获取最新洞察和教程，直接发送到您的邮箱。",
+      "placeholder": "输入您的邮箱",
+      "subscribe": "订阅"
+    }
+  }
+}

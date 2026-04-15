@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "title": "Transform Your Customer Conversations with AI Voice",
+    "subtitle": "Deploy intelligent voice agents that sound human, understand context, and drive results.",
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "Watch Demo"
+    },
+    "trustLabel": "No credit card required • Setup in 5 minutes"
+  },
+  "socialProof": {
+    "title": "Trusted by {{count}}+ companies worldwide",
+    "subtitle": "Covering finance, healthcare, retail and more industries"
+  },
+  "metrics": {
+    "calls": {
+      "label": "Calls Monthly",
+      "description": "Voice calls processed every month"
+    },
+    "accuracy": {
+      "label": "Accuracy",
+      "description": "Speech recognition accuracy rate"
+    },
+    "costReduction": {
+      "label": "Cost Reduction",
+      "description": "Savings compared to traditional support"
+    },
+    "uptime": {
+      "label": "Uptime",
+      "description": "Platform stability guarantee"
+    },
+    "languages": {
+      "label": "Languages",
+      "description": "Global language coverage"
+    },
+    "customers": {
+      "label": "Customers",
+      "description": "Enterprise customers worldwide"
+    }
+  },
+  "problem": {
+    "title": "The Challenges You Face",
+    "subtitle": "Are you struggling with these pain points?",
+    "items": [
+      {
+        "icon": "phone",
+        "title": "High Labor Costs",
+        "description": "$40,000+ per agent annually, costs keep rising"
+      },
+      {
+        "icon": "clock",
+        "title": "24/7 Coverage Difficult",
+        "description": "Can't handle night and weekend inquiries, long wait times"
+      },
+      {
+        "icon": "users",
+        "title": "High Turnover Rate",
+        "description": "Average tenure only 6-12 months, high training costs"
+      },
+      {
+        "icon": "chart",
+        "title": "Inconsistent Quality",
+        "description": "Service quality varies by agent, inconsistent experience"
+      },
+      {
+        "icon": "globe",
+        "title": "Limited Multi-language",
+        "description": "Hard to serve international customers, language barriers"
+      }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "subtitle": "AI Voice Agents solve all your pain points",
+    "items": [
+      {
+        "icon": "robot",
+        "title": "AI Agent Replacement",
+        "description": "Replace 80% repetitive work, cut costs by 60%+"
+      },
+      {
+        "icon": "zap",
+        "title": "24/7 Availability",
+        "description": "Round-the-clock service, always ready for customers"
+      },
+      {
+        "icon": "target",
+        "title": "Zero Training Cost",
+        "description": "Deploy in minutes, start working immediately"
+      },
+      {
+        "icon": "star",
+        "title": "100% Consistency",
+        "description": "Every call executed perfectly, stable service quality"
+      },
+      {
+        "icon": "globe",
+        "title": "50+ Languages",
+        "description": "Reach global customers without barriers"
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Our Platform",
+    "subtitle": "Industry-leading voice AI technology stack",
+    "items": [
+      {
+        "id": "voice",
+        "icon": "mic",
+        "title": "Natural Voice Synthesis",
+        "description": "Industry-leading TTS with 99.5% human-likeness",
+        "highlight": "Popular"
+      },
+      {
+        "id": "intelligence",
+        "icon": "brain",
+        "title": "Intelligent Understanding",
+        "description": "LLM-powered deep understanding with context memory"
+      },
+      {
+        "id": "deployment",
+        "icon": "zap",
+        "title": "Rapid Deployment",
+        "description": "Deploy in 5 minutes, start serving immediately"
+      },
+      {
+        "id": "conversation",
+        "icon": "refresh",
+        "title": "Multi-turn Conversations",
+        "description": "Handle complex business scenarios seamlessly"
+      },
+      {
+        "id": "language",
+        "icon": "globe",
+        "title": "Multi-language Support",
+        "description": "Support 50+ languages for global business"
+      },
+      {
+        "id": "analytics",
+        "icon": "chart",
+        "title": "Real-time Analytics",
+        "description": "Call data visualization in real-time"
+      },
+      {
+        "id": "api",
+        "icon": "link",
+        "title": "Open API Integration",
+        "description": "Flexible integration with existing systems"
+      },
+      {
+        "id": "security",
+        "icon": "shield",
+        "title": "Security & Compliance",
+        "description": "SOC2/GDPR/HIPAA certified, enterprise-grade security"
+      }
+    ],
+    "cta": {
+      "text": "Explore All Features",
+      "link": "/product/features"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works in 4 Steps",
+    "subtitle": "From zero to deployment in minutes",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Define Your Agent",
+        "description": "Set agent name, role, and task objectives"
+      },
+      {
+        "number": "02",
+        "title": "Configure Voice Style",
+        "description": "Choose voice style, set conversation flow and triggers"
+      },
+      {
+        "number": "03",
+        "title": "Deploy in Minutes",
+        "description": "One-click deployment, start calls immediately"
+      },
+      {
+        "number": "04",
+        "title": "Scale Infinitely",
+        "description": "Elastic scaling to meet business demands"
+      }
+    ]
+  },
+  "audioDemo": {
+    "title": "Hear It In Action",
+    "subtitle": "Experience natural AI voice conversations",
+    "scenarios": {
+      "customerService": "Customer Service",
+      "sales": "Sales",
+      "collections": "Collections",
+      "survey": "Survey"
+    },
+    "cta": {
+      "text": "Try Live Demo",
+      "link": "/demo/live"
+    }
+  },
+  "useCases": {
+    "title": "Built for Every Industry",
+    "subtitle": "From finance to healthcare, meet diverse needs",
+    "industries": [
+      {
+        "id": "finance",
+        "icon": "bank",
+        "title": "Finance",
+        "description": "Bill reminders, loan inquiries, collection notices",
+        "link": "/solutions/customer-service"
+      },
+      {
+        "id": "healthcare",
+        "icon": "hospital",
+        "title": "Healthcare",
+        "description": "Appointment confirmations, follow-ups, prescription reminders",
+        "link": "/solutions/appointment-reminders"
+      },
+      {
+        "id": "retail",
+        "icon": "shopping",
+        "title": "Retail",
+        "description": "Order confirmations, shipping updates, after-sales service",
+        "link": "/solutions/customer-service"
+      },
+      {
+        "id": "telecom",
+        "icon": "phone",
+        "title": "Telecom",
+        "description": "Plan recommendations, renewal reminders, issue reporting",
+        "link": "/solutions/sales"
+      },
+      {
+        "id": "education",
+        "icon": "school",
+        "title": "Education",
+        "description": "Class reminders, parent communications, enrollment inquiries",
+        "link": "/solutions/appointment-reminders"
+      },
+      {
+        "id": "logistics",
+        "icon": "truck",
+        "title": "Logistics",
+        "description": "Delivery notifications, pickup reminders, complaint handling",
+        "link": "/solutions/customer-service"
+      }
+    ],
+    "cta": {
+      "text": "View All Solutions",
+      "link": "/solutions"
+    }
+  },
+  "integrations": {
+    "title": "Seamless Integrations",
+    "subtitle": "Connect with your existing tech stack easily",
+    "categories": {
+      "crm": "CRM Systems",
+      "communication": "Communication Platforms",
+      "ai": "AI Platforms",
+      "analytics": "Analytics Tools"
+    },
+    "cta": {
+      "text": "View All Integrations",
+      "link": "/product/integrations"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Hear from real users"
+  },
+  "security": {
+    "title": "Enterprise-Grade Security",
+    "subtitle": "Multiple certifications, data security assured",
+    "certifications": [
+      {
+        "name": "SOC 2 Type II",
+        "description": "Service Organization Control certification"
+      },
+      {
+        "name": "GDPR",
+        "description": "EU data protection compliance"
+      },
+      {
+        "name": "HIPAA",
+        "description": "Healthcare data protection compliance"
+      },
+      {
+        "name": "ISO 27001",
+        "description": "Information security management"
+      }
+    ],
+    "features": [
+      {
+        "name": "TLS 1.3 Encryption",
+        "description": "Transport layer security"
+      },
+      {
+        "name": "End-to-End Encryption",
+        "description": "Full-chain data protection"
+      },
+      {
+        "name": "Data Residency",
+        "description": "Regional data storage"
+      },
+      {
+        "name": "99.9% SLA",
+        "description": "Availability guarantee"
+      }
+    ],
+    "cta": {
+      "text": "Learn More About Security",
+      "link": "/product/security"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Customer Conversations?",
+    "subtitle": "Start free trial, no credit card required",
+    "buttons": {
+      "primary": "Start Free Trial",
+      "secondary": "Contact Sales"
+    }
+  }
+}

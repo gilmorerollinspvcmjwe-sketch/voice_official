@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": "Pricing - AI Voice Agent Platform",
+    "description": "Transparent pricing for AI voice agents. Start free, scale as you grow. Enterprise plans available."
+  },
+  "hero": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free and scale as you grow. No hidden fees."
+  },
+  "plans": {
+    "popular": "Most Popular",
+    "free": {
+      "name": "Free",
+      "period": "month",
+      "description": "Perfect for trying out our platform",
+      "feature1": "100 minutes/month",
+      "feature2": "Basic voice synthesis",
+      "feature3": "2 voice agents",
+      "feature4": "Community support",
+      "cta": "Start Free"
+    },
+    "pro": {
+      "name": "Pro",
+      "period": "month",
+      "description": "For growing teams and businesses",
+      "feature1": "Unlimited minutes",
+      "feature2": "Advanced voice synthesis",
+      "feature3": "10 voice agents",
+      "feature4": "Priority support",
+      "feature5": "Analytics dashboard",
+      "feature6": "API access",
+      "cta": "Start Trial"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For large organizations with custom needs",
+      "feature1": "Everything in Pro",
+      "feature2": "Custom voice cloning",
+      "feature3": "Unlimited agents",
+      "feature4": "Dedicated support",
+      "feature5": "Custom integrations",
+      "feature6": "SLA guarantee",
+      "feature7": "On-premise deployment",
+      "cta": "Contact Sales"
+    }
+  },
+  "footer": {
+    "note": "All plans include 14-day free trial. No credit card required."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How is pricing calculated?",
+    "a1": "Pricing is based on usage - minutes of conversation processed. Volume discounts are available for enterprise plans.",
+    "q2": "Can I switch plans anytime?",
+    "a2": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.",
+    "q3": "What languages are supported?",
+    "a3": "We support 50+ languages including English, Spanish, Chinese, French, German, Japanese, and more.",
+    "q4": "Is there a free trial?",
+    "a4": "Yes, all plans include a 14-day free trial with full access to features. No credit card required to start.",
+    "q5": "What kind of support is included?",
+    "a5": "Free plans include community support. Pro plans include priority email support. Enterprise plans include dedicated account managers and 24/7 phone support."
+  }
+}

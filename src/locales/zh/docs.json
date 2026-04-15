@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "title": "文档中心 - VoiceAI开发者平台",
+    "description": "开始使用VoiceAI。完整的文档、API参考、SDK和教程。"
+  },
+  "hero": {
+    "badge": "文档",
+    "title": "开发者文档",
+    "subtitle": "将AI语音集成到您的应用所需的一切。",
+    "cta": "快速开始指南"
+  },
+  "sections": {
+    "quickstart": {
+      "title": "快速开始",
+      "description": "5分钟快速上手。"
+    },
+    "api": {
+      "title": "API参考",
+      "description": "完整的API文档和示例。"
+    },
+    "sdks": {
+      "title": "SDK",
+      "description": "流行语言的官方SDK。"
+    },
+    "guides": {
+      "title": "教程指南",
+      "description": "深入的教程和最佳实践。"
+    }
+  },
+  "quickstart": {
+    "title": "快速开始指南",
+    "step1": {
+      "title": "创建账户",
+      "description": "注册免费VoiceAI账户，从控制台获取您的API密钥。"
+    },
+    "step2": {
+      "title": "安装SDK",
+      "description": "使用npm、pip或您喜欢的包管理器安装我们的SDK。"
+    },
+    "step3": {
+      "title": "配置智能体",
+      "description": "定义您智能体的性格、声音和对话流程。"
+    },
+    "step4": {
+      "title": "开始第一次通话",
+      "description": "启动测试对话，听听您的AI智能体效果。"
+    }
+  }
+}

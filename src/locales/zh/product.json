@@ -1,0 +1,268 @@
+{
+  "seo": {
+    "title": "产品功能 - AI语音智能体平台",
+    "description": "探索我们企业级语音AI功能，包括自然语音合成、智能对话理解和实时分析。"
+  },
+  "hero": {
+    "badge": "产品",
+    "title": "企业级语音AI平台",
+    "subtitle": "构建、部署和扩展听起来像真人、能提供卓越客户体验的AI语音智能体。",
+    "cta": "免费试用",
+    "ctaSecondary": "观看演示"
+  },
+  "sections": {
+    "features": "功能特性",
+    "technology": "技术架构",
+    "security": "安全合规",
+    "integrations": "集成"
+  },
+  "features": {
+    "title": "强大功能",
+    "subtitle": "构建语音AI应用所需的一切",
+    "voiceSynthesis": {
+      "title": "自然语音合成",
+      "description": "业界领先的TTS技术，拟人度高达99.5%，对话自然流畅。"
+    },
+    "conversationAI": {
+      "title": "智能对话AI",
+      "description": "基于大模型的理解能力，支持上下文记忆的多轮复杂对话。"
+    },
+    "lowLatency": {
+      "title": "超低延迟",
+      "description": "响应时间低于500毫秒，对话自然流畅。"
+    },
+    "multilingual": {
+      "title": "多语言支持",
+      "description": "支持50+种语言，原生口音和方言处理。"
+    },
+    "analytics": {
+      "title": "实时分析",
+      "description": "全面的仪表板和洞察分析，优化您的语音运营。"
+    },
+    "security": {
+      "title": "企业级安全",
+      "description": "SOC2、GDPR、HIPAA合规，端到端加密。"
+    }
+  },
+  "technology": {
+    "title": "我们的技术栈",
+    "subtitle": "基于前沿AI和云基础设施构建",
+    "asr": "业界领先准确率的自动语音识别",
+    "llm": "用于自然对话理解的大语言模型",
+    "tts": "拟人化语音合成的神经TTS"
+  },
+  "cta": {
+    "title": "准备好开始了吗？",
+    "subtitle": "今天就开始构建您的语音AI应用。",
+    "button": "免费试用"
+  },
+  "featuresPage": {
+    "seo": {
+      "title": "平台功能 - VoiceAI",
+      "description": "探索 VoiceAI 核心能力：智能语音识别、自然语言理解、情感识别、多语言支持、实时分析、知识库集成。"
+    },
+    "hero": {
+      "badge": "核心功能",
+      "title": "构建智能语音智能体所需的一切能力",
+      "subtitle": "我们的综合平台提供六大核心能力，驱动企业级自然、高效、智能的语音交互体验。"
+    },
+    "capabilities": {
+      "title": "核心能力",
+      "subtitle": "语音AI平台的六大支柱",
+      "speechRecognition": {
+        "title": "智能语音识别",
+        "description": "最先进的ASR引擎，在多种口音、方言和嘈杂环境下准确率高达99.5%。支持实时流式和批量处理。",
+        "highlights": ["99.5% 识别准确率", "抗噪声处理", "实时流式ASR", "自定义词汇支持"]
+      },
+      "nlu": {
+        "title": "自然语言理解",
+        "description": "基于微调大模型的深度语义解析。跨多轮对话理解意图、实体、上下文和细微含义。",
+        "highlights": ["意图分类", "实体提取", "上下文感知对话", "多轮记忆"]
+      },
+      "emotionDetection": {
+        "title": "情感识别",
+        "description": "从语音音调、语速模式和语言线索实时分析情感和情绪。根据来电者情绪动态调整回应策略。",
+        "highlights": ["语音音调分析", "情感评分", "动态回应调整", "升级触发器"]
+      },
+      "multilingual": {
+        "title": "多语言支持",
+        "description": "原生支持50+种语言和地区方言。自动语言检测，通话中无缝切换语言。",
+        "highlights": ["50+ 种语言", "方言处理", "自动语言检测", "通话中切换"]
+      },
+      "analytics": {
+        "title": "实时分析",
+        "description": "实时仪表板追踪通话指标、解决率、情感趋势和坐席表现。导出报表并设置自定义告警。",
+        "highlights": ["实时通话监控", "解决率追踪", "情感趋势分析", "自定义告警规则"]
+      },
+      "knowledgeBase": {
+        "title": "知识库集成",
+        "description": "连接企业内部知识库、FAQ和文档。RAG驱动的检索确保每次回答准确、及时。",
+        "highlights": ["RAG驱动检索", "文档自动同步", "上下文答案生成", "版本控制内容"]
+      }
+    },
+    "workflow": {
+      "title": "工作原理",
+      "subtitle": "从语音输入到智能回应，仅需毫秒",
+      "step1": {
+        "title": "语音采集",
+        "description": "高保真音频采集，配合降噪和回声消除。"
+      },
+      "step2": {
+        "title": "语音转文字",
+        "description": "实时ASR将语音转为文本，自动添加标点和说话人分离。"
+      },
+      "step3": {
+        "title": "意图与实体提取",
+        "description": "NLU引擎解析语义，识别意图，提取关键实体。"
+      },
+      "step4": {
+        "title": "智能回应",
+        "description": "大模型生成上下文相关的回应，检索知识库，触发操作。"
+      }
+    },
+    "cta": {
+      "title": "亲身体验每一项功能",
+      "subtitle": "开始免费试用，无限制探索完整平台。",
+      "button": "免费试用"
+    }
+  },
+  "technologyPage": {
+    "seo": {
+      "title": "技术架构 - VoiceAI",
+      "description": "了解 VoiceAI 技术栈：大模型底座、流式处理管线、神经TTS引擎、超低延迟架构、分布式部署。"
+    },
+    "hero": {
+      "badge": "技术架构",
+      "title": "为性能而生，为规模而设计",
+      "subtitle": "我们的技术栈将前沿AI模型与高性能基础设施相结合，为企业级可靠性和速度而工程化打造。"
+    },
+    "stack": {
+      "title": "技术栈",
+      "subtitle": "驱动每次对话的五层架构",
+      "foundationModel": {
+        "title": "大模型底座引擎",
+        "description": "针对语音对话微调的大语言模型。支持GPT-4o、Claude及自定义模型，具备语音专用指令调优。",
+        "specs": ["语音优化微调", "128K 上下文窗口", "多模型路由", "自定义模型托管"]
+      },
+      "streaming": {
+        "title": "流式处理管线",
+        "description": "端到端流式架构实时处理音频。分块处理配合重叠确保零间隙对话流。",
+        "specs": ["分块音频处理", "零间隙流式", "双向WebSocket", "自适应比特率"]
+      },
+      "ttsEngine": {
+        "title": "神经TTS引擎",
+        "description": "新一代文字转语音，100+音色、12种情感预设、HD 48kHz输出。仅需30秒音频即可克隆自定义音色。",
+        "specs": ["100+ 神经音色", "12种情感预设", "48kHz 高清音频", "30秒音色克隆"]
+      },
+      "lowLatency": {
+        "title": "超低延迟架构",
+        "description": "全球边缘计算节点确保端到端延迟低于200ms。智能请求路由最小化往返时间。",
+        "specs": ["<200ms 端到端", "全球边缘节点", "智能请求路由", "连接池优化"]
+      },
+      "distributed": {
+        "title": "分布式部署",
+        "description": "Kubernetes原生微服务架构，支持自动伸缩。多云部署覆盖AWS、GCP和Azure，99.99%可用性SLA。",
+        "specs": ["Kubernetes原生", "自动伸缩", "多云支持", "99.99% 可用性SLA"]
+      }
+    },
+    "architecture": {
+      "title": "系统架构",
+      "subtitle": "分布式语音AI管线的高层视图",
+      "layers": {
+        "ingress": "入口层 — 负载均衡、TLS终止、速率限制",
+        "processing": "处理层 — ASR、NLU、LLM编排、TTS",
+        "data": "数据层 — 向量存储、对话记忆、分析",
+        "infra": "基础设施 — K8s、可观测性、CI/CD、密钥管理"
+      }
+    },
+    "benchmarks": {
+      "title": "性能基准",
+      "subtitle": "来自生产环境的验证指标",
+      "latency": { "value": "<200ms", "label": "端到端延迟" },
+      "accuracy": { "value": "99.5%", "label": "ASR准确率" },
+      "uptime": { "value": "99.99%", "label": "平台可用性" },
+      "concurrent": { "value": "100K+", "label": "并发通话" }
+    },
+    "cta": {
+      "title": "观看技术实战演示",
+      "subtitle": "与我们的工程团队预约一次技术深度讲解。",
+      "button": "预约演示"
+    }
+  },
+  "securityPage": {
+    "seo": {
+      "title": "安全与合规 - VoiceAI",
+      "description": "VoiceAI 企业级安全：SOC 2 Type II、HIPAA、GDPR合规。TLS 1.3、AES-256加密、RBAC、审计日志等。"
+    },
+    "hero": {
+      "badge": "安全与合规",
+      "title": "值得信赖的企业级安全",
+      "subtitle": "我们以行业领先的安全实践、全面的合规认证和透明的审计流程保护您的数据。"
+    },
+    "certifications": {
+      "title": "合规认证",
+      "subtitle": "独立审计与认证",
+      "soc2": {
+        "name": "SOC 2 Type II",
+        "description": "年度第三方审计，涵盖安全性、可用性、处理完整性、保密性和隐私控制。"
+      },
+      "hipaa": {
+        "name": "HIPAA",
+        "description": "完全HIPAA合规，适用于医疗语音AI部署中受保护健康信息的处理。"
+      },
+      "gdpr": {
+        "name": "GDPR",
+        "description": "完整GDPR合规，包括数据主体权利、同意管理和跨境传输保障。"
+      },
+      "iso27001": {
+        "name": "ISO 27001",
+        "description": "经认证的信息安全管理体系，覆盖平台运营的所有方面。"
+      }
+    },
+    "encryption": {
+      "title": "数据加密",
+      "subtitle": "每一层的端到端保护",
+      "items": [
+        "TLS 1.3 传输加密",
+        "AES-256 静态数据加密",
+        "硬件安全模块 (HSM) 密钥管理",
+        "90天周期自动密钥轮换",
+        "语音录音零知识架构",
+        "加密备份与异地冗余"
+      ]
+    },
+    "accessControl": {
+      "title": "访问控制",
+      "subtitle": "细粒度权限与身份管理",
+      "items": [
+        "强制多因素认证 (MFA)",
+        "基于角色的访问控制 (RBAC) 支持自定义角色",
+        "通过 SAML 2.0 和 OpenID Connect 集成 SSO",
+        "IP白名单与地理限制",
+        "可配置超时的会话管理",
+        "特权访问管理 (PAM)"
+      ]
+    },
+    "auditLog": {
+      "title": "审计与监控",
+      "subtitle": "对每个操作的完整可见性",
+      "items": [
+        "所有平台操作的不可篡改审计日志",
+        "实时安全事件监控（SIEM集成）",
+        "自动异常检测与告警",
+        "第三方季度渗透测试",
+        "漏洞披露计划",
+        "事件响应SLA：15分钟内确认"
+      ]
+    },
+    "documents": {
+      "title": "合规文档",
+      "items": ["安全白皮书", "隐私政策", "数据处理协议", "渗透测试摘要"]
+    },
+    "cta": {
+      "title": "需要安全评审？",
+      "subtitle": "我们的安全团队随时为您介绍我们的安全实践和认证。",
+      "button": "联系安全团队"
+    }
+  }
+}

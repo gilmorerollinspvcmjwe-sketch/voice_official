@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "title": "演示 - 体验AI语音智能体",
+    "description": "聆听真实的AI语音对话并试用我们的交互式演示。感受我们语音智能体有多自然。"
+  },
+  "hero": {
+    "title": "体验AI语音实战效果",
+    "subtitle": "聆听真实对话，看看我们的语音智能体如何处理复杂场景。",
+    "cta": "试用实时演示"
+  },
+  "audio": {
+    "badge": "音频演示",
+    "title": "聆听示例对话",
+    "subtitle": "感受我们的AI语音智能体在真实场景中有多自然。",
+    "demo1": {
+      "title": "客服咨询",
+      "scenario": "客服"
+    },
+    "demo2": {
+      "title": "销售筛选",
+      "scenario": "销售"
+    },
+    "demo3": {
+      "title": "付款提醒",
+      "scenario": "催收"
+    }
+  },
+  "video": {
+    "badge": "视频教程",
+    "title": "了解工作原理",
+    "subtitle": "观看构建和部署AI语音智能体的教程。",
+    "tutorial1": "VoiceAI入门指南",
+    "tutorial2": "构建您的第一个智能体"
+  },
+  "cta": {
+    "title": "准备好亲自尝试了吗？",
+    "subtitle": "体验与我们的AI语音智能体的实时对话。",
+    "button": "试用实时演示"
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "hero": {
+    "title": "用 AI 语音智能体，重塑客户对话体验",
+    "subtitle": "部署听起来像真人、能理解上下文、能驱动结果的语音智能体。",
+    "cta": {
+      "primary": "免费试用",
+      "secondary": "观看演示"
+    },
+    "trustLabel": "无需信用卡 · 5分钟快速上手"
+  },
+  "socialProof": {
+    "title": "全球 {{count}}+ 企业信赖",
+    "subtitle": "覆盖金融、医疗、零售等多个行业"
+  },
+  "metrics": {
+    "calls": {
+      "label": "月通话量",
+      "description": "每月处理的语音通话"
+    },
+    "accuracy": {
+      "label": "准确率",
+      "description": "语音识别准确率"
+    },
+    "costReduction": {
+      "label": "成本降低",
+      "description": "相比传统客服节省成本"
+    },
+    "uptime": {
+      "label": "可用性",
+      "description": "平台稳定运行保障"
+    },
+    "languages": {
+      "label": "支持语言",
+      "description": "覆盖全球主要语言"
+    },
+    "customers": {
+      "label": "服务客户",
+      "description": "全球企业客户数量"
+    }
+  },
+  "problem": {
+    "title": "传统呼叫中心的困境",
+    "subtitle": "您是否正面临这些挑战？",
+    "items": [
+      {
+        "icon": "phone",
+        "title": "高昂人力成本",
+        "description": "每位客服年成本 $40,000+，人力成本居高不下"
+      },
+      {
+        "icon": "clock",
+        "title": "24/7 覆盖困难",
+        "description": "无法处理夜间和节假日咨询，客户等待时间长"
+      },
+      {
+        "icon": "users",
+        "title": "高员工流失率",
+        "description": "平均任期仅 6-12 个月，培训成本高"
+      },
+      {
+        "icon": "chart",
+        "title": "服务质量不稳定",
+        "description": "每次通话质量参差不齐，客户体验不一致"
+      },
+      {
+        "icon": "globe",
+        "title": "多语言支持有限",
+        "description": "难以服务国际化客户，语言壁垒明显"
+      }
+    ]
+  },
+  "solution": {
+    "title": "我们的解决方案",
+    "subtitle": "AI 语音智能体帮您解决所有痛点",
+    "items": [
+      {
+        "icon": "robot",
+        "title": "AI 智能体替代",
+        "description": "替代 80% 重复工作，成本降低 60% 以上"
+      },
+      {
+        "icon": "zap",
+        "title": "全天候服务",
+        "description": "24/7 无间断响应，随时满足客户需求"
+      },
+      {
+        "icon": "target",
+        "title": "零培训成本",
+        "description": "分钟级部署，即刻上岗，无需培训周期"
+      },
+      {
+        "icon": "star",
+        "title": "100% 一致性",
+        "description": "每一通电话都完美执行，服务品质稳定"
+      },
+      {
+        "icon": "globe",
+        "title": "50+ 语言支持",
+        "description": "触达全球客户无障碍，多语言无缝切换"
+      }
+    ]
+  },
+  "features": {
+    "title": "选择我们平台的理由",
+    "subtitle": "业界领先的语音 AI 技术栈",
+    "items": [
+      {
+        "id": "voice",
+        "icon": "mic",
+        "title": "自然语音合成",
+        "description": "业界领先的语音合成技术，拟人度高达 99.5%",
+        "highlight": "热门"
+      },
+      {
+        "id": "intelligence",
+        "icon": "brain",
+        "title": "智能对话理解",
+        "description": "基于大模型的深度理解，支持上下文记忆"
+      },
+      {
+        "id": "deployment",
+        "icon": "zap",
+        "title": "快速部署上线",
+        "description": "5分钟即可完成部署，即刻上线开始服务"
+      },
+      {
+        "id": "conversation",
+        "icon": "refresh",
+        "title": "多轮对话能力",
+        "description": "复杂业务场景无缝衔接，自然对话体验"
+      },
+      {
+        "id": "language",
+        "icon": "globe",
+        "title": "多语言支持",
+        "description": "支持 50+ 语言，全球业务无障碍沟通"
+      },
+      {
+        "id": "analytics",
+        "icon": "chart",
+        "title": "实时数据分析",
+        "description": "通话数据实时可视化，业务洞察一目了然"
+      },
+      {
+        "id": "api",
+        "icon": "link",
+        "title": "开放 API 集成",
+        "description": "灵活对接现有业务系统，无缝集成"
+      },
+      {
+        "id": "security",
+        "icon": "shield",
+        "title": "安全合规",
+        "description": "SOC2/GDPR/HIPAA 认证，企业级安全保障"
+      }
+    ],
+    "cta": {
+      "text": "探索全部功能",
+      "link": "/product/features"
+    }
+  },
+  "howItWorks": {
+    "title": "四步快速上手",
+    "subtitle": "从零到部署，只需几分钟",
+    "steps": [
+      {
+        "number": "01",
+        "title": "定义你的智能体",
+        "description": "设置智能体名字、角色和任务目标"
+      },
+      {
+        "number": "02",
+        "title": "配置语音风格",
+        "description": "选择声音风格，设定对话流程和触发条件"
+      },
+      {
+        "number": "03",
+        "title": "分钟部署",
+        "description": "一键部署，即刻上线，开始通话"
+      },
+      {
+        "number": "04",
+        "title": "无限扩展",
+        "description": "弹性扩展，随业务增长自动扩容"
+      }
+    ]
+  },
+  "audioDemo": {
+    "title": "亲耳聆听真实效果",
+    "subtitle": "体验 AI 语音智能体的自然对话能力",
+    "scenarios": {
+      "customerService": "客服咨询",
+      "sales": "销售外呼",
+      "collections": "催收回款",
+      "survey": "调研反馈"
+    },
+    "cta": {
+      "text": "体验实时演示",
+      "link": "/demo/live"
+    }
+  },
+  "useCases": {
+    "title": "覆盖各行各业场景",
+    "subtitle": "从金融到医疗，满足多样化需求",
+    "industries": [
+      {
+        "id": "finance",
+        "icon": "bank",
+        "title": "金融服务",
+        "description": "账单提醒、贷款咨询、催收通知",
+        "link": "/solutions/customer-service"
+      },
+      {
+        "id": "healthcare",
+        "icon": "hospital",
+        "title": "医疗健康",
+        "description": "预约确认、随访通知、处方提醒",
+        "link": "/solutions/appointment-reminders"
+      },
+      {
+        "id": "retail",
+        "icon": "shopping",
+        "title": "零售电商",
+        "description": "订单确认、物流更新、售后服务",
+        "link": "/solutions/customer-service"
+      },
+      {
+        "id": "telecom",
+        "icon": "phone",
+        "title": "电信运营",
+        "description": "套餐推荐、续费提醒、故障报修",
+        "link": "/solutions/sales"
+      },
+      {
+        "id": "education",
+        "icon": "school",
+        "title": "教育培训",
+        "description": "课程提醒、家校沟通、招生咨询",
+        "link": "/solutions/appointment-reminders"
+      },
+      {
+        "id": "logistics",
+        "icon": "truck",
+        "title": "物流快递",
+        "description": "配送通知、取件提醒、投诉处理",
+        "link": "/solutions/customer-service"
+      }
+    ],
+    "cta": {
+      "text": "查看全部解决方案",
+      "link": "/solutions"
+    }
+  },
+  "integrations": {
+    "title": "无缝对接您的技术栈",
+    "subtitle": "与主流平台轻松集成",
+    "categories": {
+      "crm": "CRM 系统",
+      "communication": "通讯平台",
+      "ai": "AI 平台",
+      "analytics": "数据分析"
+    },
+    "cta": {
+      "text": "查看全部集成",
+      "link": "/product/integrations"
+    }
+  },
+  "testimonials": {
+    "title": "客户真实反馈",
+    "subtitle": "听听他们怎么说"
+  },
+  "security": {
+    "title": "企业级安全保障",
+    "subtitle": "多重认证，数据安全无忧",
+    "certifications": [
+      {
+        "name": "SOC 2 Type II",
+        "description": "服务组织控制认证"
+      },
+      {
+        "name": "GDPR",
+        "description": "欧盟数据保护合规"
+      },
+      {
+        "name": "HIPAA",
+        "description": "医疗数据保护合规"
+      },
+      {
+        "name": "ISO 27001",
+        "description": "信息安全管理体系"
+      }
+    ],
+    "features": [
+      {
+        "name": "TLS 1.3 加密",
+        "description": "传输层安全加密"
+      },
+      {
+        "name": "端到端加密",
+        "description": "全链路数据保护"
+      },
+      {
+        "name": "数据驻留",
+        "description": "区域化数据存储"
+      },
+      {
+        "name": "99.9% SLA",
+        "description": "可用性保障"
+      }
+    ],
+    "cta": {
+      "text": "了解更多安全详情",
+      "link": "/product/security"
+    }
+  },
+  "cta": {
+    "title": "准备好革新您的客户对话了吗？",
+    "subtitle": "开始免费试用，无需信用卡",
+    "buttons": {
+      "primary": "免费试用",
+      "secondary": "联系销售"
+    }
+  }
+}
