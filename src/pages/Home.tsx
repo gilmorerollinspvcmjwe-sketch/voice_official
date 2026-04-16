@@ -4,13 +4,13 @@ import {
   HeroSection,
   ProblemSolutionSection,
   FeaturesSection,
-  HowItWorksSection,
   AudioDemoSection,
   UseCasesSection,
   IntegrationsSection,
   TestimonialsSection,
   SecuritySection,
   CTASection,
+  VideoHeroSection,
 } from '@/components/sections'
 import MetricsSection from '@/components/sections/MetricsSection'
 import PricingSection from '@/components/sections/PricingSection'
@@ -40,11 +40,11 @@ const Home = () => {
         {/* 问题解决方案 */}
         <ProblemSolutionSection />
 
-        {/* 功能特性 - 更新：3x2 网格 + 横向滚动 */}
+        {/* 功能特性 - 3x2 网格 */}
         <FeaturesSection />
 
-        {/* 工作原理 */}
-        <HowItWorksSection />
+        {/* 产品演示 - 视频占位 */}
+        <VideoHeroSection />
 
         {/* 音频演示 */}
         <AudioDemoSection />

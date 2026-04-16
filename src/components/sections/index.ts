@@ -12,3 +12,4 @@ export { default as CTASection } from './CTASection'
 // 新增组件
 export { default as MetricsSection } from './MetricsSection'
 export { default as PricingSection } from './PricingSection'
+export { default as VideoHeroSection } from './VideoHeroSection'

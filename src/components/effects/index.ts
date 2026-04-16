@@ -12,7 +12,8 @@
 // P0 - 核心特效
 export { GradientText, ShimmerText } from './GradientText'
 export { InfiniteCarousel, LogoCarousel, TestimonialCarousel } from './InfiniteCarousel'
-export { HorizontalScroll, FeatureCard, ParallaxHorizontalScroll } from './HorizontalScroll'
+export { HorizontalScroll } from './HorizontalScroll'
+export { FeatureCard } from './FeatureCard'
 
 // P1 - 增强特效
 export { ParticleBackground, VoiceWaveBackground, NeuralNetworkBackground } from './ParticleBackground'
@@ -22,6 +23,7 @@ export { ParallaxSection, ParallaxLayer, FloatingElement, ParallaxImage, Stagger
 
 // P2 - 高级特效
 export { FlipCard, FeatureFlipCard, TeamCard } from './FlipCard'
+export { MagneticCard } from './MagneticCard'
 export { CustomCursor, CursorProvider, CursorHover } from './CustomCursor'
 // P3 - StarBorder 流动光效
 export { default as StarBorder } from './StarBorder'

@@ -180,7 +180,18 @@ const Navbar = () => {
           </div>
 
           {/* Right side */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            {/* 拨打体验 */}
+            <a
+              href="tel:02131445977"
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-background-hover transition-all duration-300 group whitespace-nowrap"
+            >
+              <Phone size={13} className="text-gold/50 group-hover:text-gold transition-colors" />
+              <span className="text-caption font-mono text-foreground-muted group-hover:text-foreground-primary transition-colors">
+                021-3144 5977
+              </span>
+            </a>
+
             {/* Language Switcher */}
             <div className="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-background-card/50 border border-border">
               <Globe size={14} className="text-foreground-muted" />

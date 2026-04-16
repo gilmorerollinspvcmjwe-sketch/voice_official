@@ -107,7 +107,7 @@ const Footer = () => {
     ],
     resources: [
       { label: t('footer.resources.docs'), href: '/docs' },
-      { label: t('footer.resources.api'), href: '/docs' },
+      { label: t('footer.resources.api'), href: '/docs/api' },
       { label: t('footer.resources.blog'), href: '/blog' },
     ],
     company: [
