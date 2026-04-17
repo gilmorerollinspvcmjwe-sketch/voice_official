@@ -30,5 +30,14 @@
     "title": "准备好加入他们了吗？",
     "subtitle": "开始免费试用，几天内看到效果。",
     "button": "免费试用"
-  }
+  },
+  "notFound": "案例未找到",
+  "notFoundDesc": "您查找的案例不存在。",
+  "backToList": "返回案例列表",
+  "challenge": "面临的挑战",
+  "solution": "解决方案",
+  "keyResults": "关键成果",
+  "gallery": "图片库",
+  "relatedCases": "相关案例",
+  "readMore": "阅读案例"
 }

@@ -79,8 +79,8 @@ interface Metric {
   value: number
   suffix?: string
   prefix?: string
-  label: string
-  description?: string
+  label: { en: string; zh: string }
+  description?: { en: string; zh: string }
 }
 
 // 📝 TODO(老徐): 替换为真实数据
@@ -89,50 +89,51 @@ const metrics: Metric[] = [
     id: 'csat',
     value: 15,
     suffix: 'pt',
-    label: 'CSAT 提升',
-    description: '客户满意度显著提升',
+    label: { en: 'CSAT Improvement', zh: 'CSAT 提升' },
+    description: { en: 'Customer satisfaction significantly improved', zh: '客户满意度显著提升' },
   },
   {
     id: 'revenue',
     value: 7.2,
     suffix: 'M',
     prefix: '$',
-    label: '年度节省',
-    description: '运营成本大幅降低',
+    label: { en: 'Annual Savings', zh: '年度节省' },
+    description: { en: 'Significant reduction in operating costs', zh: '运营成本大幅降低' },
   },
   {
     id: 'cost',
     value: 60,
     suffix: '%',
-    label: '成本降低',
-    description: '人力成本优化',
+    label: { en: 'Cost Reduction', zh: '成本降低' },
+    description: { en: 'Labor cost optimization', zh: '人力成本优化' },
   },
   {
     id: 'resolution',
     value: 75,
     suffix: '%',
-    label: '问题解决率',
-    description: 'AI 自动处理比例',
+    label: { en: 'Resolution Rate', zh: '问题解决率' },
+    description: { en: 'AI automated handling ratio', zh: 'AI 自动处理比例' },
   },
   {
     id: 'latency',
     value: 200,
     suffix: 'ms',
     prefix: '<',
-    label: '响应延迟',
-    description: '实时语音交互',
+    label: { en: 'Response Latency', zh: '响应延迟' },
+    description: { en: 'Real-time voice interaction', zh: '实时语音交互' },
   },
   {
     id: 'availability',
     value: 99.9,
     suffix: '%',
-    label: '可用性',
-    description: '全年稳定运行',
+    label: { en: 'Availability', zh: '可用性' },
+    description: { en: 'Stable operation throughout the year', zh: '全年稳定运行' },
   },
 ]
 
 const MetricsSection = () => {
-  const { t } = useTranslation('home')
+  const { t, i18n } = useTranslation('home')
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
   const ref = useRef(null)
 
   const containerVariants = {
@@ -175,7 +176,7 @@ const MetricsSection = () => {
           className="text-center mb-12"
         >
           <p className="text-body text-foreground-muted mb-8">
-            {t('socialProof.title', '全球 500+ 企业信赖')}
+            {t('socialProof.title', 'Trusted by 500+ enterprises worldwide')}
           </p>
 
           {/* 国际客户 - 向右滚动 */}
@@ -254,7 +255,7 @@ const MetricsSection = () => {
         >
           <h2 className="section-title">
             <GradientText metallic direction="diagonal" speed={4}>
-              {t('metrics.title', '数据驱动，效果显著')}
+              {t('metrics.title', 'Data-driven, significant results')}
             </GradientText>
           </h2>
           <p className="section-subtitle">
@@ -295,12 +296,12 @@ const MetricsSection = () => {
               </div>
 
               {/* 标签 */}
-              <div className="metric-label">{t(`metrics.${metric.id}.label`, metric.label)}</div>
+              <div className="metric-label">{t(`metrics.${metric.id}.label`, metric.label[currentLocale])}</div>
 
               {/* 描述 */}
               {metric.description && (
                 <div className="text-caption text-foreground-muted mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {t(`metrics.${metric.id}.description`, metric.description)}
+                  {t(`metrics.${metric.id}.description`, metric.description[currentLocale])}
                 </div>
               )}
 
@@ -320,7 +321,7 @@ const MetricsSection = () => {
         >
           <p className="text-body-sm text-foreground-muted">
             {/* 📝 TODO(老徐): 数据可从后端 API 获取实时更新 */}
-            * 数据来源：2024-2025 年客户案例统计平均值
+            {currentLocale === 'zh' ? '* 数据来源：2024-2025 年客户案例统计平均值' : '* Data source: Average from 2024-2025 customer case studies'}
           </p>
         </motion.div>
       </Container>

@@ -108,8 +108,10 @@ const Navbar = () => {
 
   const handleLanguageSwitch = (lang: string) => {
     i18n.changeLanguage(lang)
+    localStorage.setItem('preferredLanguage', lang)
     const currentPath = location.pathname
-    const newPath = getLocalizedPath(currentPath, lang)
+    const cleanPath = getPathWithoutLocale(currentPath)
+    const newPath = lang === 'en' ? `/en${cleanPath === '/' ? '' : cleanPath}` : `/${lang}${cleanPath === '/' ? '' : cleanPath}`
     window.location.href = newPath
   }
 

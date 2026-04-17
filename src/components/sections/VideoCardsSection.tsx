@@ -6,6 +6,7 @@
  */
 
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/common'
 import { GradientText } from '@/components/effects/GradientText'
@@ -13,8 +14,8 @@ import { Play, Pause } from 'lucide-react'
 
 interface VideoCard {
   id: string
-  title: string
-  subtitle: string
+  title: { en: string; zh: string }
+  subtitle: { en: string; zh: string }
   gradientFrom: string
   gradientTo: string
   accentColor: string
@@ -25,32 +26,32 @@ interface VideoCard {
 const videoCards: VideoCard[] = [
   {
     id: 'demo-1',
-    title: 'AI 语音对话演示',
-    subtitle: '真实场景对话体验',
+    title: { en: 'AI Voice Dialogue Demo', zh: 'AI 语音对话演示' },
+    subtitle: { en: 'Real-scenario conversation experience', zh: '真实场景对话体验' },
     gradientFrom: '#8B5CF6',
     gradientTo: '#3B82F6',
     accentColor: '#8B5CF6',
   },
   {
     id: 'demo-2',
-    title: '智能打断演示',
-    subtitle: '随时打断，AI 即时响应',
+    title: { en: 'Smart Interruption Demo', zh: '智能打断演示' },
+    subtitle: { en: 'Interrupt anytime, AI responds instantly', zh: '随时打断，AI 即时响应' },
     gradientFrom: '#D4FF00',
     gradientTo: '#22C55E',
     accentColor: '#D4FF00',
   },
   {
     id: 'demo-3',
-    title: '多语言支持',
-    subtitle: '50+ 语言无缝切换',
+    title: { en: 'Multi-language Support', zh: '多语言支持' },
+    subtitle: { en: '50+ languages seamless switching', zh: '50+ 语言无缝切换' },
     gradientFrom: '#D4A574',
     gradientTo: '#F59E0B',
     accentColor: '#D4A574',
   },
   {
     id: 'demo-4',
-    title: '数据分析看板',
-    subtitle: '实时洞察业务趋势',
+    title: { en: 'Data Analytics Dashboard', zh: '数据分析看板' },
+    subtitle: { en: 'Real-time business insights', zh: '实时洞察业务趋势' },
     gradientFrom: '#06B6D4',
     gradientTo: '#0EA5E9',
     accentColor: '#06B6D4',
@@ -58,6 +59,8 @@ const videoCards: VideoCard[] = [
 ]
 
 function VideoCardComponent({ card, index }: { card: VideoCard; index: number }) {
+  const { i18n } = useTranslation()
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
   const [isPlaying, setIsPlaying] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
@@ -132,10 +135,10 @@ function VideoCardComponent({ card, index }: { card: VideoCard; index: number })
         {/* 卡片信息 */}
         <div className="p-6">
           <h3 className="text-lg font-semibold text-foreground-primary mb-1">
-            {card.title}
+            {card.title[currentLocale]}
           </h3>
           <p className="text-body-sm text-foreground-secondary">
-            {card.subtitle}
+            {card.subtitle[currentLocale]}
           </p>
         </div>
       </div>
@@ -144,6 +147,9 @@ function VideoCardComponent({ card, index }: { card: VideoCard; index: number })
 }
 
 const VideoCardsSection = () => {
+  const { t, i18n } = useTranslation('home')
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
+
   return (
     <section className="relative py-24 bg-background-primary overflow-hidden">
       {/* 背景效果 */}
@@ -163,11 +169,11 @@ const VideoCardsSection = () => {
         >
           <h2 className="text-display font-bold mb-4">
             <GradientText metallic direction="diagonal" speed={4}>
-              产品演示
+              {t('videoDemo.title', currentLocale === 'zh' ? '产品演示' : 'Product Demo')}
             </GradientText>
           </h2>
           <p className="text-body-lg text-foreground-secondary max-w-2xl mx-auto">
-            观看 AI 语音智能体的真实表现
+            {t('videoDemo.subtitle', currentLocale === 'zh' ? '观看 AI 语音智能体的真实表现' : 'Watch AI Voice Agents in action')}
           </p>
         </motion.div>
 

@@ -15,45 +15,46 @@ import { getLocalizedPath } from '@/utils'
 
 const TestimonialsSection = () => {
   const { t, i18n } = useTranslation('home')
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
 
   // 示例案例数据
   const caseStudies = [
     {
       id: 'case1',
-      company: '某知名电商',
-      title: '如何通过 AI Voice Agent 提升 40% 客户转化率',
+      company: { en: 'Leading E-commerce Company', zh: '某知名电商' },
+      title: { en: 'How AI Voice Agent Boosted Customer Conversion by 40%', zh: '如何通过 AI Voice Agent 提升 40% 客户转化率' },
       quote: {
         en: 'Using AI Voice Agent, our customer service efficiency increased by 3x, and satisfaction rose from 75% to 92%.',
         zh: '使用 AI Voice Agent 后，我们的客服效率提升了 3 倍，客户满意度从 75% 提升到了 92%。',
       },
       author: {
-        name: '张经理',
-        title: '客户成功总监',
-        avatar: null,
+        name: { en: 'Manager Zhang', zh: '张经理' },
+        title: { en: 'VP of Customer Success', zh: '客户成功总监' },
+        avatar: '/images/avatars/sarah-chen_001.jpg',
       },
       metrics: [
-        { value: '40%', label: '转化率提升' },
-        { value: '3x', label: '效率提升' },
-        { value: '92%', label: '满意度' },
+        { value: '40%', label: { en: 'Conversion Lift', zh: '转化率提升' } },
+        { value: '3x', label: { en: 'Efficiency Gain', zh: '效率提升' } },
+        { value: '92%', label: { en: 'Satisfaction', zh: '满意度' } },
       ],
     },
     {
       id: 'case2',
-      company: '某金融银行',
-      title: '智能语音客服实现 7x24 小时无间断服务',
+      company: { en: 'Major Financial Bank', zh: '某金融银行' },
+      title: { en: 'AI Voice Customer Service Achieves 24/7 Uninterrupted Service', zh: '智能语音客服实现 7x24 小时无间断服务' },
       quote: {
         en: 'The AI voice system handles 80% of routine inquiries, freeing our agents to focus on complex cases.',
         zh: 'AI 语音系统处理了 80% 的常规咨询，让我们的客服专员能专注于复杂案例。',
       },
       author: {
-        name: '李总监',
-        title: '运营总监',
-        avatar: null,
+        name: { en: 'Director Li', zh: '李总监' },
+        title: { en: 'Director of Operations', zh: '运营总监' },
+        avatar: '/images/avatars/michael-johnson_001.jpg',
       },
       metrics: [
-        { value: '80%', label: '自动处理' },
-        { value: '24/7', label: '全天候' },
-        { value: '-60%', label: '成本降低' },
+        { value: '80%', label: { en: 'Auto-handled', zh: '自动处理' } },
+        { value: '24/7', label: { en: 'Always On', zh: '全天候' } },
+        { value: '-60%', label: { en: 'Cost Reduction', zh: '成本降低' } },
       ],
     },
   ]
@@ -83,11 +84,11 @@ const TestimonialsSection = () => {
 
           <h2 className="section-title">
             <GradientText metallic direction="diagonal" speed={4}>
-              {t('testimonials.title', '客户成功案例')}
+              {t('testimonials.title', 'Customer Success Stories')}
             </GradientText>
           </h2>
           <p className="section-subtitle">
-            {t('testimonials.subtitle', '看看企业如何通过 AI Voice Agent 提升业务价值')}
+            {t('testimonials.subtitle', 'See how enterprises boost business value with AI Voice Agent')}
           </p>
         </motion.div>
 
@@ -105,31 +106,33 @@ const TestimonialsSection = () => {
 
             {/* 标题 */}
             <h3 className="text-h3 font-semibold text-foreground-primary mb-4 pl-8">
-              {i18n.language === 'zh'
-                ? caseStudies[0].title
-                : caseStudies[0].title}
+              {caseStudies[0].title[currentLocale]}
             </h3>
 
             {/* 证言内容 */}
             <p className="text-body-lg text-foreground-secondary mb-6 pl-8 leading-relaxed italic">
-              "{i18n.language === 'zh'
-                ? caseStudies[0].quote.zh
-                : caseStudies[0].quote.en}"
+              "{caseStudies[0].quote[currentLocale]}"
             </p>
 
             {/* 作者信息 */}
             <div className="flex items-center gap-4 pl-8 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
-                <span className="text-gold font-semibold text-lg">
-                  {caseStudies[0].author.name.charAt(0)}
-                </span>
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-gold/20">
+                {caseStudies[0].author.avatar ? (
+                  <img src={caseStudies[0].author.avatar} alt={caseStudies[0].author.name[currentLocale]} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold font-semibold text-lg">
+                      {caseStudies[0].author.name[currentLocale].charAt(0)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div>
                 <h4 className="text-subheading font-semibold text-foreground-primary">
-                  {caseStudies[0].author.name}
+                  {caseStudies[0].author.name[currentLocale]}
                 </h4>
                 <p className="text-body text-foreground-muted">
-                  {caseStudies[0].author.title}, {caseStudies[0].company}
+                  {caseStudies[0].author.title[currentLocale]}, {caseStudies[0].company[currentLocale]}
                 </p>
               </div>
             </div>
@@ -142,7 +145,7 @@ const TestimonialsSection = () => {
                   className="px-4 py-3 bg-background-card/50 rounded-xl border border-border"
                 >
                   <span className="text-xl font-bold text-accent-lime">{metric.value}</span>
-                  <span className="text-caption text-foreground-muted ml-2">{metric.label}</span>
+                  <span className="text-caption text-foreground-muted ml-2">{metric.label[currentLocale]}</span>
                 </div>
               ))}
             </div>
@@ -184,7 +187,7 @@ const TestimonialsSection = () => {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-6 py-3 bg-gold/10 text-gold font-medium rounded-lg hover:bg-gold/20 transition-colors"
             >
-              {t('testimonials.cta', '查看更多案例')}
+              {t('testimonials.cta', 'View More Cases')}
               <ArrowRight className="w-4 h-4" />
             </motion.button>
           </Link>
@@ -199,7 +202,9 @@ const TestimonialsSection = () => {
           className="text-center mt-6"
         >
           <p className="text-caption text-foreground-muted">
-            📁 添加客户证言数据: <code>src/data/testimonials.ts</code>
+            {currentLocale === 'zh'
+              ? '📁 添加客户证言数据: src/data/testimonials.ts'
+              : '📁 Add customer testimonial data: src/data/testimonials.ts'}
           </p>
         </motion.div>
       </Container>

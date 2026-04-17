@@ -29,21 +29,19 @@ const scenarioIcons: Record<string, React.ReactNode> = {
 };
 
 export function TTSScenarios() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation('ttsDemo');
   const isZh = i18n.language === 'zh';
 
   return (
     <div className="w-full">
       {/* 标题 */}
       <div className="text-center mb-12">
-        <Badge variant="gradient" className="mb-4">{isZh ? '应用场景' : 'Application Scenarios'}</Badge>
+        <Badge variant="gradient" className="mb-4">{t('scenarios.title', 'Application Scenarios')}</Badge>
         <h2 className="text-h2 font-bold text-foreground-primary mb-4">
-          {isZh ? '应用场景' : 'Application Scenarios'}
+          {t('scenarios.title', 'Application Scenarios')}
         </h2>
         <p className="text-foreground-secondary max-w-2xl mx-auto">
-          {isZh 
-            ? '覆盖客服、销售、播客、有声书、教育、游戏等多行业场景，为每个场景提供最佳音色推荐' 
-            : 'Covering customer service, sales, podcasts, audiobooks, education, gaming and more industries with best voice recommendations'}
+          {t('scenarios.subtitle', 'Covering customer service, sales, podcasts, audiobooks, education, gaming and more industries with best voice recommendations')}
         </p>
       </div>
 
@@ -74,7 +72,7 @@ export function TTSScenarios() {
               {/* 推荐音色 */}
               <div className="mb-4">
                 <p className="text-caption text-foreground-muted mb-2">
-                  {isZh ? '推荐音色' : 'Recommended Voices'}
+                  {t('scenarios.recommended', 'Recommended Voices')}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {scenario.recommendedVoices.slice(0, 4).map((voiceId) => {
@@ -132,7 +130,7 @@ export function TTSScenarios() {
                            transition-colors group/link"
               >
                 <span className="text-sm font-medium">
-                  {isZh ? '查看场景详情' : 'View Scenario Details'}
+                  {t('scenarios.viewDetails', 'View Scenario Details')}
                 </span>
                 <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 
                                        transition-transform" />
@@ -145,7 +143,7 @@ export function TTSScenarios() {
       {/* 场景对比表格 */}
       <div className="mt-12 bg-background-card rounded-2xl border border-border p-8">
         <h3 className="text-xl font-semibold text-foreground-primary mb-6">
-          {isZh ? '各场景音色推荐对比' : 'Scenario Voice Recommendation Comparison'}
+          {t('scenarios.comparisonTitle', 'Scenario Voice Recommendation Comparison')}
         </h3>
         
         {/* 移动端卡片布局 */}
@@ -154,16 +152,16 @@ export function TTSScenarios() {
             <thead>
               <tr className="border-b border-border">
                 <th className="px-4 py-3 text-left text-sm font-semibold text-foreground-primary">
-                  {isZh ? '场景' : 'Scenario'}
+                  {t('scenarios.tableScenario', 'Scenario')}
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-foreground-primary">
-                  {isZh ? '推荐音色' : 'Voices'}
+                  {t('scenarios.tableVoices', 'Voices')}
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-foreground-primary">
-                  {isZh ? '风格特点' : 'Features'}
+                  {t('scenarios.tableFeatures', 'Features')}
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-foreground-primary">
-                  {isZh ? '效果指标' : 'Metrics'}
+                  {t('scenarios.tableMetrics', 'Metrics')}
                 </th>
               </tr>
             </thead>

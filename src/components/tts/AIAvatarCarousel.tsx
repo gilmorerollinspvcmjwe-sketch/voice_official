@@ -5,6 +5,7 @@
  */
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Play, Pause, Volume2 } from 'lucide-react';
 import { AIVoice } from '../../data/tts-voices';
 import { cn } from '../../utils/cn';
@@ -18,6 +19,7 @@ export function AIAvatarCarousel({
   voices, 
   onSelect
 }: AIAvatarCarouselProps) {
+  const { t } = useTranslation('ttsDemo');
   const [selectedVoice, setSelectedVoice] = useState<AIVoice | null>(
     voices && voices.length > 0 ? voices[0] : null
   );
@@ -86,7 +88,7 @@ export function AIAvatarCarousel({
   if (!voices || voices.length === 0) {
     return (
       <div className="text-center py-12 text-foreground-secondary">
-        暂无可用音色
+        {t('avatar.noVoices', 'No voices available')}
       </div>
     );
   }
@@ -209,7 +211,7 @@ export function AIAvatarCarousel({
                 {voice.popular && (
                   <div className="absolute top-1 right-1 bg-primary-purple text-white 
                                   text-[10px] px-1.5 py-0.5 rounded-full font-medium">
-                    热门
+                    {t('gallery.popular', 'Popular')}
                   </div>
                 )}
               </button>
@@ -224,7 +226,7 @@ export function AIAvatarCarousel({
                 className="px-6 py-2.5 bg-primary-purple/10 text-primary-purple rounded-full 
                            font-medium hover:bg-primary-purple/20 transition-colors"
               >
-                加载更多 ({voices.length - visibleCount} 个)
+                {t('avatar.loadMore', 'Load More ({{count}} more)', { count: voices.length - visibleCount })}
               </button>
             </div>
           )}
@@ -233,7 +235,7 @@ export function AIAvatarCarousel({
           {selectedVoice && (
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="px-3 py-1 bg-primary-purple/10 text-primary-purple rounded-full text-sm">
-                {selectedVoice.gender === 'female' ? '女声' : '男声'}
+                {selectedVoice.gender === 'female' ? t('avatar.femaleVoice', 'Female Voice') : t('avatar.maleVoice', 'Male Voice')}
               </span>
               <span className="px-3 py-1 bg-background-card text-foreground-secondary rounded-full text-sm border border-border">
                 {selectedVoice.ageRange}

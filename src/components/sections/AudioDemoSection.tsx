@@ -34,32 +34,39 @@ const AudioDemoSection = () => {
           </p>
         </motion.div>
 
-        {/* Audio player */}
+        {/* Audio player - 左右分栏 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
-          {/* Scenario selector */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <div className="flex gap-6">
+          {/* 左侧场景列表 */}
+          <div className="hidden md:flex flex-col gap-1 w-[140px] flex-shrink-0 pt-2">
             {Object.entries(scenarios).map(([key, label]) => (
               <button
                 key={key}
                 onClick={() => setActiveScenario(key)}
-                className={`px-4 py-2 rounded-lg text-body font-medium transition-colors ${
-                  activeScenario === key 
-                    ? 'bg-accent text-white' 
-                    : 'bg-surface text-text-secondary hover:text-text hover:bg-surface-secondary'
+                className={`relative text-left px-3 py-2.5 rounded-lg text-body-sm font-medium transition-all duration-200 ${
+                  activeScenario === key
+                    ? 'bg-accent/10 text-accent'
+                    : 'text-text-secondary hover:text-text hover:bg-surface-secondary'
                 }`}
               >
+                <motion.div
+                  className="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-full bg-accent"
+                  initial={false}
+                  animate={{ opacity: activeScenario === key ? 1 : 0, scaleY: activeScenario === key ? 1 : 0 }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                />
                 {label}
               </button>
             ))}
           </div>
 
-          {/* Audio placeholder/player */}
-          <div className="bg-surface rounded-xl shadow-lg p-8 border border-border">
+          {/* 右侧播放器 */}
+          <div className="flex-1 bg-surface rounded-xl shadow-lg p-8 border border-border">
             {/* Demo header */}
             <div className="flex items-center justify-between mb-6">
               <div>
@@ -133,6 +140,7 @@ const AudioDemoSection = () => {
                 📁 Replace with your audio files at: <code>public/audio/demos/</code>
               </p>
             </div>
+          </div>
           </div>
 
           {/* CTA */}

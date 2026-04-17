@@ -5,6 +5,7 @@
  */
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Filter, RotateCcw, X } from 'lucide-react';
 import { 
   AIVoice, 
@@ -28,6 +29,7 @@ interface FilterState {
 }
 
 export function VoiceFilter({ onFilter }: VoiceFilterProps) {
+  const { t } = useTranslation('ttsDemo');
   const [filters, setFilters] = useState<FilterState>({
     gender: 'all',
     ageRange: 'all',
@@ -38,19 +40,19 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
 
   // 年龄段选项
   const ageRanges = [
-    { value: 'all', label: '全部年龄段' },
+    { value: 'all', label: t('filter.ageRange.all', 'All Ages') },
     { value: '20', label: '20s' },
     { value: '25', label: '25-30' },
     { value: '30', label: '30s' },
     { value: '35', label: '35-40' },
     { value: '40', label: '40s' },
     { value: '50', label: '50+' },
-    { value: '8', label: '童声' }
+    { value: '8', label: t('filter.ageRange.child', 'Child') }
   ];
 
   // 语言选项
   const languageOptions = [
-    { value: 'all', label: '全部语言' },
+    { value: 'all', label: t('filter.language.all', 'All Languages') },
     ...Object.entries(languageMap).map(([code, info]) => ({
       value: code,
       label: `${info.flag} ${info.label}`
@@ -92,7 +94,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
         <div className="flex items-center gap-3">
           <Filter className="w-5 h-5 text-foreground-muted" />
           <span className="text-sm text-foreground-secondary">
-            {filteredCount} 个音色符合条件
+            {t('filter.results', '{{count}} voices found', { count: filteredCount })}
           </span>
         </div>
         
@@ -103,7 +105,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
                        text-foreground-secondary hover:text-foreground-primary transition-colors"
           >
             <RotateCcw className="w-4 h-4" />
-            重置筛选
+            {t('filter.reset', 'Reset Filters')}
           </button>
         )}
       </div>
@@ -113,13 +115,13 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
         {/* 快捷筛选按钮 - 性别 */}
         <div className="mb-4">
           <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-            性别
+            {t('filter.gender.label', 'Gender')}
           </label>
           <div className="flex gap-2">
             {[
-              { value: 'all', label: '全部' },
-              { value: 'female', label: '👩 女声' },
-              { value: 'male', label: '👨 男声' }
+              { value: 'all', label: t('filter.gender.all', 'All') },
+              { value: 'female', label: `👩 ${t('filter.gender.female', 'Female')}` },
+              { value: 'male', label: `👨 ${t('filter.gender.male', 'Male')}` }
             ].map((option) => (
               <button
                 key={option.value}
@@ -143,7 +145,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
           {/* 年龄段 */}
           <div>
             <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-              年龄段
+              {t('filter.ageRange.label', 'Age Range')}
             </label>
             <select
               value={filters.ageRange}
@@ -154,7 +156,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
             >
               {ageRanges.map((option) => (
                 <option key={option.value} value={option.value}>
-                  {option.label}
+                  {option.value === 'all' ? t('filter.ageRange.all', 'All Ages') : option.label}
                 </option>
               ))}
             </select>
@@ -163,7 +165,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
           {/* 语言 */}
           <div>
             <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-              语言
+              {t('filter.language.label', 'Language')}
             </label>
             <select
               value={filters.language}
@@ -174,7 +176,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
             >
               {languageOptions.map((option) => (
                 <option key={option.value} value={option.value}>
-                  {option.label}
+                  {option.value === 'all' ? t('filter.language.all', 'All Languages') : option.label}
                 </option>
               ))}
             </select>
@@ -183,7 +185,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
           {/* 风格 */}
           <div>
             <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-              风格
+              {t('filter.style.label', 'Style')}
             </label>
             <select
               value={filters.style}
@@ -192,7 +194,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
                          bg-background-secondary text-foreground-primary text-sm 
                          focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple"
             >
-              <option value="all">全部风格</option>
+              <option value="all">{t('filter.style.all', 'All Styles')}</option>
               {styleTypes.map((style) => (
                 <option key={style} value={style}>
                   {style}
@@ -204,7 +206,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
           {/* 场景 */}
           <div>
             <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-              适用场景
+              {t('filter.scenario.label', 'Scenario')}
             </label>
             <select
               value={filters.scenario}
@@ -213,7 +215,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
                          bg-background-secondary text-foreground-primary text-sm 
                          focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple"
             >
-              <option value="all">全部场景</option>
+              <option value="all">{t('filter.scenario.all', 'All Scenarios')}</option>
               {scenarioList.map((scenario) => (
                 <option key={scenario} value={scenario}>
                   {scenario}
@@ -229,7 +231,7 @@ export function VoiceFilter({ onFilter }: VoiceFilterProps) {
             {filters.gender !== 'all' && (
               <span className="inline-flex items-center gap-1 px-3 py-1 
                                bg-primary-purple/10 text-primary-purple rounded-full text-sm">
-                {filters.gender === 'female' ? '女声' : '男声'}
+                {filters.gender === 'female' ? t('filter.gender.female', 'Female') : t('filter.gender.male', 'Male')}
                 <button
                   onClick={() => updateFilter('gender', 'all')}
                   className="hover:bg-primary-purple/20 rounded-full p-0.5"

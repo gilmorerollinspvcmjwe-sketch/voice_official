@@ -6,37 +6,25 @@
       "primary": "免费试用",
       "secondary": "观看演示"
     },
-    "trustLabel": "无需信用卡 · 5分钟快速上手"
+    "trustLabel": "无需信用卡 · 5分钟快速上手",
+    "callToExperience": "拨打体验 →"
   },
   "socialProof": {
     "title": "全球 500+ 企业信赖",
     "subtitle": "覆盖金融、医疗、零售等多个行业"
   },
   "metrics": {
-    "calls": {
-      "label": "月通话量",
-      "description": "每月处理的语音通话"
-    },
-    "accuracy": {
-      "label": "准确率",
-      "description": "语音识别准确率"
-    },
-    "costReduction": {
-      "label": "成本降低",
-      "description": "相比传统客服节省成本"
-    },
-    "uptime": {
-      "label": "可用性",
-      "description": "平台稳定运行保障"
-    },
-    "languages": {
-      "label": "支持语言",
-      "description": "覆盖全球主要语言"
-    },
-    "customers": {
-      "label": "服务客户",
-      "description": "全球企业客户数量"
-    }
+    "title": "数据驱动，效果显著",
+    "subtitle": "AI Voice Agent 为企业带来可量化的业务价值",
+    "csat": { "label": "CSAT 提升", "description": "客户满意度显著提升" },
+    "revenue": { "label": "年度节省", "description": "运营成本大幅降低" },
+    "cost": { "label": "成本降低", "description": "人力成本优化" },
+    "resolution": { "label": "问题解决率", "description": "AI 自动处理比例" },
+    "latency": { "label": "响应延迟", "description": "实时语音交互" },
+    "availability": { "label": "可用性", "description": "全年稳定运行" }
+  },
+  "socialProof": {
+    "title": "全球 500+ 企业信赖"
   },
   "problem": {
     "title": "传统呼叫中心的困境",
@@ -103,60 +91,14 @@
   "features": {
     "title": "选择我们平台的理由",
     "subtitle": "业界领先的语音 AI 技术栈",
-    "items": [
-      {
-        "id": "voice",
-        "icon": "mic",
-        "title": "自然语音合成",
-        "description": "业界领先的语音合成技术，拟人度高达 99.5%",
-        "highlight": "热门"
-      },
-      {
-        "id": "intelligence",
-        "icon": "brain",
-        "title": "智能对话理解",
-        "description": "基于大模型的深度理解，支持上下文记忆"
-      },
-      {
-        "id": "deployment",
-        "icon": "zap",
-        "title": "快速部署上线",
-        "description": "5分钟即可完成部署，即刻上线开始服务"
-      },
-      {
-        "id": "conversation",
-        "icon": "refresh",
-        "title": "多轮对话能力",
-        "description": "复杂业务场景无缝衔接，自然对话体验"
-      },
-      {
-        "id": "language",
-        "icon": "globe",
-        "title": "多语言支持",
-        "description": "支持 50+ 语言，全球业务无障碍沟通"
-      },
-      {
-        "id": "analytics",
-        "icon": "chart",
-        "title": "实时数据分析",
-        "description": "通话数据实时可视化，业务洞察一目了然"
-      },
-      {
-        "id": "api",
-        "icon": "link",
-        "title": "开放 API 集成",
-        "description": "灵活对接现有业务系统，无缝集成"
-      },
-      {
-        "id": "security",
-        "icon": "shield",
-        "title": "安全合规",
-        "description": "SOC2/GDPR/HIPAA 认证，企业级安全保障"
-      }
-    ],
+    "natural": { "title": "拟人对话", "description": "自然流畅的对话体验，支持打断和上下文记忆" },
+    "realtime": { "title": "实时响应", "description": "<200ms 响应延迟，毫秒级语音识别和合成" },
+    "interrupt": { "title": "智能打断", "description": "支持用户随时打断，AI 智能响应调整" },
+    "context": { "title": "上下文记忆", "description": "长时记忆能力，跨对话上下文保持" },
+    "emotion": { "title": "情感智能", "description": "识别用户情绪，动态调整对话策略" },
+    "analytics": { "title": "数据分析", "description": "全链路数据追踪，可视化报表分析" },
     "cta": {
-      "text": "探索全部功能",
-      "link": "/product/features"
+      "text": "了解更多功能"
     }
   },
   "howItWorks": {
@@ -266,8 +208,9 @@
     }
   },
   "testimonials": {
-    "title": "客户真实反馈",
-    "subtitle": "听听他们怎么说"
+    "title": "客户成功案例",
+    "subtitle": "看看企业如何通过 AI Voice Agent 提升业务价值",
+    "cta": "查看更多案例"
   },
   "security": {
     "title": "企业级安全保障",
@@ -312,6 +255,10 @@
       "text": "了解更多安全详情",
       "link": "/product/security"
     }
+  },
+  "videoDemo": {
+    "title": "产品演示",
+    "subtitle": "观看 AI 语音智能体的真实表现"
   },
   "cta": {
     "title": "准备好革新您的客户对话了吗？",

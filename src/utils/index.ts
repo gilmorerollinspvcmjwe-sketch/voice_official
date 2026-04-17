@@ -99,14 +99,14 @@ export function getPathWithoutLocale(path: string): string {
 
 /**
  * Add locale prefix to path
+ * When no locale is provided, reads from localStorage (current i18n state)
  */
 export function getLocalizedPath(path: string, locale?: string): string {
-  // Get current locale from i18n if not provided
   const currentLocale = locale || (typeof window !== 'undefined' 
     ? localStorage.getItem('preferredLanguage') || 'en' 
     : 'en')
   
   const cleanPath = getPathWithoutLocale(path)
-  if (currentLocale === 'en') return cleanPath
-  return `/zh${cleanPath === '/' ? '' : cleanPath}`
+  if (currentLocale === 'en') return `/en${cleanPath === '/' ? '' : cleanPath}`
+  return `/${currentLocale}${cleanPath === '/' ? '' : cleanPath}`
 }

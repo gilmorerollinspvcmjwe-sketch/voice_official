@@ -94,32 +94,30 @@ const specs: Spec[] = [
 ];
 
 const emotionData = [
-  { emoji: '😊', label: '开心', score: 95 },
-  { emoji: '😌', label: '平静', score: 98 },
-  { emoji: '😢', label: '悲伤', score: 88 },
-  { emoji: '😠', label: '愤怒', score: 85 },
-  { emoji: '😲', label: '惊讶', score: 82 },
-  { emoji: '😨', label: '害怕', score: 78 },
-  { emoji: '🤢', label: '厌恶', score: 75 },
-  { emoji: '🤩', label: '期待', score: 90 }
+  { emoji: '😊', label: '开心', key: 'happy', score: 95 },
+  { emoji: '😌', label: '平静', key: 'calm', score: 98 },
+  { emoji: '😢', label: '悲伤', key: 'sad', score: 88 },
+  { emoji: '😠', label: '愤怒', key: 'angry', score: 85 },
+  { emoji: '😲', label: '惊讶', key: 'surprised', score: 82 },
+  { emoji: '😨', label: '害怕', key: 'afraid', score: 78 },
+  { emoji: '🤢', label: '厌恶', key: 'disgusted', score: 75 },
+  { emoji: '🤩', label: '期待', key: 'expecting', score: 90 }
 ];
 
 export function TTSSpecs() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation('ttsDemo');
   const isZh = i18n.language === 'zh';
 
   return (
     <div className="w-full">
       {/* 标题 */}
       <div className="text-center mb-12">
-        <Badge variant="accent" className="mb-4">技术规格</Badge>
+        <Badge variant="accent" className="mb-4">{t('specs.title', 'Technical Specifications')}</Badge>
         <h2 className="text-h2 font-bold text-foreground-primary mb-4">
-          {isZh ? '技术规格' : 'Technical Specifications'}
+          {t('specs.title', 'Technical Specifications')}
         </h2>
         <p className="text-foreground-secondary max-w-2xl mx-auto">
-          {isZh 
-            ? '业界领先的 TTS 技术参数，确保语音合成质量达到最高标准' 
-            : 'Industry-leading TTS parameters ensuring the highest quality speech synthesis'}
+          {t('specs.subtitle', 'Industry-leading TTS parameters ensuring the highest quality speech synthesis')}
         </p>
       </div>
 
@@ -161,7 +159,7 @@ export function TTSSpecs() {
       {/* 波形对比图 */}
       <div className="mt-12 bg-background-card rounded-2xl border border-border p-8">
         <h3 className="text-xl font-semibold mb-6 text-center text-foreground-primary">
-          {isZh ? 'AI vs 真人波形对比' : 'AI vs Human Waveform Comparison'}
+          {t('specs.waveform.title', 'AI vs Human Waveform Comparison')}
         </h3>
         
         {/* 对比展示 */}
@@ -170,7 +168,7 @@ export function TTSSpecs() {
           <div className="bg-background-elevated rounded-xl p-6 border border-border">
             <div className="flex items-center gap-2 mb-4">
               <Mic className="w-5 h-5 text-primary-purple" />
-              <span className="font-medium text-foreground-primary">{isZh ? 'AI 语音合成' : 'AI Voice Synthesis'}</span>
+              <span className="font-medium text-foreground-primary">{t('specs.waveform.ai', 'AI Voice Synthesis')}</span>
               <span className="ml-auto text-sm text-success">MOS 4.8</span>
             </div>
             {/* 模拟波形 */}
@@ -196,7 +194,7 @@ export function TTSSpecs() {
           <div className="bg-background-elevated rounded-xl p-6 border border-border">
             <div className="flex items-center gap-2 mb-4">
               <Users className="w-5 h-5 text-success" />
-              <span className="font-medium text-foreground-primary">{isZh ? '真人录音' : 'Human Recording'}</span>
+              <span className="font-medium text-foreground-primary">{t('specs.waveform.human', 'Human Recording')}</span>
               <span className="ml-auto text-sm text-success">MOS 5.0</span>
             </div>
             {/* 模拟波形 */}
@@ -223,16 +221,14 @@ export function TTSSpecs() {
         {/* 说明 */}
         <div className="mt-6 text-center text-sm text-foreground-muted">
           <TrendingUp className="w-4 h-4 inline mr-2" />
-          {isZh 
-            ? 'AI 语音波形与真人高度相似，自然度 MOS 评分接近满分' 
-            : 'AI voice waveform highly similar to human, MOS score close to perfect'}
+          {t('specs.waveform.note', 'AI voice waveform highly similar to human, MOS score close to perfect')}
         </div>
       </div>
 
       {/* 情感雷达图 */}
       <div className="mt-12 bg-background-card rounded-2xl border border-border p-8">
         <h3 className="text-xl font-semibold mb-6 text-center text-foreground-primary">
-          {isZh ? '情感表达能力覆盖' : 'Emotion Expression Coverage'}
+          {t('specs.emotionRadar.title', 'Emotion Expression Coverage')}
         </h3>
         
         {/* 简化的情感展示 */}
@@ -241,7 +237,7 @@ export function TTSSpecs() {
             <div key={emotion.label} className="text-center">
               <div className="text-3xl mb-2">{emotion.emoji}</div>
               <div className="text-sm font-medium text-foreground-secondary mb-1">
-                {isZh ? emotion.label : emotion.label}
+                {t(`emotions.${emotion.key}`, emotion.label)}
               </div>
               <div className="w-full bg-background-elevated rounded-full h-2">
                 <div

@@ -95,21 +95,18 @@ const testimonials: TTSTestimonial[] = [
 ];
 
 export function TTSTestimonials() {
-  const { i18n } = useTranslation();
-  const isZh = i18n.language === 'zh';
+  const { t } = useTranslation('ttsDemo');
 
   return (
     <div className="w-full">
       {/* 标题 */}
       <div className="text-center mb-12">
-        <Badge variant="accent" className="mb-4">{isZh ? '客户案例' : 'Customer Stories'}</Badge>
+        <Badge variant="accent" className="mb-4">{t('testimonials.title', 'Customer Stories')}</Badge>
         <h2 className="text-h2 font-bold text-foreground-primary mb-4">
-          {isZh ? '客户案例' : 'Customer Stories'}
+          {t('testimonials.title', 'Customer Stories')}
         </h2>
         <p className="text-foreground-secondary max-w-2xl mx-auto">
-          {isZh 
-            ? '来自电商、金融、教育、游戏等行业的真实使用案例，看看他们如何用 AI 语音提升业务效率' 
-            : 'Real use cases from e-commerce, finance, education, gaming and other industries'}
+          {t('testimonials.subtitle', 'Real use cases from e-commerce, finance, education, gaming and other industries')}
         </p>
       </div>
 
@@ -183,10 +180,10 @@ export function TTSTestimonials() {
       <div className="mt-12 bg-gradient-primary rounded-2xl p-8 text-white">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { label: isZh ? '企业客户' : 'Enterprise Customers', value: '500+', icon: <Building2 className="w-6 h-6" /> },
-            { label: isZh ? '月通话量' : 'Monthly Calls', value: '10M+', icon: <Clock className="w-6 h-6" /> },
-            { label: isZh ? '平均满意度' : 'Avg Satisfaction', value: '95%', icon: <CheckCircle className="w-6 h-6" /> },
-            { label: isZh ? '成本降低' : 'Cost Reduction', value: '60%', icon: <TrendingDown className="w-6 h-6" /> }
+            { label: t('testimonials.summary.customers.label', 'Enterprise Customers'), value: '500+', icon: <Building2 className="w-6 h-6" /> },
+            { label: t('testimonials.summary.calls.label', 'Monthly Calls'), value: '10M+', icon: <Clock className="w-6 h-6" /> },
+            { label: t('testimonials.summary.satisfaction.label', 'Avg Satisfaction'), value: '95%', icon: <CheckCircle className="w-6 h-6" /> },
+            { label: t('testimonials.summary.costReduction.label', 'Cost Reduction'), value: '60%', icon: <TrendingDown className="w-6 h-6" /> }
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center 
@@ -203,17 +200,17 @@ export function TTSTestimonials() {
       {/* 行业分布 */}
       <div className="mt-12 bg-background-card rounded-2xl border border-border p-8">
         <h3 className="text-xl font-semibold text-foreground-primary mb-6 text-center">
-          {isZh ? '行业客户分布' : 'Industry Customer Distribution'}
+          {t('testimonials.industryDistribution', 'Industry Customer Distribution')}
         </h3>
         
         <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
           {[
-            { name: isZh ? '电商' : 'E-commerce', count: 120, color: 'bg-orange-500' },
-            { name: isZh ? '金融' : 'Finance', count: 85, color: 'bg-blue-500' },
-            { name: isZh ? '教育' : 'Education', count: 60, color: 'bg-green-500' },
-            { name: isZh ? '游戏' : 'Gaming', count: 45, color: 'bg-purple-500' },
-            { name: isZh ? '医疗' : 'Healthcare', count: 35, color: 'bg-red-500' },
-            { name: isZh ? '其他' : 'Other', count: 155, color: 'bg-foreground-muted' }
+            { name: t('testimonials.industry.ecommerce', 'E-commerce'), count: 120, color: 'bg-orange-500' },
+            { name: t('testimonials.industry.finance', 'Finance'), count: 85, color: 'bg-blue-500' },
+            { name: t('testimonials.industry.education', 'Education'), count: 60, color: 'bg-green-500' },
+            { name: t('testimonials.industry.gaming', 'Gaming'), count: 45, color: 'bg-purple-500' },
+            { name: t('testimonials.industry.healthcare', 'Healthcare'), count: 35, color: 'bg-red-500' },
+            { name: t('testimonials.industry.other', 'Other'), count: 155, color: 'bg-foreground-muted' }
           ].map((industry) => (
             <div
               key={industry.name}

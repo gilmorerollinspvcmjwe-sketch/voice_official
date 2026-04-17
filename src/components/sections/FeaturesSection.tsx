@@ -46,9 +46,9 @@ const iconMap = {
 interface Feature {
   id: string
   icon: keyof typeof iconMap
-  title: string
-  description: string
-  highlight?: string
+  title: { en: string; zh: string }
+  description: { en: string; zh: string }
+  highlight?: { en: string; zh: string }
   glowColor?: string
   gradientBg?: string
 }
@@ -57,49 +57,49 @@ const features: Feature[] = [
   {
     id: 'natural',
     icon: 'mic',
-    title: '拟人对话',
-    description: '自然流畅的对话体验，支持打断和上下文记忆',
+    title: { en: 'Natural Conversation', zh: '拟人对话' },
+    description: { en: 'Natural and fluent conversation experience, with interruption and context memory support', zh: '自然流畅的对话体验，支持打断和上下文记忆' },
     glowColor: '#8B5CF6',
     gradientBg: 'from-primary-purple/20 to-primary-blue/10',
   },
   {
     id: 'realtime',
     icon: 'zap',
-    title: '实时响应',
-    description: '<200ms 响应延迟，毫秒级语音识别和合成',
-    highlight: '极速',
+    title: { en: 'Real-time Response', zh: '实时响应' },
+    description: { en: '<200ms response latency, millisecond-level speech recognition and synthesis', zh: '<200ms 响应延迟，毫秒级语音识别和合成' },
+    highlight: { en: 'Fast', zh: '极速' },
     glowColor: '#D4FF00',
     gradientBg: 'from-accent-lime/20 to-accent-lime/10',
   },
   {
     id: 'interrupt',
     icon: 'refresh',
-    title: '智能打断',
-    description: '支持用户随时打断，AI 智能响应调整',
+    title: { en: 'Smart Interruption', zh: '智能打断' },
+    description: { en: 'Users can interrupt at any time, AI intelligently adjusts response', zh: '支持用户随时打断，AI 智能响应调整' },
     glowColor: '#D4A574',
     gradientBg: 'from-gold/20 to-gold-light/10',
   },
   {
     id: 'context',
     icon: 'brain',
-    title: '上下文记忆',
-    description: '长时记忆能力，跨对话上下文保持',
+    title: { en: 'Context Memory', zh: '上下文记忆' },
+    description: { en: 'Long-term memory capability, cross-conversation context retention', zh: '长时记忆能力，跨对话上下文保持' },
     glowColor: '#8B5CF6',
     gradientBg: 'from-primary-purple/20 to-primary-blue/10',
   },
   {
     id: 'emotion',
     icon: 'heart',
-    title: '情感智能',
-    description: '识别用户情绪，动态调整对话策略',
+    title: { en: 'Emotional Intelligence', zh: '情感智能' },
+    description: { en: 'Recognize user emotions, dynamically adjust conversation strategy', zh: '识别用户情绪，动态调整对话策略' },
     glowColor: '#D4A574',
     gradientBg: 'from-gold/20 to-gold-light/10',
   },
   {
     id: 'analytics',
     icon: 'chart',
-    title: '数据分析',
-    description: '全链路数据追踪，可视化报表分析',
+    title: { en: 'Data Analytics', zh: '数据分析' },
+    description: { en: 'Full-link data tracking, visual report analysis', zh: '全链路数据追踪，可视化报表分析' },
     glowColor: '#D4FF00',
     gradientBg: 'from-accent-lime/20 to-accent-lime/10',
   },
@@ -155,7 +155,8 @@ const headerVariants = {
 }
 
 const FeaturesSection = () => {
-  const { t } = useTranslation('home')
+  const { t, i18n } = useTranslation('home')
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
   const sectionRef = useRef<HTMLDivElement>(null)
 
   return (
@@ -177,11 +178,11 @@ const FeaturesSection = () => {
         >
           <h2 className="section-title">
             <GradientText metallic direction="diagonal" speed={4}>
-              {t('features.title', '核心能力')}
+              {t('features.title', 'Core Capabilities')}
             </GradientText>
           </h2>
           <p className="section-subtitle">
-            {t('features.subtitle', '6 大核心技术能力，打造企业级 AI 语音对话体验')}
+            {t('features.subtitle', '6 core technical capabilities for enterprise-grade AI voice conversations')}
           </p>
         </motion.div>
 
@@ -218,7 +219,7 @@ const FeaturesSection = () => {
                     {/* 标题 */}
                     <div className="flex items-center gap-2 mb-3">
                       <h3 className="text-h4 font-semibold text-foreground-primary">
-                        {t(`features.${feature.id}.title`, feature.title)}
+                        {t(`features.${feature.id}.title`, feature.title[currentLocale])}
                       </h3>
                       {feature.highlight && (
                         <Badge
@@ -226,14 +227,14 @@ const FeaturesSection = () => {
                           size="sm"
                           className="bg-accent-lime/10 text-accent-lime"
                         >
-                          {feature.highlight}
+                          {feature.highlight[currentLocale]}
                         </Badge>
                       )}
                     </div>
 
                     {/* 描述 */}
                     <p className="text-body text-foreground-secondary leading-relaxed">
-                      {t(`features.${feature.id}.description`, feature.description)}
+                      {t(`features.${feature.id}.description`, feature.description[currentLocale])}
                     </p>
                   </div>
                 </FeatureCard>
@@ -257,7 +258,7 @@ const FeaturesSection = () => {
               rightIcon={<ArrowRight size={20} />}
               className="text-foreground-secondary hover:text-foreground-primary"
             >
-              {t('features.cta.text', '了解更多功能')}
+              {t('features.cta.text', 'Learn More Features')}
             </Button>
           </Link>
         </motion.div>

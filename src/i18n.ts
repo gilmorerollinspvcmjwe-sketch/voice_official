@@ -65,9 +65,10 @@ i18n
     defaultNS: 'common',
     
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['path', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'preferredLanguage',
+      lookupFromPathIndex: 1, // /en/path -> index 1 = 'en'
     },
 
     interpolation: {

@@ -23,59 +23,59 @@ import { ParticleBackground } from '@/components/effects/ParticleBackground'
 
 const items: Array<{
   icon: LucideIcon
-  problemTitle: string
-  problemDesc: string
+  problemTitle: { en: string; zh: string }
+  problemDesc: { en: string; zh: string }
   solutionIcon: LucideIcon
-  solutionTitle: string
-  solutionDesc: string
+  solutionTitle: { en: string; zh: string }
+  solutionDesc: { en: string; zh: string }
 }> = [
   {
     icon: Phone,
-    problemTitle: '高昂人力成本',
-    problemDesc: '每位客服年成本 $40,000+，人力成本居高不下',
+    problemTitle: { en: 'High Labor Costs', zh: '高昂人力成本' },
+    problemDesc: { en: 'Each agent costs $40,000+/year, labor costs remain high', zh: '每位客服年成本 $40,000+，人力成本居高不下' },
     solutionIcon: Bot,
-    solutionTitle: 'AI 智能体替代',
-    solutionDesc: '替代 80% 重复工作，成本降低 60% 以上',
+    solutionTitle: { en: 'AI Agent Replacement', zh: 'AI 智能体替代' },
+    solutionDesc: { en: 'Replace 80% of repetitive work, reduce costs by 60%+', zh: '替代 80% 重复工作，成本降低 60% 以上' },
   },
   {
     icon: Clock,
-    problemTitle: '24/7 覆盖困难',
-    problemDesc: '无法处理夜间和节假日咨询，客户等待时间长',
+    problemTitle: { en: '24/7 Coverage Difficulty', zh: '24/7 覆盖困难' },
+    problemDesc: { en: 'Unable to handle night and holiday inquiries, long customer wait times', zh: '无法处理夜间和节假日咨询，客户等待时间长' },
     solutionIcon: Zap,
-    solutionTitle: '全天候服务',
-    solutionDesc: '24/7 无间断响应，随时满足客户需求',
+    solutionTitle: { en: '24/7 Service', zh: '全天候服务' },
+    solutionDesc: { en: 'Non-stop 24/7 response, always meeting customer needs', zh: '24/7 无间断响应，随时满足客户需求' },
   },
   {
     icon: Users,
-    problemTitle: '高员工流失率',
-    problemDesc: '平均任期仅 6-12 个月，培训成本高',
+    problemTitle: { en: 'High Employee Turnover', zh: '高员工流失率' },
+    problemDesc: { en: 'Average tenure only 6-12 months, high training costs', zh: '平均任期仅 6-12 个月，培训成本高' },
     solutionIcon: Target,
-    solutionTitle: '零培训成本',
-    solutionDesc: '分钟级部署，即刻上岗，无需培训周期',
+    solutionTitle: { en: 'Zero Training Cost', zh: '零培训成本' },
+    solutionDesc: { en: 'Deploy in minutes, ready to work immediately, no training cycle needed', zh: '分钟级部署，即刻上岗，无需培训周期' },
   },
   {
     icon: BarChart3,
-    problemTitle: '服务质量不稳定',
-    problemDesc: '每次通话质量参差不齐，客户体验不一致',
+    problemTitle: { en: 'Inconsistent Service Quality', zh: '服务质量不稳定' },
+    problemDesc: { en: 'Call quality varies, inconsistent customer experience', zh: '每次通话质量参差不齐，客户体验不一致' },
     solutionIcon: Star,
-    solutionTitle: '100% 一致性',
-    solutionDesc: '每一通电话都完美执行，服务品质稳定',
+    solutionTitle: { en: '100% Consistency', zh: '100% 一致性' },
+    solutionDesc: { en: 'Every call executed perfectly, stable service quality', zh: '每一通电话都完美执行，服务品质稳定' },
   },
   {
     icon: Globe,
-    problemTitle: '多语言支持有限',
-    problemDesc: '难以服务国际化客户，语言壁垒明显',
+    problemTitle: { en: 'Limited Multi-language Support', zh: '多语言支持有限' },
+    problemDesc: { en: 'Difficult to serve international customers, obvious language barriers', zh: '难以服务国际化客户，语言壁垒明显' },
     solutionIcon: Globe,
-    solutionTitle: '50+ 语言支持',
-    solutionDesc: '触达全球客户无障碍，多语言无缝切换',
+    solutionTitle: { en: '50+ Languages Supported', zh: '50+ 语言支持' },
+    solutionDesc: { en: 'Reach global customers without barriers, seamless multi-language switching', zh: '触达全球客户无障碍，多语言无缝切换' },
   },
   {
     icon: Phone,
-    problemTitle: '数据收集困难',
-    problemDesc: '通话数据无法结构化，缺少实时分析能力',
+    problemTitle: { en: 'Difficult Data Collection', zh: '数据收集困难' },
+    problemDesc: { en: 'Call data cannot be structured, lacks real-time analysis capabilities', zh: '通话数据无法结构化，缺少实时分析能力' },
     solutionIcon: BarChart3,
-    solutionTitle: '实时数据洞察',
-    solutionDesc: '通话内容自动分析，业务洞察即时生成',
+    solutionTitle: { en: 'Real-time Data Insights', zh: '实时数据洞察' },
+    solutionDesc: { en: 'Automatic call content analysis, instant business insights', zh: '通话内容自动分析，业务洞察即时生成' },
   },
 ]
 
@@ -91,13 +91,15 @@ function ProblemSolutionCard({
   delay = 0,
 }: {
   icon: LucideIcon
-  problemTitle: string
-  problemDesc: string
+  problemTitle: { en: string; zh: string }
+  problemDesc: { en: string; zh: string }
   solutionIcon: LucideIcon
-  solutionTitle: string
-  solutionDesc: string
+  solutionTitle: { en: string; zh: string }
+  solutionDesc: { en: string; zh: string }
   delay?: number
 }) {
+  const { i18n } = useTranslation()
+  const currentLocale = i18n.language === 'zh' ? 'zh' : 'en'
   const [isFlipped, setIsFlipped] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -153,10 +155,10 @@ function ProblemSolutionCard({
               </div>
 
               <h3 className="text-xl font-semibold text-foreground-primary mb-2">
-                {problemTitle}
+                {problemTitle[currentLocale]}
               </h3>
               <p className="text-foreground-muted text-sm leading-relaxed mb-4">
-                {problemDesc}
+                {problemDesc[currentLocale]}
               </p>
 
               {/* 翻转提示 */}
@@ -203,10 +205,10 @@ function ProblemSolutionCard({
               </div>
 
               <h3 className="text-xl font-semibold text-accent-lime mb-2">
-                {solutionTitle}
+                {solutionTitle[currentLocale]}
               </h3>
               <p className="text-foreground-secondary text-sm leading-relaxed">
-                {solutionDesc}
+                {solutionDesc[currentLocale]}
               </p>
 
               {/* 成功标记 */}
@@ -252,10 +254,10 @@ const ProblemSolutionSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-h2 md:text-h1 font-semibold text-foreground-primary mb-4">
-            {t('problem.title', '传统呼叫中心的困境')}
+            {t('problem.title', 'The Dilemma of Traditional Call Centers')}
           </h2>
           <p className="text-body-lg text-foreground-secondary max-w-2xl mx-auto">
-            {t('problem.subtitle', '您是否正面临这些挑战？')}
+            {t('problem.subtitle', 'Are you facing these challenges?')}
           </p>
 
           {/* 分隔线 + VS */}

@@ -30,6 +30,12 @@
     "subtitle": "Click on an avatar to hear the corresponding voice and experience hyper-realistic AI speech synthesis",
     "popular": "Popular"
   },
+  "avatar": {
+    "noVoices": "No voices available",
+    "loadMore": "Load More ({{count}} more)",
+    "femaleVoice": "Female Voice",
+    "maleVoice": "Male Voice"
+  },
   "filter": {
     "gender": {
       "label": "Gender",
@@ -39,7 +45,8 @@
     },
     "ageRange": {
       "label": "Age Range",
-      "all": "All Ages"
+      "all": "All Ages",
+      "child": "Child"
     },
     "language": {
       "label": "Language",
@@ -84,11 +91,17 @@
       "pause": "Pause",
       "download": "Download"
     },
-    "reset": "Reset"
+    "reset": "Reset",
+    "pitchOptions": {
+      "deep": "Deep",
+      "normal": "Normal",
+      "high": "High"
+    }
   },
   "specs": {
     "title": "Technical Specifications",
     "subtitle": "Industry-leading TTS parameters ensuring the highest quality speech synthesis",
+    "badge": "Technical Specifications",
     "items": {
       "mos": {
         "label": "Naturalness (MOS)",
@@ -137,6 +150,10 @@
     "viewDetails": "View Scenario Details",
     "recommended": "Recommended Voices",
     "comparisonTitle": "Scenario Voice Recommendation Comparison",
+    "tableScenario": "Scenario",
+    "tableVoices": "Voices",
+    "tableFeatures": "Features",
+    "tableMetrics": "Metrics",
     "items": {
       "customerService": {
         "title": "Customer Service",
@@ -168,6 +185,14 @@
     "title": "Customer Stories",
     "subtitle": "Real use cases from e-commerce, finance, education, gaming and other industries",
     "industryDistribution": "Industry Customer Distribution",
+    "industry": {
+      "ecommerce": "E-commerce",
+      "finance": "Finance",
+      "education": "Education",
+      "gaming": "Gaming",
+      "healthcare": "Healthcare",
+      "other": "Other"
+    },
     "summary": {
       "customers": {
         "value": "500+",

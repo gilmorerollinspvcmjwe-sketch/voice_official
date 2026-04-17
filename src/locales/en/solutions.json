@@ -226,5 +226,12 @@
       "subtitle": "Recover more revenue with compliant, empathetic AI voice agents.",
       "button": "Schedule a Demo"
     }
+  },
+  "survey": {
+    "pageTitle": "Survey & Feedback - VoiceAgent",
+    "pageDescription": "AI voice survey solution, coming soon.",
+    "comingSoon": "Coming Soon",
+    "description": "AI voice survey solution is under development, stay tuned.",
+    "backToSolutions": "Back to Solutions"
   }
 }

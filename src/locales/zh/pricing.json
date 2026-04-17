@@ -9,44 +9,34 @@
   },
   "plans": {
     "popular": "最受欢迎",
-    "free": {
-      "name": "免费版",
-      "period": "月",
-      "description": "适合试用我们的平台",
-      "feature1": "100分钟/月",
-      "feature2": "基础语音合成",
-      "feature3": "2个语音智能体",
-      "feature4": "社区支持",
+    "starter": {
+      "name": "入门版",
+      "description": "适合个人开发者和小团队试用",
+      "features": ["每月 100 分钟通话", "基础语音模型", "标准技术支持", "社区支持", "基础 API 访问"],
       "cta": "免费开始"
     },
     "pro": {
       "name": "专业版",
-      "period": "月",
-      "description": "适合成长中的团队和企业",
-      "feature1": "无限通话时长",
-      "feature2": "高级语音合成",
-      "feature3": "10个语音智能体",
-      "feature4": "优先支持",
-      "feature5": "分析仪表板",
-      "feature6": "API访问",
-      "cta": "开始试用"
+      "description": "适合成长型企业",
+      "features": ["每月 1000 分钟通话", "高级语音模型", "优先技术支持", "自定义音色", "完整 API 访问", "数据分析报表", "多场景模板"],
+      "cta": "立即升级"
     },
     "enterprise": {
       "name": "企业版",
-      "price": "定制",
-      "description": "适合有定制需求的大型组织",
-      "feature1": "专业版所有功能",
-      "feature2": "自定义声音克隆",
-      "feature3": "无限智能体",
-      "feature4": "专属支持",
-      "feature5": "定制集成",
-      "feature6": "SLA保障",
-      "feature7": "私有化部署",
+      "description": "适合大型企业和定制需求",
+      "features": ["无限通话时长", "专属语音模型", "7x24 技术支持", "私有化部署", "SLA 保障", "专属客户经理", "定制化开发", "安全合规审计"],
       "cta": "联系销售"
     }
   },
   "footer": {
     "note": "所有计划均含14天免费试用。无需信用卡。"
+  },
+  "faqHint": "有疑问？",
+  "faqLink": "查看常见问题",
+  "enterprise": {
+    "title": "需要定制方案？",
+    "description": "联系我们获取专属定价和私有化部署方案",
+    "cta": "联系销售团队"
   },
   "faq": {
     "title": "常见问题",

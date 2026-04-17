@@ -5,6 +5,7 @@
  */
 
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   Mic, 
   Play, 
@@ -38,6 +39,7 @@ interface GenerateResult {
 }
 
 export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
+  const { t } = useTranslation('ttsDemo');
   // 输入状态
   const [text, setText] = useState('');
   const [selectedVoice, setSelectedVoice] = useState<AIVoice | null>(
@@ -95,7 +97,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         setGeneratedAudio(selectedVoice.audioSample);
       }
     } catch (err) {
-      setError('生成失败，请稍后重试');
+      setError(t('customDemo.generate.error', 'Generation failed, please try again'));
     } finally {
       setIsGenerating(false);
     }
@@ -127,20 +129,20 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
       <div className="flex items-center gap-3 mb-6">
         <Mic className="w-6 h-6 text-primary-purple" />
         <h3 className="text-xl font-semibold text-foreground-primary">
-          自定义试听
+          {t('customDemo.title', 'Custom Demo')}
         </h3>
       </div>
 
       {/* 文本输入 */}
       <div className="mb-6">
         <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-          输入试听文案
+          {t('customDemo.textInput.label', 'Enter Text')}
         </label>
         <div className="relative">
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value.slice(0, MAX_CHARS))}
-            placeholder="请输入您想听到的内容..."
+            placeholder={t('customDemo.textInput.placeholder', 'Enter the content you want to hear...')}
             rows={4}
             className={cn(
               "w-full px-4 py-3 rounded-lg border bg-background-secondary resize-none",
@@ -151,7 +153,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
             )}
           />
           <div className="absolute bottom-2 right-2 text-sm text-foreground-muted">
-            {charCount} / {MAX_CHARS}
+            {t('customDemo.textInput.charLimit', '{{count}} / {{max}} characters', { count: charCount, max: MAX_CHARS })}
           </div>
         </div>
       </div>
@@ -159,7 +161,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
       {/* 音色选择 */}
       <div className="mb-6">
         <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-          选择音色
+          {t('customDemo.voiceSelect.label', 'Select Voice')}
         </label>
         <select
           value={selectedVoice?.id || ''}
@@ -173,7 +175,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         >
           {voices.map((voice) => (
             <option key={voice.id} value={voice.id}>
-              {voice.name} - {voice.style} ({voice.gender === 'female' ? '女' : '男'})
+              {voice.name} - {voice.style} ({voice.gender === 'female' ? 'F' : 'M'})
             </option>
           ))}
         </select>
@@ -203,7 +205,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         {/* 语言 */}
         <div>
           <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-            语言
+            {t('customDemo.params.language', 'Language')}
           </label>
           <select
             value={language}
@@ -224,7 +226,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         {/* 情感 */}
         <div>
           <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-            情感
+            {t('customDemo.params.emotion', 'Emotion')}
           </label>
           <select
             value={emotion}
@@ -244,7 +246,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         {/* 语速 */}
         <div>
           <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-            语速: {speed.toFixed(1)}x
+            {t('customDemo.params.speed', 'Speed: {{value}}x', { value: speed.toFixed(1) })}
           </label>
           <input
             type="range"
@@ -267,7 +269,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
       {/* 音调 */}
       <div className="mb-6">
         <label className="text-sm font-medium text-foreground-secondary mb-2 block">
-          音调: {pitch.toFixed(1)}x
+          {t('customDemo.params.pitch', 'Pitch: {{value}}x', { value: pitch.toFixed(1) })}
         </label>
         <input
           type="range"
@@ -280,9 +282,9 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
                      cursor-pointer accent-primary-purple"
         />
         <div className="flex justify-between text-xs text-foreground-muted mt-1">
-          <span>低沉</span>
-          <span>正常</span>
-          <span>高亢</span>
+          <span>{t('customDemo.pitchOptions.deep', 'Deep')}</span>
+          <span>{t('customDemo.pitchOptions.normal', 'Normal')}</span>
+          <span>{t('customDemo.pitchOptions.high', 'High')}</span>
         </div>
       </div>
 
@@ -303,12 +305,12 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
           {isGenerating ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              正在生成...
+              {t('customDemo.generate.loading', 'Generating...')}
             </>
           ) : (
             <>
               <Volume2 className="w-5 h-5" />
-              生成试听
+              {t('customDemo.generate.button', 'Generate Demo')}
             </>
           )}
         </button>
@@ -319,7 +321,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
             className="px-6 py-3 rounded-lg font-medium text-foreground-secondary 
                        bg-background-secondary hover:bg-background-elevated transition-colors border border-border"
           >
-            重置
+            {t('customDemo.reset', 'Reset')}
           </button>
         )}
       </div>
@@ -337,7 +339,7 @@ export function CustomTTSDemo({ voices, onGenerate }: CustomTTSDemoProps) {
         <div className="p-4 bg-success/5 rounded-lg border border-success/20">
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
-            <p className="text-success font-medium">生成成功！</p>
+            <p className="text-success font-medium">{t('customDemo.generate.success', 'Generated Successfully!')}</p>
           </div>
 
           {/* 音频播放器 */}

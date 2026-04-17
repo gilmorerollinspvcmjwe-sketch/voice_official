@@ -6,37 +6,25 @@
       "primary": "Start Free Trial",
       "secondary": "Watch Demo"
     },
-    "trustLabel": "No credit card required • Setup in 5 minutes"
+    "trustLabel": "No credit card required • Setup in 5 minutes",
+    "callToExperience": "Call to Experience →"
   },
   "socialProof": {
     "title": "Trusted by 500+ companies worldwide",
     "subtitle": "Covering finance, healthcare, retail and more industries"
   },
   "metrics": {
-    "calls": {
-      "label": "Calls Monthly",
-      "description": "Voice calls processed every month"
-    },
-    "accuracy": {
-      "label": "Accuracy",
-      "description": "Speech recognition accuracy rate"
-    },
-    "costReduction": {
-      "label": "Cost Reduction",
-      "description": "Savings compared to traditional support"
-    },
-    "uptime": {
-      "label": "Uptime",
-      "description": "Platform stability guarantee"
-    },
-    "languages": {
-      "label": "Languages",
-      "description": "Global language coverage"
-    },
-    "customers": {
-      "label": "Customers",
-      "description": "Enterprise customers worldwide"
-    }
+    "title": "Data-Driven, Significant Results",
+    "subtitle": "AI Voice Agent delivers quantifiable business value for enterprises",
+    "csat": { "label": "CSAT Improvement", "description": "Customer satisfaction significantly improved" },
+    "revenue": { "label": "Annual Savings", "description": "Significant reduction in operating costs" },
+    "cost": { "label": "Cost Reduction", "description": "Labor cost optimization" },
+    "resolution": { "label": "Resolution Rate", "description": "AI automated handling ratio" },
+    "latency": { "label": "Response Latency", "description": "Real-time voice interaction" },
+    "availability": { "label": "Availability", "description": "Stable operation throughout the year" }
+  },
+  "socialProof": {
+    "title": "Trusted by 500+ enterprises worldwide"
   },
   "problem": {
     "title": "The Challenges You Face",
@@ -103,60 +91,14 @@
   "features": {
     "title": "Why Choose Our Platform",
     "subtitle": "Industry-leading voice AI technology stack",
-    "items": [
-      {
-        "id": "voice",
-        "icon": "mic",
-        "title": "Natural Voice Synthesis",
-        "description": "Industry-leading TTS with 99.5% human-likeness",
-        "highlight": "Popular"
-      },
-      {
-        "id": "intelligence",
-        "icon": "brain",
-        "title": "Intelligent Understanding",
-        "description": "LLM-powered deep understanding with context memory"
-      },
-      {
-        "id": "deployment",
-        "icon": "zap",
-        "title": "Rapid Deployment",
-        "description": "Deploy in 5 minutes, start serving immediately"
-      },
-      {
-        "id": "conversation",
-        "icon": "refresh",
-        "title": "Multi-turn Conversations",
-        "description": "Handle complex business scenarios seamlessly"
-      },
-      {
-        "id": "language",
-        "icon": "globe",
-        "title": "Multi-language Support",
-        "description": "Support 50+ languages for global business"
-      },
-      {
-        "id": "analytics",
-        "icon": "chart",
-        "title": "Real-time Analytics",
-        "description": "Call data visualization in real-time"
-      },
-      {
-        "id": "api",
-        "icon": "link",
-        "title": "Open API Integration",
-        "description": "Flexible integration with existing systems"
-      },
-      {
-        "id": "security",
-        "icon": "shield",
-        "title": "Security & Compliance",
-        "description": "SOC2/GDPR/HIPAA certified, enterprise-grade security"
-      }
-    ],
+    "natural": { "title": "Natural Conversation", "description": "Natural and fluent conversation experience, with interruption and context memory support" },
+    "realtime": { "title": "Real-time Response", "description": "<200ms response latency, millisecond-level speech recognition and synthesis" },
+    "interrupt": { "title": "Smart Interruption", "description": "Users can interrupt at any time, AI intelligently adjusts response" },
+    "context": { "title": "Context Memory", "description": "Long-term memory capability, cross-conversation context retention" },
+    "emotion": { "title": "Emotional Intelligence", "description": "Recognize user emotions, dynamically adjust conversation strategy" },
+    "analytics": { "title": "Data Analytics", "description": "Full-link data tracking, visual report analysis" },
     "cta": {
-      "text": "Explore All Features",
-      "link": "/product/features"
+      "text": "Learn More Features"
     }
   },
   "howItWorks": {
@@ -266,8 +208,9 @@
     }
   },
   "testimonials": {
-    "title": "What Our Customers Say",
-    "subtitle": "Hear from real users"
+    "title": "Customer Success Stories",
+    "subtitle": "See how enterprises boost business value with AI Voice Agent",
+    "cta": "View More Cases"
   },
   "security": {
     "title": "Enterprise-Grade Security",
@@ -312,6 +255,10 @@
       "text": "Learn More About Security",
       "link": "/product/security"
     }
+  },
+  "videoDemo": {
+    "title": "Product Demo",
+    "subtitle": "Watch AI Voice Agents in action"
   },
   "cta": {
     "title": "Ready to Transform Your Customer Conversations?",

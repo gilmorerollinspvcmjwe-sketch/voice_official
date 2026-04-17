@@ -38,7 +38,7 @@ export const testimonials: Testimonial[] = [
       name: 'Sarah Chen',
       title: 'VP of Customer Service',
       company: 'TechCorp',
-      avatar: '/images/avatars/sarah-chen.jpg'  // ← 添加头像文件
+      avatar: '/images/avatars/sarah-chen_001.jpg'
     },
     featured: true,
     rating: 5,
@@ -56,7 +56,7 @@ export const testimonials: Testimonial[] = [
       name: 'Michael Johnson',
       title: 'Director of Operations',
       company: 'FinanceHub',
-      avatar: '/images/avatars/michael-johnson.jpg'
+      avatar: '/images/avatars/michael-johnson_001.jpg'
     },
     featured: true,
     rating: 5,
@@ -74,7 +74,7 @@ export const testimonials: Testimonial[] = [
       name: 'Lisa Wang',
       title: 'Head of Global Support',
       company: 'GlobalRetail',
-      avatar: '/images/avatars/lisa-wang.jpg'
+      avatar: '/images/avatars/lisa-wang_001.jpg'
     },
     featured: true,
     rating: 5

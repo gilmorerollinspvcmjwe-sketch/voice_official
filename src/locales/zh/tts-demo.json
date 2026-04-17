@@ -30,6 +30,12 @@
     "subtitle": "点击头像试听对应音色，体验超逼真 AI 语音合成效果",
     "popular": "热门"
   },
+  "avatar": {
+    "noVoices": "暂无可用音色",
+    "loadMore": "加载更多（还有 {{count}} 个）",
+    "femaleVoice": "女声",
+    "maleVoice": "男声"
+  },
   "filter": {
     "gender": {
       "label": "性别",
@@ -39,7 +45,8 @@
     },
     "ageRange": {
       "label": "年龄段",
-      "all": "全部年龄段"
+      "all": "全部年龄段",
+      "child": "童声"
     },
     "language": {
       "label": "语言",
@@ -84,11 +91,17 @@
       "pause": "暂停",
       "download": "下载"
     },
-    "reset": "重置"
+    "reset": "重置",
+    "pitchOptions": {
+      "deep": "低沉",
+      "normal": "标准",
+      "high": "高亢"
+    }
   },
   "specs": {
     "title": "技术规格",
     "subtitle": "业界领先的 TTS 技术参数，确保语音合成质量达到最高标准",
+    "badge": "技术规格",
     "items": {
       "mos": {
         "label": "自然度 (MOS)",
@@ -137,6 +150,10 @@
     "viewDetails": "查看场景详情",
     "recommended": "推荐音色",
     "comparisonTitle": "各场景音色推荐对比",
+    "tableScenario": "场景",
+    "tableVoices": "推荐音色",
+    "tableFeatures": "风格特点",
+    "tableMetrics": "效果指标",
     "items": {
       "customerService": {
         "title": "客服咨询",
@@ -168,6 +185,14 @@
     "title": "客户案例",
     "subtitle": "来自电商、金融、教育、游戏等行业的真实使用案例",
     "industryDistribution": "行业客户分布",
+    "industry": {
+      "ecommerce": "电商",
+      "finance": "金融",
+      "education": "教育",
+      "gaming": "游戏",
+      "healthcare": "医疗",
+      "other": "其他"
+    },
     "summary": {
       "customers": {
         "value": "500+",
