@@ -1,7 +1,5 @@
 /**
  * CaseStudyDetail 客户案例详情页
- * 
- * 📝 TODO(老徐): 替换为真实客户案例 + 数据授权
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -66,7 +64,6 @@ const CaseStudyDetail = () => {
               </Link>
 
               {/* Customer Logo */}
-              {/* 📝 TODO(老徐): 添加客户 Logo */}
               <div className="w-32 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-white/60 text-body-sm">{caseStudy.customer.name}</span>
               </div>
@@ -169,7 +166,6 @@ const CaseStudyDetail = () => {
                       "{caseStudy.quote.text}"
                     </blockquote>
                     <div className="flex items-center gap-4">
-                      {/* 📝 TODO(老徐): 添加引用者头像 */}
                       <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
                         <Users className="w-6 h-6 text-accent" />
                       </div>
@@ -209,7 +205,6 @@ const CaseStudyDetail = () => {
               </motion.div>
 
               {/* Images Gallery */}
-              {/* 📝 TODO(老徐): 添加案例图片 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -279,7 +274,6 @@ const CaseStudyDetail = () => {
                 >
                   <Link to={getLocalizedPath(`/customers/${relatedCase.slug}`)}>
                     <Card variant="hover" padding="lg" className="h-full">
-                      {/* 📝 TODO(老徐): 添加客户 Logo */}
                       <div className="w-20 h-10 bg-background-secondary rounded flex items-center justify-center mb-4">
                         <span className="text-foreground-muted text-caption">{relatedCase.customer.name}</span>
                       </div>

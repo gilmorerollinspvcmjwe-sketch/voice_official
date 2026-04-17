@@ -203,8 +203,8 @@ const TestimonialsSection = () => {
         >
           <p className="text-caption text-foreground-muted">
             {currentLocale === 'zh'
-              ? '📁 添加客户证言数据: src/data/testimonials.ts'
-              : '📁 Add customer testimonial data: src/data/testimonials.ts'}
+              ? '客户证言数据: src/data/testimonials.ts'
+              : 'Customer testimonial data: src/data/testimonials.ts'}
           </p>
         </motion.div>
       </Container>

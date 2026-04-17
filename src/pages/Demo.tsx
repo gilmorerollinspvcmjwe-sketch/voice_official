@@ -1,7 +1,5 @@
 /**
  * Demo 交互式演示页面
- * 
- * 📝 TODO(老徐): 对接真实 TTS/ASR API
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -80,7 +78,6 @@ const Demo = () => {
     setUserInput('')
 
     // Simulate AI response
-    // 📝 TODO(老徐): 对接真实 TTS/ASR API
     setIsTyping(true)
     await new Promise(resolve => setTimeout(resolve, 1500))
     
@@ -106,8 +103,7 @@ const Demo = () => {
 
   const toggleRecording = () => {
     setIsRecording(!isRecording)
-    // 📝 TODO(老徐): 预留麦克风接口，对接 ASR API
-  }
+    }
 
   const resetConversation = () => {
     setMessages([])
@@ -459,10 +455,15 @@ const Demo = () => {
                 </div>
               </Card>
 
-              {/* 📝 TODO(老徐): 对接真实 TTS/ASR API */}
-              <p className="text-center text-caption text-text-muted mt-4">
-                ⚠️ 这是一个演示环境。真实对话需要对接 TTS/ASR API。
-              </p>
+              {/* 模拟演示提示 */}
+              <div className="text-center mt-4">
+                <Badge variant="outline" className="text-accent">
+                  🎭 模拟演示 | Simulation Demo
+                </Badge>
+                <p className="text-caption text-text-muted mt-2">
+                  真实对话体验请联系我们预约演示
+                </p>
+              </div>
             </div>
           </Container>
         </section>

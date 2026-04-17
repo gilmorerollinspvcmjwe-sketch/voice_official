@@ -1,8 +1,5 @@
 /**
  * Contact 联系页面
- * 
- * 📝 TODO(老徐): 表单提交对接后端 API
- * 📝 TODO(老徐): 嵌入 Google Maps
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -27,7 +24,6 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // 📝 TODO(老徐): 表单提交对接后端 API
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500))
     
@@ -177,11 +173,11 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-subheading font-semibold text-text mb-1">{t('contact.info.email', 'Email')}</h3>
-                        <a href="mailto:hello@voiceai.com" className="text-body text-accent hover:underline">
-                          hello@voiceai.com
+                        <a href="mailto:contact@udesk.cn" className="text-body text-accent hover:underline">
+                          contact@udesk.cn
                         </a>
                         <p className="text-caption text-text-muted mt-1">
-                          {t('contact.info.emailSupport', 'Support: support@voiceai.com')}
+                          {t('contact.info.emailSupport', 'Support: support@udesk.cn')}
                         </p>
                       </div>
                     </div>
@@ -194,11 +190,11 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-subheading font-semibold text-text mb-1">{t('contact.info.phone', 'Phone')}</h3>
-                        <a href="tel:+1-800-VOICE-AI" className="text-body text-accent hover:underline">
-                          +1 (800) VOICE-AI
+                        <a href="tel:02131445977" className="text-body text-accent hover:underline">
+                          021-3144 5977
                         </a>
                         <p className="text-caption text-text-muted mt-1">
-                          {t('contact.info.phoneHours', 'Mon-Fri, 9am-6pm PST')}
+                          {t('contact.info.phoneHours', '周一至周五 9:00-18:00')}
                         </p>
                       </div>
                     </div>
@@ -212,9 +208,8 @@ const Contact = () => {
                       <div>
                         <h3 className="text-subheading font-semibold text-text mb-1">{t('contact.info.address', 'Office')}</h3>
                         <p className="text-body text-text-secondary">
-                          123 Innovation Drive<br />
-                          Suite 500<br />
-                          San Francisco, CA 94105
+                          上海市浦东新区<br />
+                          张江高科技园区
                         </p>
                       </div>
                     </div>
@@ -228,8 +223,8 @@ const Contact = () => {
                       <div>
                         <h3 className="text-subheading font-semibold text-text mb-1">{t('contact.info.hours', 'Business Hours')}</h3>
                         <p className="text-body text-text-secondary">
-                          {t('contact.info.weekdays', 'Monday - Friday')}: 9:00 AM - 6:00 PM PST<br />
-                          {t('contact.info.weekend', 'Saturday - Sunday')}: {t('contact.info.closed', 'Closed')}
+                          {t('contact.info.weekdays', '周一至周五')}: 9:00 - 18:00<br />
+                          {t('contact.info.weekend', '周六至周日')}: {t('contact.info.closed', '休息')}
                         </p>
                       </div>
                     </div>
@@ -237,14 +232,12 @@ const Contact = () => {
                 </div>
 
                 {/* Map Placeholder */}
-                {/* 📝 TODO(老徐): 嵌入 Google Maps */}
                 <Card padding="none" className="overflow-hidden">
                   <div className="h-64 bg-background-secondary flex items-center justify-center">
                     <div className="text-center">
                       <MapPin className="w-12 h-12 text-foreground-muted mx-auto mb-2" />
                       <p className="text-body text-foreground-muted">
-                        {/* TODO: Replace with actual Google Maps embed */}
-                        <span className="text-accent">📍</span> San Francisco, CA
+                        <span className="text-accent">📍</span> 上海市浦东新区张江高科技园区
                       </p>
                     </div>
                   </div>

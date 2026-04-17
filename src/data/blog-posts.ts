@@ -1,8 +1,6 @@
 /**
  * 博客文章数据配置
  * 
- * 📝 TODO(老徐): 对接 CMS (Contentful/Strapi)
- * 
  * 使用场景: src/pages/Company/Blog.tsx
  */
 
@@ -53,12 +51,12 @@ export const blogPosts: BlogPost[] = [
     },
     author: {
       name: 'Sarah Chen',
-      avatar: '/images/avatars/sarah-chen.jpg', // 📝 TODO(老徐): 添加头像图片
+      avatar: '/images/avatars/sarah-chen.jpg',
       role: 'VP of Product',
     },
     publishedAt: '2025-03-15',
     updatedAt: '2025-03-15',
-    coverImage: '/images/blog/ai-voice-future.jpg', // 📝 TODO(老徐): 添加封面图片
+    coverImage: '/images/blog/ai-voice-future.jpg',
     tags: ['AI', 'Customer Service', 'Voice Technology'],
     category: 'Industry Insights',
     readTime: 8,

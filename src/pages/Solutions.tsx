@@ -38,20 +38,23 @@ const Solutions = () => {
       description: t('solutions.collections.description'),
       features: [t('solutions.collections.feature1'), t('solutions.collections.feature2'), t('solutions.collections.feature3')]
     },
-    { 
-      id: 'appointment', 
-      icon: Calendar, 
-      title: t('solutions.appointment.title'),
-      description: t('solutions.appointment.description'),
-      features: [t('solutions.appointment.feature1'), t('solutions.appointment.feature2'), t('solutions.appointment.feature3')]
-    },
+    // appointment 暂未上线，Coming Soon
+    // { 
+    //   id: 'appointment', 
+    //   icon: Calendar, 
+    //   title: t('solutions.appointment.title'),
+    //   description: t('solutions.appointment.description'),
+    //   features: [t('solutions.appointment.feature1'), t('solutions.appointment.feature2'), t('solutions.appointment.feature3')]
+    // },
     { 
       id: 'survey', 
       icon: ClipboardList, 
       title: t('solutions.survey.title'),
       description: t('solutions.survey.description'),
-      features: [t('solutions.survey.feature1'), t('solutions.survey.feature2'), t('solutions.survey.feature3')]
+      features: [t('solutions.survey.feature1'), t('solutions.survey.feature2'), t('solutions.survey.feature3')],
+      comingSoon: true,
     },
+
   ]
 
   return (
@@ -89,7 +92,10 @@ const Solutions = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link to={getLocalizedPath(`/solutions/${solution.id}`)}>
+                  <Link 
+                    to={solution.comingSoon ? getLocalizedPath('/company/contact') : getLocalizedPath(`/solutions/${solution.id}`)}
+                    className={solution.comingSoon ? 'cursor-default' : ''}
+                  >
                     <Card variant="interactive" padding="lg" className="h-full group">
                       <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                         <solution.icon size={24} className="text-accent" />
@@ -108,10 +114,16 @@ const Solutions = () => {
                           </li>
                         ))}
                       </ul>
-                      <div className="flex items-center gap-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-body-sm">{t('common.learnMore')}</span>
-                        <ArrowRight size={16} />
-                      </div>
+                      {solution.comingSoon ? (
+                        <Badge variant="outline" className="text-text-muted">
+                          Coming Soon
+                        </Badge>
+                      ) : (
+                        <div className="flex items-center gap-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span className="text-body-sm">{t('common.learnMore')}</span>
+                          <ArrowRight size={16} />
+                        </div>
+                      )}
                     </Card>
                   </Link>
                 </motion.div>

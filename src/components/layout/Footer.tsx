@@ -48,7 +48,7 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: footerRef.current,
-        start: 'top 90%',
+        start: 'top 100%',
         toggleActions: 'play none none none',
       },
     })
@@ -111,7 +111,8 @@ const Footer = () => {
       { label: t('footer.solutions.customerService', '智能客服'), href: '/solutions/customer-service' },
       { label: t('footer.solutions.sales', '销售外呼'), href: '/solutions/sales' },
       { label: t('footer.solutions.collections', '催收提醒'), href: '/solutions/collections' },
-      { label: t('footer.solutions.survey', '问卷回访'), href: '/solutions/survey' },
+      // Survey Coming Soon，暂时隐藏
+      // { label: t('footer.solutions.survey', '问卷回访'), href: '/solutions/survey' },
     ],
     cases: [
       { label: t('footer.cases.finance', '金融'), href: '/cases/finance' },
@@ -122,8 +123,8 @@ const Footer = () => {
     ],
     support: [
       { label: t('footer.support.docs', '帮助文档'), href: '/docs' },
-      { label: t('footer.support.api', 'API 参考'), href: '/docs/api' },
-      { label: t('footer.support.developer', '开发者中心'), href: '/developer' },
+      { label: t('footer.support.api', 'API 参考'), href: '/docs#api' },
+      { label: t('footer.support.developer', '开发者中心'), href: '/docs' },
       { label: t('footer.support.blog', '新闻资讯'), href: '/blog' },
     ],
     company: [

@@ -1,7 +1,5 @@
 /**
  * Login 登录页面
- * 
- * 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -25,8 +23,7 @@ const Login = () => {
     e.preventDefault()
     setIsLoading(true)
     
-    // 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
-    // Example: await authService.login(email, password)
+    // Simulated login - contact admin for authentication
     await new Promise(resolve => setTimeout(resolve, 1500))
     
     setIsLoading(false)
@@ -35,8 +32,6 @@ const Login = () => {
   }
 
   const handleSocialLogin = async (provider: 'google' | 'github') => {
-    // 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
-    // Example: await authService.socialLogin(provider)
     console.log(`Logging in with ${provider}`)
   }
 
@@ -131,12 +126,12 @@ const Login = () => {
                     <label className="block text-body-sm font-medium text-text">
                       {t('auth.login.password', 'Password')}
                     </label>
-                    <Link
-                      to={getLocalizedPath('/forgot-password')}
+                    <button
+                      onClick={() => alert(t('auth.login.forgotMessage', '请联系管理员重置密码 | Please contact admin to reset password'))}
                       className="text-caption text-accent hover:underline"
                     >
                       {t('auth.login.forgot', 'Forgot password?')}
-                    </Link>
+                    </button>
                   </div>
                   <div className="relative">
                     <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-foreground-muted" />

@@ -1,8 +1,6 @@
 /**
  * Pricing FAQ 数据配置
  * 
- * 📝 TODO(老徐): FAQ 可从 CMS 动态加载
- * 
  * 使用场景: src/pages/Pricing.tsx
  */
 

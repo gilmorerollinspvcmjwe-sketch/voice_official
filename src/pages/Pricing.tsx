@@ -1,7 +1,5 @@
 /**
  * Pricing 定价页面
- * 
- * 📝 TODO(老徐): FAQ 可从 CMS 动态加载
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -167,7 +165,6 @@ const Pricing = () => {
         </section>
 
         {/* FAQ Section */}
-        {/* 📝 TODO(老徐): FAQ 可从 CMS 动态加载 */}
         <section className="py-16 bg-surface-secondary">
           <Container>
             <motion.div

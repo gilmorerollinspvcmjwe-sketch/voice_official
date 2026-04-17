@@ -1,7 +1,5 @@
 /**
  * Product 产品页面
- * 
- * 📝 TODO(老徐): 补充真实技术文档和合规证书
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -146,7 +144,6 @@ const Product = () => {
         )}
 
         {/* Technology section */}
-        {/* 📝 TODO(老徐): 补充真实技术文档和合规证书 */}
         {activeSection === 'technology' && (
           <section className="py-16 md:py-24 bg-surface">
             <Container>
@@ -181,7 +178,6 @@ const Product = () => {
                         <p className="text-caption text-text-muted">Speech Recognition</p>
                       </div>
                     </div>
-                    {/* 📝 TODO(老徐): 替换为真实 ASR 技术信息 */}
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-body-sm">
                         <span className="text-text-secondary">Accuracy</span>
@@ -216,7 +212,6 @@ const Product = () => {
                         <p className="text-caption text-text-muted">Large Language Model</p>
                       </div>
                     </div>
-                    {/* 📝 TODO(老徐): 替换为真实 LLM 技术信息 */}
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-body-sm">
                         <span className="text-text-secondary">Model</span>
@@ -251,7 +246,6 @@ const Product = () => {
                         <p className="text-caption text-text-muted">Text-to-Speech</p>
                       </div>
                     </div>
-                    {/* 📝 TODO(老徐): 替换为真实 TTS 技术信息 */}
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-body-sm">
                         <span className="text-text-secondary">Voices</span>
@@ -277,7 +271,6 @@ const Product = () => {
                 viewport={{ once: true }}
               >
                 <Card padding="lg" className="text-center">
-                  {/* 📝 TODO(老徐): 替换为真实技术架构图 */}
                   <div className="py-16 bg-gradient-to-br from-primary-purple/5 to-primary-cyan/5 rounded-2xl">
                     <Server className="w-16 h-16 text-foreground-muted mx-auto mb-4" />
                     <h3 className="text-title font-semibold text-text mb-2">System Architecture</h3>
@@ -321,7 +314,6 @@ const Product = () => {
         )}
 
         {/* Security section */}
-        {/* 📝 TODO(老徐): 补充真实技术文档和合规证书 */}
         {activeSection === 'security' && (
           <section className="py-16 md:py-24 bg-surface">
             <Container>
@@ -340,7 +332,6 @@ const Product = () => {
 
               {/* Compliance Badges */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-                {/* 📝 TODO(老徐): 替换为真实合规证书 */}
                 {[
                   { id: 'soc2', name: 'SOC 2', full: 'SOC 2 Type II', color: 'primary-purple' },
                   { id: 'hipaa', name: 'HIPAA', full: 'HIPAA Compliant', color: 'primary-cyan' },
@@ -382,7 +373,6 @@ const Product = () => {
                         <p className="text-caption text-text-muted">End-to-end protection</p>
                       </div>
                     </div>
-                    {/* 📝 TODO(老徐): 替换为真实安全特性信息 */}
                     <ul className="space-y-3">
                       {[
                         'AES-256 encryption at rest',
@@ -415,7 +405,6 @@ const Product = () => {
                         <p className="text-caption text-text-muted">Granular permissions</p>
                       </div>
                     </div>
-                    {/* 📝 TODO(老徐): 替换为真实访问控制信息 */}
                     <ul className="space-y-3">
                       {[
                         'Multi-factor authentication (MFA)',
@@ -445,7 +434,6 @@ const Product = () => {
                     <FileText className="w-6 h-6 text-accent" />
                     Compliance Documentation
                   </h3>
-                  {/* 📝 TODO(老徐): 替换为真实文档链接 */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
                       'Security Whitepaper',
@@ -470,7 +458,6 @@ const Product = () => {
         )}
 
         {/* Integrations section */}
-        {/* 📝 TODO(老徐): 替换为真实集成平台 Logo */}
         {activeSection === 'integrations' && (
           <section className="py-16 md:py-24 bg-surface">
             <Container>

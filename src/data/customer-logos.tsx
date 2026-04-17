@@ -1,7 +1,5 @@
 /**
  * 客户 Logo 配置
- * 
- * 📝 TODO(老徐): 替换为真实客户 Logo (SVG 格式，统一 120x40)
  * Logo 文件放置位置: public/logos/
  */
 
@@ -17,37 +15,37 @@ export const customerLogos: CustomerLogo[] = [
     id: 'customer-1',
     name: 'TechCorp',
     logoUrl: '/logos/customer-1.svg',
-    website: 'https://example.com/techcorp',
+    website: 'https://udesk.cn',
   },
   {
     id: 'customer-2',
     name: 'FinanceHub',
     logoUrl: '/logos/customer-2.svg',
-    website: 'https://example.com/financehub',
+    website: 'https://udesk.cn',
   },
   {
     id: 'customer-3',
     name: 'RetailMax',
     logoUrl: '/logos/customer-3.svg',
-    website: 'https://example.com/retailmax',
+    website: 'https://udesk.cn',
   },
   {
     id: 'customer-4',
     name: 'HealthPlus',
     logoUrl: '/logos/customer-4.svg',
-    website: 'https://example.com/healthplus',
+    website: 'https://udesk.cn',
   },
   {
     id: 'customer-5',
     name: 'LogiTech',
     logoUrl: '/logos/customer-5.svg',
-    website: 'https://example.com/logitech',
+    website: 'https://udesk.cn',
   },
   {
     id: 'customer-6',
     name: 'EduFirst',
     logoUrl: '/logos/customer-6.svg',
-    website: 'https://example.com/edufirst',
+    website: 'https://udesk.cn',
   },
 ];
 

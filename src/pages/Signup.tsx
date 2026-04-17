@@ -1,7 +1,5 @@
 /**
  * Signup 注册页面
- * 
- * 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -35,8 +33,7 @@ const Signup = () => {
     
     setIsLoading(true)
     
-    // 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
-    // Example: await authService.signup(formData)
+    // Simulated signup - contact admin for authentication
     await new Promise(resolve => setTimeout(resolve, 1500))
     
     setIsLoading(false)
@@ -45,8 +42,6 @@ const Signup = () => {
   }
 
   const handleSocialLogin = async (provider: 'google' | 'github') => {
-    // 📝 TODO(老徐): 对接认证服务 (Auth0/Cognito)
-    // Example: await authService.socialSignup(provider)
     console.log(`Signing up with ${provider}`)
   }
 

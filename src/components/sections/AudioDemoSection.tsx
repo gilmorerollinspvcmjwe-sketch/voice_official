@@ -134,10 +134,10 @@ const AudioDemoSection = () => {
               </div>
             </div>
 
-            {/* Upload hint */}
+            {/* Demo notice */}
             <div className="mt-6 p-4 bg-surface-tertiary rounded-lg">
               <p className="text-caption text-text-muted text-center">
-                📁 Replace with your audio files at: <code>public/audio/demos/</code>
+                🎧 演示效果，真实体验请联系我们 | Demo audio - contact us for real experience
               </p>
             </div>
           </div>
@@ -145,7 +145,7 @@ const AudioDemoSection = () => {
 
           {/* CTA */}
           <div className="text-center mt-8">
-            <Link to={getLocalizedPath('/demo/live')}>
+            <Link to={getLocalizedPath('/demo')}>
               <Button 
                 variant="accent" 
                 size="lg"

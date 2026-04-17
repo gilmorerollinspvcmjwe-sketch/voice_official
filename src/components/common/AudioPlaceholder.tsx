@@ -55,10 +55,10 @@ export function AudioPlaceholder({
         <Volume2 size={16} className="text-text-muted ml-auto" />
       </div>
       
-      {/* Upload hint */}
+      {/* Demo notice */}
       <div className="mt-4 p-3 bg-surface-tertiary rounded-lg">
         <p className="text-caption text-text-muted text-center">
-          📁 Replace with your audio file (MP3, WAV, M4A)
+          🎧 演示效果，真实体验请联系我们
         </p>
       </div>
     </div>

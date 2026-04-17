@@ -1,7 +1,5 @@
 /**
  * Blog 博客列表页
- * 
- * 📝 TODO(老徐): 对接 CMS (Contentful/Strapi)
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -66,7 +64,6 @@ const Blog = () => {
                     <div className="grid md:grid-cols-2">
                       {/* Cover Image Placeholder */}
                       <div className="bg-gradient-to-br from-primary-purple/20 to-primary-cyan/20 min-h-[300px] flex items-center justify-center">
-                        {/* 📝 TODO(老徐): 添加博客封面图片 */}
                         <span className="text-foreground-muted text-body">Featured Image</span>
                       </div>
                       
@@ -149,7 +146,6 @@ const Blog = () => {
                     <Card variant="hover" padding="none" className="overflow-hidden h-full flex flex-col">
                       {/* Cover Image Placeholder */}
                       <div className="bg-gradient-to-br from-accent/10 to-primary-purple/10 h-48 flex items-center justify-center">
-                        {/* 📝 TODO(老徐): 添加博客封面图片 */}
                         <span className="text-foreground-muted text-body-sm">Featured Image</span>
                       </div>
                       

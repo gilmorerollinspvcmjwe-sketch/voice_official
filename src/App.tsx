@@ -86,7 +86,7 @@ function App() {
         <Route path="demo" element={<Demo />} />
         <Route path="demo/*" element={<Demo />} />
         <Route path="tts-demo" element={<TTSDemo />} />
-        <Route path="voice-gallery" element={<TTSDemo />} />
+        {/* voice-gallery 已合并到 tts-demo，移除冗余路由 */}
         <Route path="demo/effects" element={<EffectsDemo />} />
         <Route path="docs" element={<Docs />} />
         <Route path="docs/*" element={<Docs />} />

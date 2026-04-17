@@ -2,8 +2,6 @@
  * MetricsSection - 数据展示区域
  * 合并了 SocialProofSection 的客户 Logo 墙
  * 客户 Logo 两行横向滚动 + 6 大核心能力卡片 + 渐变文字动画
- * 
- * 📝 TODO(老徐): 数据可从后端 API 获取实时更新
  */
 
 import { useTranslation } from 'react-i18next'
@@ -83,7 +81,6 @@ interface Metric {
   description?: { en: string; zh: string }
 }
 
-// 📝 TODO(老徐): 替换为真实数据
 const metrics: Metric[] = [
   {
     id: 'csat',
@@ -320,7 +317,6 @@ const MetricsSection = () => {
           className="text-center mt-12"
         >
           <p className="text-body-sm text-foreground-muted">
-            {/* 📝 TODO(老徐): 数据可从后端 API 获取实时更新 */}
             {currentLocale === 'zh' ? '* 数据来源：2024-2025 年客户案例统计平均值' : '* Data source: Average from 2024-2025 customer case studies'}
           </p>
         </motion.div>

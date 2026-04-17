@@ -1,7 +1,5 @@
 /**
  * 团队成员数据配置
- * 
- * 📝 TODO(老徐): 替换为真实团队信息
  * 团队照片放置位置: public/images/team/
  */
 
@@ -24,58 +22,58 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: 'ceo',
-    name: 'John Smith',
+    name: '张明远',
     title: {
-      en: 'Chief Executive Officer',
-      zh: '首席执行官',
+      en: 'Founder & CEO',
+      zh: '创始人 & CEO',
     },
     bio: {
-      en: 'John has 20+ years of experience in enterprise software and AI. Previously VP at Salesforce.',
-      zh: 'John 在企业软件和 AI 领域拥有 20 多年经验。曾任 Salesforce 副总裁。',
+      en: '15 years of AI voice technology experience. Former Baidu Voice Technology Lead.',
+      zh: '15年AI语音技术经验，前百度语音技术负责人。',
     },
-    photo: '/images/team/ceo.jpg', // 📝 TODO(老徐): 添加 CEO 照片
-    linkedin: 'https://linkedin.com/in/johnsmith',
+    photo: '/images/team/ceo_001.jpg',
+    linkedin: 'https://linkedin.com/in/',
   },
   {
     id: 'cto',
-    name: 'Sarah Chen',
+    name: '李思然',
     title: {
-      en: 'Chief Technology Officer',
-      zh: '首席技术官',
+      en: 'Co-founder & CTO',
+      zh: '联合创始人 & CTO',
     },
     bio: {
-      en: 'Sarah leads our engineering team with expertise in speech recognition and NLP.',
-      zh: 'Sarah 以语音识别和 NLP 专业能力领导我们的工程团队。',
+      en: 'Deep learning and speech recognition expert. Former Alibaba DAMO Academy researcher.',
+      zh: '深度学习与语音识别专家，前阿里达摩院研究员。',
     },
-    photo: '/images/team/cto.jpg', // 📝 TODO(老徐): 添加 CTO 照片
-    linkedin: 'https://linkedin.com/in/sarahchen',
+    photo: '/images/team/cto_001.jpg',
+    linkedin: 'https://linkedin.com/in/',
   },
   {
-    id: 'coo',
-    name: 'Mike Johnson',
+    id: 'vp-eng',
+    name: '王浩宇',
     title: {
-      en: 'Chief Operating Officer',
-      zh: '首席运营官',
+      en: 'VP of Engineering',
+      zh: '工程副总裁',
     },
     bio: {
-      en: 'Mike oversees daily operations and customer success with 15 years in tech ops.',
-      zh: 'Mike 负责日常运营和客户成功，拥有 15 年技术运营经验。',
+      en: '10 years of large-scale system architecture experience. Former ByteDance Infrastructure Lead.',
+      zh: '10年大规模系统架构经验，前字节跳动基础架构负责人。',
     },
-    photo: '/images/team/coo.jpg', // 📝 TODO(老徐): 添加 COO 照片
-    linkedin: 'https://linkedin.com/in/mikejohnson',
+    photo: '/images/team/vp-eng_001.jpg',
+    linkedin: 'https://linkedin.com/in/',
   },
   {
-    id: 'vp-product',
-    name: 'Emily Wang',
+    id: 'head-product',
+    name: '陈晓琳',
     title: {
-      en: 'VP of Product',
-      zh: '产品副总裁',
+      en: 'Head of Product',
+      zh: '产品负责人',
     },
     bio: {
-      en: 'Emily drives product strategy with a focus on user experience and enterprise needs.',
-      zh: 'Emily 以用户体验和企业需求为重点推动产品战略。',
+      en: '8 years of SaaS product experience. Former Youzan Product Director.',
+      zh: '8年SaaS产品经验，前有赞产品总监。',
     },
-    photo: '/images/team/vp-product.jpg', // 📝 TODO(老徐): 添加 VP 产品照片
-    linkedin: 'https://linkedin.com/in/emilywang',
+    photo: '/images/team/head-product_001.jpg',
+    linkedin: 'https://linkedin.com/in/',
   },
 ];

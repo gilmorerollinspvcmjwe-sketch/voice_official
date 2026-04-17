@@ -1,7 +1,5 @@
 /**
  * BlogPost 博客文章详情页
- * 
- * 📝 TODO(老徐): 对接 CMS (Contentful/Strapi)
  */
 
 import { Helmet } from 'react-helmet-async'
@@ -84,7 +82,6 @@ const BlogPost = () => {
               {/* Meta */}
               <div className="flex flex-wrap items-center gap-6 text-white/70">
                 <div className="flex items-center gap-2">
-                  {/* 📝 TODO(老徐): 添加作者头像 */}
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
                     <User className="w-5 h-5 text-accent" />
                   </div>
@@ -107,7 +104,6 @@ const BlogPost = () => {
         </section>
 
         {/* Cover Image */}
-        {/* 📝 TODO(老徐): 添加博客封面图片 */}
         <section className="bg-gradient-to-br from-primary-purple/20 to-primary-cyan/20 py-24">
           <Container>
             <div className="max-w-3xl mx-auto text-center">
@@ -167,7 +163,6 @@ const BlogPost = () => {
                 {/* Author Card */}
                 <Card padding="lg">
                   <div className="text-center">
-                    {/* 📝 TODO(老徐): 添加作者头像 */}
                     <div className="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
                       <User className="w-10 h-10 text-accent" />
                     </div>

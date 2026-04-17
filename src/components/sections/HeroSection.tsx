@@ -7,8 +7,6 @@
  * - GlitchText 故障文字（AI Voice Agent 标题）
  * - GSAP SplitText 入场动画
  * - SplashCursor 鼠标轨迹效果
- *
- * 📝 TODO(老徐): 替换为真实产品视频 (1920x1080, loop, <10MB)
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react'
@@ -479,14 +477,14 @@ const HeroSection = () => {
                   </GlitchText>
                 </span>
               </div>
-              <div ref={subtitleRef} className="text-h3 md:text-h2 lg:text-h1 font-semibold text-foreground-primary">
+              <div ref={subtitleRef} className="text-h3 md:text-h2 lg:text-h1 font-semibold text-foreground-primary whitespace-nowrap">
                 <GradientText metallic direction="diagonal" speed={4}>
                   {t('hero.title', '拟人化语音对话智能体平台')}
                 </GradientText>
               </div>
             </h1>
 
-            <p className="text-body-lg md:text-xl text-foreground-secondary mb-8 max-w-lg leading-relaxed">
+            <p className="text-body-lg md:text-xl text-foreground-secondary mb-8 max-w-xl leading-relaxed">
               {t('hero.subtitle', '打造自然流畅的 AI 语音对话体验，支持呼入、外呼全场景，助力企业客户服务和销售转化效率提升 3 倍以上。')}
             </p>
 

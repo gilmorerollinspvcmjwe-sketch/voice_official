@@ -3,18 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Mail, ArrowRight } from 'lucide-react'
-import { Container, Card, Badge, Button, AvatarPlaceholder } from '@/components/common'
+import { Container, Card, Badge, Button } from '@/components/common'
 import { getLocalizedPath } from '@/utils'
+import { teamMembers } from '@/data/team-members'
 
 const Company = () => {
-  const { t } = useTranslation('company')
-
-  const team = [
-    { name: 'John Smith', title: t('team.ceo'), bio: t('team.ceoBio') },
-    { name: 'Sarah Chen', title: t('team.cto'), bio: t('team.ctoBio') },
-    { name: 'Mike Johnson', title: t('team.coo'), bio: t('team.cooBio') },
-    { name: 'Emily Wang', title: t('team.vp'), bio: t('team.vpBio') },
-  ]
+  const { t, i18n } = useTranslation('company')
+  const currentLocale = i18n.language?.startsWith('zh') ? 'zh' : 'en'
 
   const careers = [
     { title: t('careers.job1.title'), department: 'Engineering', location: 'Remote' },
@@ -93,28 +88,32 @@ const Company = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {team.map((member, index) => (
+              {teamMembers.map((member, index) => (
                 <motion.div
-                  key={member.name}
+                  key={member.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <Card variant="hover" padding="lg" className="text-center">
-                    <AvatarPlaceholder name={member.name} size="xl" className="mx-auto mb-4" />
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl font-bold text-accent">{member.name[0]}</span>
+                      </div>
+                    )}
                     <h3 className="text-subheading font-semibold text-text mb-1">{member.name}</h3>
-                    <p className="text-body-sm text-accent mb-3">{member.title}</p>
-                    <p className="text-body-sm text-text-secondary">{member.bio}</p>
+                    <p className="text-body-sm text-accent mb-3">{member.title[currentLocale as 'en' | 'zh'] || member.title.zh}</p>
+                    <p className="text-body-sm text-text-secondary">{member.bio[currentLocale as 'en' | 'zh'] || member.bio.zh}</p>
                   </Card>
                 </motion.div>
               ))}
-            </div>
-
-            <div className="text-center mt-6">
-              <p className="text-caption text-text-muted">
-                📁 Add team photos at: <code>public/images/team/</code>
-              </p>
             </div>
           </Container>
         </section>

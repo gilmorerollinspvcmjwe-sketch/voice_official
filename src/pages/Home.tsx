@@ -25,9 +25,9 @@ const Home = () => {
         <meta name="description" content={t('home.description')} />
         <meta property="og:title" content={t('home.title')} />
         <meta property="og:description" content={t('home.description')} />
-        <link rel="alternate" hrefLang="en" href="https://example.com/" />
-        <link rel="alternate" hrefLang="zh" href="https://example.com/zh/" />
-        <link rel="alternate" hrefLang="x-default" href="https://example.com/" />
+        <link rel="alternate" hrefLang="en" href="https://udesk.cn/" />
+        <link rel="alternate" hrefLang="zh" href="https://udesk.cn/zh/" />
+        <link rel="alternate" hrefLang="x-default" href="https://udesk.cn/" />
       </Helmet>
 
       <div className="bg-background-primary">

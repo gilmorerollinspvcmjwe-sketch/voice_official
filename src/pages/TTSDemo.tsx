@@ -93,7 +93,7 @@ export default function TTSDemo() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link to={getLocalizedPath('/demo/live')}>
+                <Link to={getLocalizedPath('/demo')}>
                   <Button variant="secondary" size="lg" leftIcon={<Mic className="w-5 h-5" />}>
                     {t('hero.cta.primary')}
                   </Button>
@@ -211,7 +211,7 @@ export default function TTSDemo() {
               <p className="text-body-lg text-white/80 mb-8">{t('cta.subtitle')}</p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to={getLocalizedPath('/demo/live')}>
+                <Link to={getLocalizedPath('/demo')}>
                   <Button variant="secondary" size="lg" leftIcon={<Mic className="w-5 h-5" />}>
                     {t('cta.primary')}
                   </Button>

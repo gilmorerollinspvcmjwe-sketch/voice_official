@@ -42,41 +42,68 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
-    id: 'starter',
-    name: { en: 'Starter', zh: '入门版' },
-    price: '¥0',
-    period: '/月',
-    description: { en: 'For individual developers and small team trials', zh: '适合个人开发者和小团队试用' },
-    features: {
-      en: ['100 call minutes/month', 'Basic voice models', 'Standard technical support', 'Community support', 'Basic API access'],
-      zh: ['每月 100 分钟通话', '基础语音模型', '标准技术支持', '社区支持', '基础 API 访问'],
-    },
-    cta: { en: 'Start Free', zh: '免费开始' },
-    variant: 'default',
-  },
-  {
-    id: 'pro',
-    name: { en: 'Professional', zh: '专业版' },
-    price: '¥299',
-    period: '/月',
-    description: { en: 'For growing enterprises', zh: '适合成长型企业' },
-    features: {
-      en: ['1,000 call minutes/month', 'Advanced voice models', 'Priority technical support', 'Custom voice tones', 'Full API access', 'Data analytics reports', 'Multi-scenario templates'],
-      zh: ['每月 1000 分钟通话', '高级语音模型', '优先技术支持', '自定义音色', '完整 API 访问', '数据分析报表', '多场景模板'],
-    },
-    cta: { en: 'Upgrade Now', zh: '立即升级' },
-    variant: 'popular',
-    badge: { en: 'Most Popular', zh: '最受欢迎' },
-  },
-  {
-    id: 'enterprise',
-    name: { en: 'Enterprise', zh: '企业版' },
-    price: '定制',
+    id: 'cloud',
+    name: { en: 'Cloud', zh: '云端版' },
+    price: '',
     period: '',
-    description: { en: 'For large enterprises and custom needs', zh: '适合大型企业和定制需求' },
+    description: { en: 'SaaS hosted, pay per minute, get started fast', zh: 'SaaS 托管，按分钟计费，快速上线' },
     features: {
-      en: ['Unlimited call minutes', 'Dedicated voice models', '7x24 technical support', 'Private deployment', 'SLA guarantee', 'Dedicated account manager', 'Custom development', 'Security compliance audit'],
-      zh: ['无限通话时长', '专属语音模型', '7x24 技术支持', '私有化部署', 'SLA 保障', '专属客户经理', '定制化开发', '安全合规审计'],
+      en: [
+        'Inbound & outbound at unified rate',
+        'LLM + TTS + ASR included',
+        'Telecom charges billed separately',
+        'Advanced voice models',
+        'Custom voice tones',
+        'Full API access',
+        'Data analytics reports',
+        'Multi-scenario templates',
+        'Priority technical support',
+      ],
+      zh: [
+        '呼入/外呼统一计费',
+        '已含 LLM + TTS + ASR 费用',
+        '话费由运营商单独结算',
+        '高级语音模型',
+        '自定义音色',
+        '完整 API 访问',
+        '数据分析报表',
+        '多场景模板',
+        '优先技术支持',
+      ],
+    },
+    cta: { en: 'Contact Sales', zh: '联系销售' },
+    variant: 'popular',
+    badge: { en: 'Recommended', zh: '推荐' },
+  },
+  {
+    id: 'private',
+    name: { en: 'Private Deployment', zh: '私有化部署' },
+    price: '',
+    period: '',
+    description: { en: 'Deploy on your own servers, full data control', zh: '部署在客户自有服务器，数据完全可控' },
+    features: {
+      en: [
+        'All Cloud features included',
+        'Private cloud / on-premise deployment',
+        'Annual license',
+        'SLA guarantee',
+        '7x24 dedicated support',
+        'Dedicated account manager',
+        'Custom development',
+        'Security compliance audit',
+        'Data isolation & sovereignty',
+      ],
+      zh: [
+        '包含云端版全部功能',
+        '私有云/本地化部署',
+        '年度授权费',
+        'SLA 保障',
+        '7x24 专属技术支持',
+        '专属客户经理',
+        '定制化开发',
+        '安全合规审计',
+        '数据隔离与主权',
+      ],
     },
     cta: { en: 'Contact Sales', zh: '联系销售' },
     variant: 'enterprise',
@@ -184,8 +211,49 @@ const PricingSection = () => {
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {/* 免费体验入口 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-10 max-w-3xl mx-auto"
+        >
+          <div className="bg-gradient-to-r from-accent-lime/10 to-gold/10 border border-accent-lime/30 rounded-2xl px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="text-body-lg font-semibold text-foreground-primary">
+                {currentLocale === 'zh' ? '免费体验' : 'Free Trial'}
+              </p>
+              <p className="text-body-sm text-foreground-secondary">
+                {currentLocale === 'zh' ? '注册即送体验额度，无需绑卡，5 分钟快速上手' : 'Sign up for free credits, no card required, 5-min setup'}
+              </p>
+            </div>
+            <CTAButton
+              variant="primary"
+              size="md"
+              href={getLocalizedPath('/demo')}
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+            >
+              {currentLocale === 'zh' ? '立即体验' : 'Try Now'}
+            </CTAButton>
+          </div>
+        </motion.div>
+
+        {/* 计费说明 */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mb-8 text-center"
+        >
+          <p className="text-body text-foreground-secondary">
+            {currentLocale === 'zh'
+              ? '呼入/外呼统一计费 · 已含 LLM + TTS + ASR 费用 · 话费由运营商单独结算'
+              : 'Unified inbound/outbound rate · LLM + TTS + ASR included · Telecom charges billed separately'}
+          </p>
+        </motion.div>
+
+        {/* Pricing Cards - 两栏 */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
@@ -196,30 +264,24 @@ const PricingSection = () => {
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
                   <span className="bg-gradient-gold text-background-primary px-4 py-1.5 rounded-full text-caption font-semibold shadow-gold">
-                    <Sparkles className="w-3 h-3 inline mr-1" />
                     {plan.badge?.[currentLocale]}
                   </span>
                 </div>
               )}
 
               {/* Plan Name */}
-              <h3 className="text-h4 font-semibold text-foreground-primary mb-2">
-                {t(`plans.${plan.id}.name`, plan.name[currentLocale])}
+              <h3 className="text-h3 font-semibold text-foreground-primary mb-2">
+                {plan.name[currentLocale]}
               </h3>
 
-              {/* Price */}
-              <div className="mb-4">
-                <span className={`text-4xl font-bold ${getPriceStyles(plan.variant)}`}>
-                  {plan.price}
-                </span>
-                <span className="text-body text-foreground-muted ml-1">
-                  {plan.period}
-                </span>
-              </div>
-
               {/* Description */}
-              <p className="text-body-sm text-foreground-secondary mb-6">
-                {t(`plans.${plan.id}.description`, plan.description[currentLocale])}
+              <p className="text-body text-foreground-secondary mb-2">
+                {plan.description[currentLocale]}
+              </p>
+
+              {/* Price hint */}
+              <p className="text-body-sm text-foreground-muted mb-6">
+                {currentLocale === 'zh' ? '联系销售获取报价' : 'Contact sales for pricing'}
               </p>
 
               {/* Features */}
@@ -228,51 +290,36 @@ const PricingSection = () => {
                   <li key={fIndex} className="flex items-start gap-3">
                     <Check className={`w-5 h-5 flex-shrink-0 ${plan.variant === 'popular' ? 'text-gold' : 'text-accent-lime'}`} />
                     <span className="text-body-sm text-foreground-secondary">
-                      {t(`plans.${plan.id}.features.${fIndex}`, feature)}
+                      {feature}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              {/* CTA Button - 使用统一的 CTAButton */}
+              {/* CTA Button */}
               <CTAButton
-                variant={plan.variant === 'popular' ? 'primary' : plan.variant === 'enterprise' ? 'secondary' : 'default'}
+                variant={plan.variant === 'popular' ? 'primary' : 'secondary'}
                 size="lg"
                 fullWidth
-                href={getLocalizedPath(plan.variant === 'enterprise' ? '/company/contact' : '/signup')}
-                rightIcon={plan.variant === 'popular' ? <ArrowRight className="w-4 h-4" /> : undefined}
+                href={getLocalizedPath('/company/contact')}
               >
-                {t(`plans.${plan.id}.cta`, plan.cta[currentLocale])}
+                {plan.cta[currentLocale]}
               </CTAButton>
             </div>
           ))}
         </div>
 
-        {/* FAQ + 企业定制 */}
-        <div className="mt-10 max-w-2xl mx-auto text-center space-y-4">
+        {/* FAQ */}
+        <div className="mt-10 text-center">
           <p className="text-body text-foreground-secondary">
-            {t('faqHint', currentLocale === 'zh' ? '有疑问？' : 'Have questions?')}{' '}
+            {currentLocale === 'zh' ? '有疑问？' : 'Have questions?'}{' '}
             <Link
               to={getLocalizedPath('/pricing#faq')}
               className="text-gold hover:text-gold-light underline underline-offset-2"
             >
-              {t('faqLink', currentLocale === 'zh' ? '查看常见问题' : 'View FAQ')}
+              {currentLocale === 'zh' ? '查看常见问题' : 'View FAQ'}
             </Link>
           </p>
-
-          <div className="bg-background-card/50 border border-border rounded-xl p-6">
-            <h4 className="text-subheading font-semibold text-foreground-primary mb-2">
-              {t('enterprise.title', currentLocale === 'zh' ? '需要定制方案？' : 'Need a Custom Solution?')}
-            </h4>
-            <p className="text-body text-foreground-secondary mb-4">
-              {t('enterprise.description', currentLocale === 'zh' ? '联系我们获取专属定价和私有化部署方案' : 'Contact us for custom pricing and private deployment plans')}
-            </p>
-            <Link to={getLocalizedPath('/company/contact')}>
-              <Button variant="secondary" size="sm">
-                {t('enterprise.cta', currentLocale === 'zh' ? '联系销售团队' : 'Contact Sales Team')}
-              </Button>
-            </Link>
-          </div>
         </div>
       </Container>
     </section>

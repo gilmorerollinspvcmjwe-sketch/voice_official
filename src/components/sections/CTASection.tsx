@@ -37,7 +37,7 @@ const CTASection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 70%',
+        start: 'top 95%',
         toggleActions: 'play none none none',
       },
     })
@@ -51,7 +51,13 @@ const CTASection = () => {
       ease: 'power4.out',
     })
 
+    // 兜底：1.5秒后强制显示
+    const fallback = setTimeout(() => {
+      if (contentRef.current) gsap.set(contentRef.current.children, { opacity: 1, y: 0 })
+    }, 1500)
+
     return () => {
+      clearTimeout(fallback)
       tl.kill()
       ScrollTrigger.getAll().forEach((st) => st.kill())
     }

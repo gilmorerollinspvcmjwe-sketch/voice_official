@@ -14,25 +14,25 @@ const Docs = () => {
       icon: Rocket, 
       title: t('sections.quickstart.title'), 
       description: t('sections.quickstart.description'),
-      href: '/docs/quickstart'
+      href: '/docs#quickstart'
     },
     { 
       icon: Code, 
       title: t('sections.api.title'), 
       description: t('sections.api.description'),
-      href: '/docs/api'
+      href: '/docs#api'
     },
     { 
       icon: Package, 
       title: t('sections.sdks.title'), 
       description: t('sections.sdks.description'),
-      href: '/docs/sdks'
+      href: '/docs#sdks'
     },
     { 
       icon: Book, 
       title: t('sections.guides.title'), 
       description: t('sections.guides.description'),
-      href: '/docs/guides'
+      href: '/docs#guides'
     },
   ]
 
@@ -108,7 +108,11 @@ session.on('response', (text) => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link to={getLocalizedPath(section.href)}>
+                  <Link to={getLocalizedPath(section.href)} onClick={() => {
+                    // 滚动到对应section
+                    const el = document.getElementById(section.href.split('#')[1] || '')
+                    if (el) el.scrollIntoView({ behavior: 'smooth' })
+                  }}>
                     <Card variant="interactive" padding="lg" className="h-full group">
                       <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                         <section.icon size={24} className="text-accent" />

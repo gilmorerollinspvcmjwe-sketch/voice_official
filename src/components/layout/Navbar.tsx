@@ -66,7 +66,8 @@ const Navbar = () => {
         { label: t('nav.customerService'), href: '/solutions/customer-service' },
         { label: t('nav.sales'), href: '/solutions/sales' },
         { label: t('nav.collections'), href: '/solutions/collections' },
-        { label: t('nav.survey'), href: '/solutions/survey' },
+        // Survey 页面暂时隐藏，Coming Soon
+        // { label: t('nav.survey'), href: '/solutions/survey' },
       ],
     },
     {
@@ -78,10 +79,6 @@ const Navbar = () => {
       label: t('nav.demo'),
       href: '/demo',
       icon: Play,
-      dropdown: [
-        { label: t('nav.voiceDemo'), href: '/demo' },
-        { label: t('nav.effects'), href: '/demo/effects' },
-      ],
     },
     {
       label: t('nav.ttsDemo'),
@@ -148,7 +145,7 @@ const Navbar = () => {
                 <Link
                   to={getLocalizedPath(item.href)}
                   className={cn(
-                    'flex items-center gap-1 px-4 py-2.5 rounded-lg text-body font-medium',
+                    'flex items-center gap-1 px-5 py-2.5 rounded-lg text-body font-medium whitespace-nowrap',
                     'transition-colors duration-200',
                     'text-foreground-secondary hover:text-foreground-primary hover:bg-background-hover',
                     location.pathname.includes(getPathWithoutLocale(item.href)) &&
@@ -194,45 +191,41 @@ const Navbar = () => {
               </span>
             </a>
 
-            {/* Language Switcher */}
-            <div className="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-background-card/50 border border-border">
-              <Globe size={14} className="text-foreground-muted" />
-              <button
-                onClick={() => handleLanguageSwitch('en')}
-                className={cn(
-                  'px-2 py-1 text-caption rounded transition-colors',
-                  i18n.language === 'en'
-                    ? 'bg-primary-purple text-white'
-                    : 'text-foreground-secondary hover:text-foreground-primary'
-                )}
-              >
-                EN
+            {/* Language Switcher - Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-caption font-medium text-foreground-secondary hover:text-foreground-primary hover:bg-background-hover transition-colors">
+                <Globe size={14} />
+                {i18n.language === 'zh' ? '中文' : 'EN'}
+                <ChevronDown size={12} className="opacity-60" />
               </button>
-              <button
-                onClick={() => handleLanguageSwitch('zh')}
-                className={cn(
-                  'px-2 py-1 text-caption rounded transition-colors',
-                  i18n.language === 'zh'
-                    ? 'bg-primary-purple text-white'
-                    : 'text-foreground-secondary hover:text-foreground-primary'
-                )}
-              >
-                中文
-              </button>
+              <div className="absolute top-full right-0 mt-1 w-32 py-1 bg-background-card rounded-lg shadow-elevated border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <button
+                  onClick={() => handleLanguageSwitch('zh')}
+                  className={cn(
+                    'block w-full text-left px-4 py-2 text-caption transition-colors',
+                    i18n.language === 'zh' ? 'text-primary-purple bg-primary-purple/5' : 'text-foreground-secondary hover:text-foreground-primary hover:bg-background-hover'
+                  )}
+                >
+                  中文
+                </button>
+                <button
+                  onClick={() => handleLanguageSwitch('en')}
+                  className={cn(
+                    'block w-full text-left px-4 py-2 text-caption transition-colors',
+                    i18n.language === 'en' ? 'text-primary-purple bg-primary-purple/5' : 'text-foreground-secondary hover:text-foreground-primary hover:bg-background-hover'
+                  )}
+                >
+                  English
+                </button>
+              </div>
             </div>
 
-            {/* Auth buttons */}
-            <Link
-              to={getLocalizedPath('/login')}
-              className="text-body font-medium text-foreground-secondary hover:text-foreground-primary transition-colors"
-            >
-              {t('nav.login')}
-            </Link>
-            <Link to={getLocalizedPath('/signup')}>
+            {/* Get Demo CTA */}
+            <Link to={getLocalizedPath('/demo')}>
               <motion.button
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-5 py-2.5 bg-gradient-gold text-background-primary font-semibold rounded-xl shadow-gold hover:shadow-gold-lg transition-shadow text-body"
+                className="px-5 py-2.5 bg-gradient-gold text-background-primary font-semibold rounded-xl shadow-gold hover:shadow-gold-lg transition-shadow text-body whitespace-nowrap"
               >
                 <Sparkles className="w-4 h-4 inline mr-1.5" />
                 {t('nav.getStarted')}
@@ -321,25 +314,7 @@ const Navbar = () => {
                   </button>
                 </div>
 
-                {/* Auth buttons */}
-                <div className="flex gap-3 px-4 pt-4">
-                  <Link to={getLocalizedPath('/login')} className="w-1/2">
-                    <motion.button
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full py-3 bg-background-card border border-border text-foreground-primary font-medium rounded-xl"
-                    >
-                      {t('nav.login')}
-                    </motion.button>
-                  </Link>
-                  <Link to={getLocalizedPath('/signup')} className="w-1/2">
-                    <motion.button
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full py-3 bg-gradient-gold text-background-primary font-semibold rounded-xl shadow-gold"
-                    >
-                      {t('nav.getStarted')}
-                    </motion.button>
-                  </Link>
-                </div>
+
               </div>
             </Container>
           </motion.div>
